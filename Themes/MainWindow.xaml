@@ -1,0 +1,228 @@
+﻿<Window x:Class="Themes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Themes"
+        xmlns:viewmodels="clr-namespace:Themes.ViewModels"
+        mc:Ignorable="d" Title="EEEEEEEEEEEEEEEEEEEEE (themes program)"
+        Height="720" Width="1280" FontSize="16" Style="{DynamicResource CustomWindowStyle}" WindowStyle="SingleBorderWindow">
+    <Window.DataContext>
+        <viewmodels:MainViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="File" Foreground="White">
+                <MenuItem Header="Save" Template="{DynamicResource DropDownMenuItemTemplate}"/>
+                <MenuItem Header="Save" Template="{DynamicResource DropDownMenuItemTemplate}"/>
+                <MenuItem Header="Save" Template="{DynamicResource DropDownMenuItemTemplate}"/>
+                <MenuItem Header="Save" Template="{DynamicResource DropDownMenuItemTemplate}">
+                    <MenuItem Header="Save" Template="{DynamicResource DropDownMenuItemTemplate}"/>
+                </MenuItem>
+                <MenuItem Header="Save" Template="{DynamicResource DropDownMenuItemTemplate}"/>
+                <MenuItem Header="Save" Template="{DynamicResource DropDownMenuItemTemplate}"/>
+                <MenuItem Header="Save" Template="{DynamicResource DropDownMenuItemTemplate}">
+                    <MenuItem Header="Save" Template="{DynamicResource DropDownMenuItemTemplate}">
+                        <MenuItem Header="Save" Template="{DynamicResource DropDownMenuItemTemplate}">
+                            <MenuItem Header="Save" Template="{DynamicResource DropDownMenuItemTemplate}">
+                                <MenuItem Header="Save" Template="{DynamicResource DropDownMenuItemTemplate}">
+                                    <MenuItem Header="Save" Template="{DynamicResource DropDownMenuItemTemplate}"/>
+                                </MenuItem>
+                            </MenuItem>
+                        </MenuItem>
+                    </MenuItem>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Edit" >
+                <MenuItem Header="1"/>
+                <MenuItem Header="2">
+                    <MenuItem Header="21"/>
+                    <MenuItem Header="22"/>
+                    <MenuItem Header="23"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Other things here">
+                <MenuItem Header="eeeeeeeeeeee" />
+            </MenuItem>
+        </Menu>
+        <GroupBox Header="Theme" HorizontalAlignment="Left" Height="84" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="236">
+            <ComboBox SelectedIndex="{Binding ThemeIndex, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" FontSize="16">
+                <ComboBoxItem Content="Light"/>
+                <ComboBoxItem Content="Dark"/>
+            </ComboBox>
+        </GroupBox>
+        <GroupBox Header="GroupBox" HorizontalAlignment="Left" Margin="10,23,0,99" Width="236">
+            <Grid>
+                <Button Content="Button 1" Margin="10,10,10,0" VerticalAlignment="Top" Height="60" FontSize="16"/>
+                <Grid Margin="0,75,0,0" Height="60" VerticalAlignment="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Content="Button 2" Margin="10,0,2,0" VerticalAlignment="Bottom" Height="60" FontSize="16"/>
+                    <Button Content="Button 3" Margin="2,0,10,0" VerticalAlignment="Bottom" Height="60" Grid.Column="1" FontSize="16"/>
+                </Grid>
+                <ProgressBar Value="36" Height="24" Margin="10,140,10,0" VerticalAlignment="Top"/>
+                <RadioButton Content="A radio button here" HorizontalAlignment="Left" Margin="10,169,0,0" VerticalAlignment="Top" Height="20"/>
+                <RadioButton Content="A radio button here" HorizontalAlignment="Left" Margin="10,194,0,0" VerticalAlignment="Top" Height="20"/>
+                <RadioButton Content="A radio button here" HorizontalAlignment="Left" Margin="10,219,0,0" VerticalAlignment="Top" Height="20"/>
+                <RadioButton Content="A radio button here" HorizontalAlignment="Left" Margin="10,244,0,0" VerticalAlignment="Top" Height="20"/>
+                <RadioButton Content="A radio button here" HorizontalAlignment="Left" Margin="10,269,0,0" VerticalAlignment="Top" Height="20"/>
+                <ComboBox HorizontalAlignment="Left" SelectedIndex="2" Margin="10,294,0,0" VerticalAlignment="Top" Width="204">
+                    <TextBlock Text="blocc"/>
+                    <TextBlock Text="tblocc"/>
+                    <ComboBoxItem Content="contentstuff"/>
+                </ComboBox>
+            </Grid>
+        </GroupBox>
+        <GroupBox Margin="251,23,10,10" Header="Yr a noooooooooooe">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="250*"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="500*"/>
+                </Grid.ColumnDefinitions>
+                <GroupBox Margin="10,10,5,10" Header="u wot m8">
+                    <Grid>
+                        <Button Content="Button 1" Margin="10,10,10,0" VerticalAlignment="Top" Height="60" FontSize="16"/>
+                        <Grid Margin="0,75,0,0" Height="60" VerticalAlignment="Top">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Content="Button 2" Margin="10,0,2,0" VerticalAlignment="Bottom" Height="60" FontSize="16"/>
+                            <Button Content="Button 3" Margin="2,0,10,0" VerticalAlignment="Bottom" Height="60" Grid.Column="1" FontSize="16"/>
+                        </Grid>
+                        <CheckBox Content="Check Box 1" HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top" Height="20" Width="140"/>
+                        <CheckBox Content="Check Box 1" HorizontalAlignment="Left" Margin="155,140,0,0" VerticalAlignment="Top" Height="20" Width="139"/>
+                        <Calendar HorizontalAlignment="Left" Margin="10,212,0,0" VerticalAlignment="Top" Height="163"/>
+                        <Expander Header="Expander" HorizontalAlignment="Left" Margin="10,385,0,0" Width="177" Height="98" VerticalAlignment="Top">
+                            <Grid Background="Transparent">
+                                <Button Margin="10" Content="Hello there :))"/>
+                            </Grid>
+                        </Expander>
+                        <TextBlock HorizontalAlignment="Left" Margin="192,217,0,0" Text="A ListView" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
+                        <ListView Margin="192,243,10,171">
+                            <ListViewItem Content="A ListViewItem Here"/>
+                            <ListViewItem Content="A ListViewItem Here"/>
+                            <ListViewItem Content="A ListViewItem Here"/>
+                            <ListViewItem Content="A ListViewItem Here"/>
+                            <ListViewItem Content="A ListViewItem Here"/>
+                            <ListViewItem Content="A ListViewItem Here"/>
+                            <ListViewItem Content="A ListViewItem Here"/>
+                            <ListViewItem Content="A ListViewItem Here"/>
+                            <ListViewItem Content="A ListViewItem Here"/>
+                            <ListViewItem Content="A ListViewItem Here"/>
+                            <ListViewItem Content="A ListViewItem Here"/>
+                            <ListViewItem Content="A ListViewItem Here"/>
+                            <ListViewItem Content="A ListViewItem Here"/>
+                        </ListView>
+                        <ComboBox SelectedIndex="2" Margin="10,0,117,39" IsTextSearchEnabled="True" IsTextSearchCaseSensitive="False" IsEditable="True" VerticalAlignment="Bottom">
+                            <ComboBoxItem Content="osososos"/>
+                            <ComboBoxItem Content="osososos"/>
+                            <ComboBoxItem Content="osososos"/>
+                            <ComboBoxItem Content="osososos"/>
+                            <ComboBoxItem Content="osososos"/>
+                            <ComboBoxItem Content="osososos"/>
+                            <ComboBoxItem Content="osososos"/>
+                            <ComboBoxItem Content="osososos"/>
+                        </ComboBox>
+                        <TextBox Height="24" Margin="10,0,117,10" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Bottom"/>
+                        <ListView Margin="0,0,10,10" Height="133" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="102">
+                            <ListViewItem Content="A ListBoxItem Here"/>
+                            <ListViewItem Content="A ListBoxItem Here"/>
+                            <ListViewItem Content="A ListBoxItem Here"/>
+                            <ListViewItem Content="A ListBoxItem Here"/>
+                            <ListViewItem Content="A ListBoxItem Here"/>
+                            <ListViewItem Content="A ListBoxItem Here"/>
+                            <ListViewItem Content="A ListBoxItem Here"/>
+                            <ListViewItem Content="A ListBoxItem Here"/>
+                            <ListViewItem Content="A ListBoxItem Here"/>
+                            <ListViewItem Content="A ListBoxItem Here"/>
+                            <ListViewItem Content="A ListBoxItem Here"/>
+                            <ListViewItem Content="A ListBoxItem Here"/>
+                            <ListViewItem Content="A ListBoxItem Here"/>
+                        </ListView>
+                        <TextBlock HorizontalAlignment="Left" Margin="192,385,0,0" Text="A ListBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
+                        <CheckBox Content="Check Box 1" HorizontalAlignment="Left" Margin="10,164,0,0" VerticalAlignment="Top" Height="20" Width="140"/>
+                        <CheckBox Content="Check Box 1" HorizontalAlignment="Left" Margin="10,188,0,0" VerticalAlignment="Top" Height="20" Width="140"/>
+                        <CheckBox Content="Check Box 1" HorizontalAlignment="Left" Margin="155,164,0,0" VerticalAlignment="Top" Height="20" Width="139"/>
+                        <CheckBox Content="Check Box 1" HorizontalAlignment="Left" Margin="155,188,0,0" VerticalAlignment="Top" Height="20" Width="139"/>
+                    </Grid>
+                </GroupBox>
+                <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,10"/>
+                <GroupBox Margin="5,10,10,10" Grid.Column="2" Header="owowoowowowowowowow">
+                    <Grid>
+                        <TabControl Margin="10">
+                            <TabItem Header="Sliders">
+                                <Grid>
+                                    <ScrollViewer>
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Text="Slidersssss" Margin="2"/>
+                                            <Slider Margin="2" Value="2"/>
+                                            <Separator Margin="3"/>
+                                            <TextBlock Text="Slidersssss" Margin="2"/>
+                                            <Slider Margin="2"/>
+                                            <Separator Margin="3"/>
+                                            <TextBlock Text="Slidersssss" Margin="2"/>
+                                            <Slider Margin="2"/>
+                                            <Separator Margin="3"/>
+                                            <TextBlock Text="Slidersssss" Margin="2"/>
+                                            <Slider Margin="2"/>
+                                            <Separator Margin="3"/>
+                                            <TextBlock Text="Slidersssss" Margin="2"/>
+                                            <Slider Margin="2"/>
+                                            <Separator Margin="3"/>
+                                            <TextBlock Text="Slidersssss" Margin="2"/>
+                                            <Slider Margin="2"/>
+                                            <Separator Margin="3"/>
+                                            <TextBlock Text="Slidersssss" Margin="2"/>
+                                            <Slider Margin="2"/>
+                                            <Separator Margin="3"/>
+                                            <TextBlock Text="Slidersssss" Margin="2"/>
+                                            <Slider Margin="2"/>
+                                            <Separator Margin="3"/>
+                                            <TextBlock Text="Slidersssss" Margin="2"/>
+                                            <Slider Margin="2"/>
+                                            <Separator Margin="3"/>
+                                            <TextBlock Text="Slidersssss" Margin="2"/>
+                                            <Slider Margin="2"/>
+                                            <Separator Margin="3"/>
+                                            <TextBlock Text="Slidersssss" Margin="2"/>
+                                            <Slider Margin="2"/>
+                                            <Separator Margin="3"/>
+                                            <TextBlock Text="Slidersssss" Margin="2"/>
+                                            <Slider Margin="2"/>
+                                            <Separator Margin="3"/>
+                                        </StackPanel>
+                                    </ScrollViewer>
+                                </Grid>
+                            </TabItem>
+                            <TabItem Header="DataGrid">
+                                <Grid>
+                                    <DataGrid>
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Header="FileName 1" Binding="{Binding FileName}"/>
+                                            <DataGridTextColumn Header="Date Modified 2" Binding="{Binding DateModified}"/>
+                                            <DataGridTextColumn Header="type 3" Binding="{Binding FileType}"/>
+                                            <DataGridTextColumn Header="Size 4" Binding="{Binding FileSize}"/>
+                                        </DataGrid.Columns>
+                                        <viewmodels:DataGridItemFileExplorerSortOf FileName="heheh" FileType="Folder" FileSize="40000 TB"/>
+                                        <!-- ItemsSource="{Binding DataGridItems, UpdateSourceTrigger=PropertyChanged}" -->
+                                    </DataGrid>
+                                </Grid>
+                            </TabItem>
+                            <TabItem Header="????">
+                                <Grid/>
+                            </TabItem>
+                            <TabItem Header="????">
+                                <Grid/>
+                            </TabItem>
+                        </TabControl>
+
+                    </Grid>
+                </GroupBox>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
