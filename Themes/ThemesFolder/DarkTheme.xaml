@@ -952,6 +952,7 @@
                                 <Condition Binding="{Binding IsSelected, RelativeSource={RelativeSource Self}}" Value="true"/>
                                 <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource AncestorType={x:Type TabControl}}}" Value="Left"/>
                             </MultiDataTrigger.Conditions>
+                            <Setter Property="Background" Value="{StaticResource ControlSelectedBackground}"/>
                             <Setter Property="Panel.ZIndex" Value="1"/>
                             <Setter Property="Margin" Value="-2,-2,0,-2"/>
                             <Setter Property="Opacity" TargetName="innerBorder" Value="1"/>
@@ -971,6 +972,7 @@
                                 <Condition Binding="{Binding IsSelected, RelativeSource={RelativeSource Self}}" Value="true"/>
                                 <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource AncestorType={x:Type TabControl}}}" Value="Bottom"/>
                             </MultiDataTrigger.Conditions>
+                            <Setter Property="Background" Value="{StaticResource ControlSelectedBackground}"/>
                             <Setter Property="Panel.ZIndex" Value="1"/>
                             <Setter Property="Margin" Value="-2,0,-2,-2"/>
                             <Setter Property="Opacity" TargetName="innerBorder" Value="1"/>
@@ -990,6 +992,7 @@
                                 <Condition Binding="{Binding IsSelected, RelativeSource={RelativeSource Self}}" Value="true"/>
                                 <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource AncestorType={x:Type TabControl}}}" Value="Right"/>
                             </MultiDataTrigger.Conditions>
+                            <Setter Property="Background" Value="{StaticResource ControlSelectedBackground}"/>
                             <Setter Property="Panel.ZIndex" Value="1"/>
                             <Setter Property="Margin" Value="0,-2,-2,-2"/>
                             <Setter Property="Opacity" TargetName="innerBorder" Value="1"/>
@@ -1009,6 +1012,7 @@
                                 <Condition Binding="{Binding IsSelected, RelativeSource={RelativeSource Self}}" Value="true"/>
                                 <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource AncestorType={x:Type TabControl}}}" Value="Top"/>
                             </MultiDataTrigger.Conditions>
+                            <Setter Property="Background" Value="{StaticResource ControlSelectedBackground}"/>
                             <Setter Property="Panel.ZIndex" Value="1"/>
                             <Setter Property="Margin" Value="0,-2,-3,0"/>
                             <Setter Property="Opacity" TargetName="innerBorder" Value="1"/>
@@ -1135,6 +1139,7 @@
                     <Condition Binding="{Binding IsSelected, RelativeSource={RelativeSource Self}}" Value="true"/>
                     <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource AncestorType={x:Type TabControl}}}" Value="Left"/>
                 </MultiDataTrigger.Conditions>
+                <Setter Property="Background" Value="{StaticResource ControlSelectedBackground}"/>
                 <Setter Property="Panel.ZIndex" Value="1"/>
                 <Setter Property="Margin" Value="-2,-2,0,-2"/>
                 <Setter Property="Opacity" TargetName="innerBorder" Value="1"/>
@@ -1154,6 +1159,7 @@
                     <Condition Binding="{Binding IsSelected, RelativeSource={RelativeSource Self}}" Value="true"/>
                     <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource AncestorType={x:Type TabControl}}}" Value="Bottom"/>
                 </MultiDataTrigger.Conditions>
+                <Setter Property="Background" Value="{StaticResource ControlSelectedBackground}"/>
                 <Setter Property="Panel.ZIndex" Value="1"/>
                 <Setter Property="Margin" Value="-2,0,-2,-2"/>
                 <Setter Property="Opacity" TargetName="innerBorder" Value="1"/>
@@ -1173,6 +1179,7 @@
                     <Condition Binding="{Binding IsSelected, RelativeSource={RelativeSource Self}}" Value="true"/>
                     <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource AncestorType={x:Type TabControl}}}" Value="Right"/>
                 </MultiDataTrigger.Conditions>
+                <Setter Property="Background" Value="{StaticResource ControlSelectedBackground}"/>
                 <Setter Property="Panel.ZIndex" Value="1"/>
                 <Setter Property="Margin" Value="0,-2,-2,-2"/>
                 <Setter Property="Opacity" TargetName="innerBorder" Value="1"/>
@@ -1192,6 +1199,7 @@
                     <Condition Binding="{Binding IsSelected, RelativeSource={RelativeSource Self}}" Value="true"/>
                     <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource AncestorType={x:Type TabControl}}}" Value="Top"/>
                 </MultiDataTrigger.Conditions>
+                <Setter Property="Background" Value="{StaticResource ControlSelectedBackground}"/>
                 <Setter Property="Panel.ZIndex" Value="1"/>
                 <Setter Property="Margin" Value="0,-2,-3,0"/>
                 <Setter Property="Opacity" TargetName="innerBorder" Value="1"/>
