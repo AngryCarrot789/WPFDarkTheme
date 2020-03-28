@@ -2563,6 +2563,7 @@
                             <Setter Property="BorderBrush" TargetName="templateRoot" Value="{StaticResource ControlDefaultBorderBrush}"/>
                             <Setter Property="Background" TargetName="splitBorder" Value="{StaticResource ControlDefaultBackground}"/>
                             <Setter Property="BorderBrush" TargetName="splitBorder" Value="{StaticResource ControlDefaultBorderBrush}"/>
+                            <Setter Property="Foreground" Value="{StaticResource ControlDefaultForeground}"/>
                         </MultiDataTrigger>
                         <Trigger Property="IsMouseOver" Value="true">
                             <Setter Property="Fill" TargetName="arrow" Value="{StaticResource ControlMouseOverGlythColour}"/>
@@ -2584,6 +2585,7 @@
                             <Setter Property="BorderBrush" TargetName="templateRoot" Value="{StaticResource ControlDefaultBorderBrush}"/>
                             <Setter Property="Background" TargetName="splitBorder" Value="{StaticResource ControlDefaultBackground}"/>
                             <Setter Property="BorderBrush" TargetName="splitBorder" Value="{StaticResource ControlDefaultBorderBrush}"/>
+                            <Setter Property="Foreground" Value="{StaticResource ControlDefaultForeground}"/>
                         </MultiDataTrigger>
                         <Trigger Property="IsPressed" Value="true">
                             <Setter Property="Fill" TargetName="arrow" Value="{StaticResource ControlSelectedGlythColour}"/>
@@ -2605,6 +2607,7 @@
                             <Setter Property="BorderBrush" TargetName="templateRoot" Value="{StaticResource ControlDefaultBorderBrush}"/>
                             <Setter Property="Background" TargetName="splitBorder" Value="{StaticResource ControlDefaultBackground}"/>
                             <Setter Property="BorderBrush" TargetName="splitBorder" Value="{StaticResource ControlDefaultBorderBrush}"/>
+                            <Setter Property="Foreground" Value="{StaticResource ControlDefaultForeground}"/>
                         </MultiDataTrigger>
                         <Trigger Property="IsEnabled" Value="false">
                             <Setter Property="Fill" TargetName="arrow" Value="{StaticResource ControlDisabledGlythColour}"/>
@@ -2626,6 +2629,7 @@
                             <Setter Property="BorderBrush" TargetName="templateRoot" Value="{StaticResource ControlDisabledBorderBrush}"/>
                             <Setter Property="Background" TargetName="splitBorder" Value="{StaticResource ControlDisabledBackground}"/>
                             <Setter Property="BorderBrush" TargetName="splitBorder" Value="{StaticResource ControlDisabledBorderBrush}"/>
+                            <Setter Property="Foreground" Value="{StaticResource ControlDefaultForeground}"/>
                         </MultiDataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -2701,6 +2705,8 @@
         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
         <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
         <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+        <Setter Property="Foreground" Value="{StaticResource ControlDefaultForeground}"/>
+        <Setter Property="CaretBrush" Value="{StaticResource ControlGlythColour}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">
