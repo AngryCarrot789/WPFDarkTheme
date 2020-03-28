@@ -7,6 +7,32 @@
         xmlns:viewmodels="clr-namespace:Themes.ViewModels"
         mc:Ignorable="d" Title="EEEEEEEEEEEEEEEEEEEEE (themes program)"
         Height="720" Width="1280" FontSize="16" Style="{DynamicResource CustomWindowStyle}" WindowStyle="SingleBorderWindow">
+    <Window.Resources>
+        <!-- MainComboBoxStyle -->
+
+        <Style TargetType="{x:Type ComboBox}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource ControlDefaultBackground}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource ControlDefaultBorderBrush}"/>
+            <Setter Property="Foreground" Value="{StaticResource ControlDefaultForeground}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="Padding" Value="6,3,5,3"/>
+            <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+            <Setter Property="ScrollViewer.PanningMode" Value="Both"/>
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+            <Setter Property="Template" Value="{StaticResource ComboBoxTemplate}"/>
+            <Style.Triggers>
+                <Trigger Property="IsEditable" Value="true">
+                    <Setter Property="IsTabStop" Value="false"/>
+                    <Setter Property="Padding" Value="2"/>
+                    <Setter Property="Template" Value="{StaticResource ComboBoxEditableTemplate}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+    </Window.Resources>
     <Window.DataContext>
         <viewmodels:MainViewModel/>
     </Window.DataContext>
@@ -69,6 +95,16 @@
                 <RadioButton Content="A radio button here" HorizontalAlignment="Left" Margin="10,244,0,0" VerticalAlignment="Top" Height="20"/>
                 <RadioButton Content="A radio button here" HorizontalAlignment="Left" Margin="10,269,0,0" VerticalAlignment="Top" Height="20"/>
                 <ComboBox HorizontalAlignment="Left" SelectedIndex="2" Margin="10,294,0,0" VerticalAlignment="Top" Width="204">
+                    <TextBlock Text="blocc"/>
+                    <TextBlock Text="tblocc"/>
+                    <ComboBoxItem Content="contentstuff"/>
+                </ComboBox>
+                <ComboBox HorizontalAlignment="Left" IsEditable="True" SelectedIndex="2" Margin="10,326,0,0" VerticalAlignment="Top" Width="204">
+                    <TextBlock Text="blocc"/>
+                    <TextBlock Text="tblocc"/>
+                    <ComboBoxItem Content="contentstuff"/>
+                </ComboBox>
+                <ComboBox HorizontalAlignment="Left" IsEditable="True" SelectedIndex="2" Margin="10,358,0,0" VerticalAlignment="Top" Width="204">
                     <TextBlock Text="blocc"/>
                     <TextBlock Text="tblocc"/>
                     <ComboBoxItem Content="contentstuff"/>
