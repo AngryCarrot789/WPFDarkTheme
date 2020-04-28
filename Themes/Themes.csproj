@@ -58,6 +58,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ThemesFolder\DarkTheme.xaml.cs">
+      <DependentUpon>DarkTheme.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ThemesFolder\LightTheme.xaml.cs">
+      <DependentUpon>LightTheme.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Utilities\BaseViewModel.cs" />
     <Compile Include="Utilities\Command.cs" />
     <Compile Include="Utilities\CommandParam.cs" />
@@ -111,8 +117,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\closeWindow.png" />
+    <Resource Include="Resources\closeWindowBlack.png" />
     <Resource Include="Resources\maximizeRestoreWindow.png" />
+    <Resource Include="Resources\maximizeRestoreWindowBlack.png" />
     <Resource Include="Resources\minimizeWindow.png" />
+    <Resource Include="Resources\minimizeWindowBlack.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

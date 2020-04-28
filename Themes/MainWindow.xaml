@@ -7,38 +7,12 @@
         xmlns:viewmodels="clr-namespace:Themes.ViewModels"
         mc:Ignorable="d" Title="EEEEEEEEEEEEEEEEEEEEE (themes program)"
         Height="720" Width="1280" FontSize="16" Style="{DynamicResource CustomWindowStyle}" WindowStyle="SingleBorderWindow">
-    <Window.Resources>
-        <!-- MainComboBoxStyle -->
-
-        <Style TargetType="{x:Type ComboBox}">
-            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
-            <Setter Property="Background" Value="{StaticResource ControlDefaultBackground}"/>
-            <Setter Property="BorderBrush" Value="{StaticResource ControlDefaultBorderBrush}"/>
-            <Setter Property="Foreground" Value="{StaticResource ControlDefaultForeground}"/>
-            <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
-            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
-            <Setter Property="Padding" Value="6,3,5,3"/>
-            <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
-            <Setter Property="ScrollViewer.PanningMode" Value="Both"/>
-            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
-            <Setter Property="Template" Value="{StaticResource ComboBoxTemplate}"/>
-            <Style.Triggers>
-                <Trigger Property="IsEditable" Value="true">
-                    <Setter Property="IsTabStop" Value="false"/>
-                    <Setter Property="Padding" Value="2"/>
-                    <Setter Property="Template" Value="{StaticResource ComboBoxEditableTemplate}"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-
-    </Window.Resources>
     <Window.DataContext>
         <viewmodels:MainViewModel/>
     </Window.DataContext>
     <Grid>
         <Menu VerticalAlignment="Top">
-            <MenuItem Header="File" Foreground="White">
+            <MenuItem Header="File">
                 <MenuItem Header="Save" Template="{DynamicResource DropDownMenuItemTemplate}"/>
                 <MenuItem Header="Save" Template="{DynamicResource DropDownMenuItemTemplate}"/>
                 <MenuItem Header="Save" Template="{DynamicResource DropDownMenuItemTemplate}"/>
@@ -71,13 +45,13 @@
                 <MenuItem Header="eeeeeeeeeeee" />
             </MenuItem>
         </Menu>
-        <GroupBox Header="Theme" HorizontalAlignment="Left" Height="84" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="236">
-            <ComboBox SelectedIndex="{Binding ThemeIndex, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" FontSize="16">
+        <GroupBox Header="Theme" HorizontalAlignment="Left" Height="70" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="236">
+            <ComboBox SelectedIndex="{Binding ThemeIndex, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Stretch" FontSize="16">
                 <ComboBoxItem Content="Light"/>
                 <ComboBoxItem Content="Dark"/>
             </ComboBox>
         </GroupBox>
-        <GroupBox Header="GroupBox" HorizontalAlignment="Left" Margin="10,23,0,99" Width="236">
+        <GroupBox Header="GroupBox" HorizontalAlignment="Left" Margin="10,23,0,85" Width="236">
             <Grid>
                 <Button Content="Button 1" Margin="10,10,10,0" VerticalAlignment="Top" Height="60" FontSize="16"/>
                 <Grid Margin="0,75,0,0" Height="60" VerticalAlignment="Top">
@@ -138,7 +112,7 @@
                             </Grid>
                         </Expander>
                         <TextBlock HorizontalAlignment="Left" Margin="192,217,0,0" Text="A ListView" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
-                        <ListView Margin="192,243,10,171">
+                        <ListView Margin="192,243,10,0" Height="108" VerticalAlignment="Top">
                             <ListViewItem Content="A ListViewItem Here"/>
                             <ListViewItem Content="A ListViewItem Here"/>
                             <ListViewItem Content="A ListViewItem Here"/>
@@ -179,7 +153,7 @@
                             <ListViewItem Content="A ListBoxItem Here"/>
                             <ListViewItem Content="A ListBoxItem Here"/>
                         </ListView>
-                        <TextBlock HorizontalAlignment="Left" Margin="192,385,0,0" Text="A ListBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="192,356,0,0" Text="A ListBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
                         <CheckBox Content="Check Box 1" HorizontalAlignment="Left" Margin="10,164,0,0" VerticalAlignment="Top" Height="20" Width="140"/>
                         <CheckBox Content="Check Box 1" HorizontalAlignment="Left" Margin="10,188,0,0" VerticalAlignment="Top" Height="20" Width="140"/>
                         <CheckBox Content="Check Box 1" HorizontalAlignment="Left" Margin="155,164,0,0" VerticalAlignment="Top" Height="20" Width="139"/>
@@ -189,7 +163,7 @@
                 <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,10"/>
                 <GroupBox Margin="5,10,10,10" Grid.Column="2" Header="owowoowowowowowowow">
                     <Grid>
-                        <TabControl Margin="10">
+                        <TabControl SelectedIndex="2" Margin="10">
                             <TabItem Header="Sliders">
                                 <Grid>
                                     <ScrollViewer>
@@ -249,7 +223,28 @@
                                 </Grid>
                             </TabItem>
                             <TabItem Header="????">
-                                <Grid/>
+                                <Grid>
+                                    <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
+                                    <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="80,2,0,0" VerticalAlignment="Top"/>
+                                    <Label Content="Label" HorizontalAlignment="Left" Margin="168,0,0,0" VerticalAlignment="Top"/>
+                                    <ListBox Margin="0,0,506,359" Height="81" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="102">
+                                        <ListBoxItem Content="A ListBoxItem Here"/>
+                                        <ListBoxItem Content="A ListBoxItem Here"/>
+                                        <ListBoxItem Content="A ListBoxItem Here"/>
+                                        <ListBoxItem Content="A ListBoxItem Here"/>
+                                    </ListBox>
+                                    <ListView Margin="0,0,506,278" Height="81" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="102">
+                                        <ListViewItem Content="A ListViewItem Here"/>
+                                        <ListViewItem Content="A ListViewItem Here"/>
+                                        <ListViewItem Content="A ListViewItem Here"/>
+                                        <ListViewItem Content="A ListViewItem Here"/>
+                                    </ListView>
+                                    <Calendar HorizontalAlignment="Left" Margin="102,31,0,0" VerticalAlignment="Top"/>
+                                    <ComboBox HorizontalAlignment="Left" Margin="284,4,0,0" VerticalAlignment="Top" Width="120"/>
+                                    <DatePicker HorizontalAlignment="Left" Margin="284,36,0,0" VerticalAlignment="Top" Width="175"/>
+                                    <DocumentViewer HorizontalAlignment="Left" Margin="284,65,0,0" VerticalAlignment="Top" Height="267" Width="174"/>
+                                    <PasswordBox HorizontalAlignment="Left" Margin="10,202,0,0" VerticalAlignment="Top" Width="144"/>
+                                </Grid>
                             </TabItem>
                             <TabItem Header="????">
                                 <Grid/>
