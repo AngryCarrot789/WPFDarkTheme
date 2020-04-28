@@ -239,10 +239,8 @@
                                         <ListViewItem Content="A ListViewItem Here"/>
                                         <ListViewItem Content="A ListViewItem Here"/>
                                     </ListView>
-                                    <Calendar HorizontalAlignment="Left" Margin="102,31,0,0" VerticalAlignment="Top"/>
-                                    <ComboBox HorizontalAlignment="Left" Margin="284,4,0,0" VerticalAlignment="Top" Width="120"/>
-                                    <DatePicker HorizontalAlignment="Left" Margin="284,36,0,0" VerticalAlignment="Top" Width="175"/>
-                                    <DocumentViewer HorizontalAlignment="Left" Margin="284,65,0,0" VerticalAlignment="Top" Height="267" Width="174"/>
+                                    <Calendar HorizontalAlignment="Right" Margin="0,31,329,0" VerticalAlignment="Top"/>
+                                    <DocumentViewer Margin="10,0,10,11" VerticalAlignment="Bottom" Height="224"/>
                                     <PasswordBox HorizontalAlignment="Left" Margin="10,202,0,0" VerticalAlignment="Top" Width="144"/>
                                 </Grid>
                             </TabItem>
