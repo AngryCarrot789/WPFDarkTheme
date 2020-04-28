@@ -34,7 +34,8 @@ namespace Themes
 
         public static void SetTheme(Theme theme)
         {
-            CurrentApp.SetTheme(theme);
+            if (CurrentApp != null)
+                CurrentApp.SetTheme(theme);
         }
 
         public void CloseWindow()

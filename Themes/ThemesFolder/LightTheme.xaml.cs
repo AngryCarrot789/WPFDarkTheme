@@ -2,7 +2,7 @@
 
 namespace Themes
 {
-    public partial class DarkTheme
+    public partial class LightTheme
     {
         private void CloseWindow_Event(object sender, RoutedEventArgs e)
         {
