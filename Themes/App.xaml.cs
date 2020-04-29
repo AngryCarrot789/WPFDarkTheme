@@ -23,17 +23,25 @@ namespace Themes
 
         public void SetTheme(Theme theme)
         {
-            string themeName = null;
-            switch (theme)
+            try
             {
-                case Theme.Dark: themeName = "DarkTheme"; break;
-                case Theme.Light: themeName = "LightTheme"; break;
-            }
+                string themeName = null;
+                switch (theme)
+                {
+                    case Theme.Dark: themeName = "DarkTheme"; break;
+                    case Theme.Light: themeName = "LightTheme"; break;
+                }
 
-            if (!string.IsNullOrEmpty(themeName))
-            {
-                this.Resources.MergedDictionaries[0].Source = new Uri($"/ThemesFolder/{themeName}.xaml", UriKind.Relative);
+                if (!string.IsNullOrEmpty(themeName))
+                {
+                    try
+                    {
+                        this.Resources.MergedDictionaries[0].Source = new Uri($"/ThemesFolder/{themeName}.xaml", UriKind.Relative);
+                    }
+                    catch { }
+                }
             }
+            catch { }
         }
     }
 }
