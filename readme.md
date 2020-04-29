@@ -22,9 +22,7 @@ and thats about it. Enjoy :)
 - And finally improved the RadioBoxes by giving them a more circular shape, like they normally have.
 
 Here's a preview of the latest update:
-![](latestUpdate3.png)
-# Errors and 'todo' stuff
-An error if you add a "Light/Dark" option thingy, and use Menus/MenuItems; in the test program thing, selecting the light theme just unloads DarkTheme.xaml, which makes WPF style everything to their default styles. But because i said that MenuItems need to have a special template, well WPF will try to look for that template and wont find it. As a result, the MenuItems will all turn into tiny squares because WPF has nothing to style them with. idk how to fix that unfortunately. rip.
+![](latestUpdate4.png)
 # How to use MenuItems properly (sort of)
 MenuItems are relatively challenging to auto-style, so they require just a tiny bit of effort to give them the dark theme. MenuItems use a POPUP thingy which is quite difficult to get to work sometimes. But i think i did okay tbh. but i haven't managed to put the little arrow which shows when the MenuItem has children MenuItems.
 this is the code for making a fully themed menu:
@@ -46,7 +44,7 @@ I added 2 different templates for tabcontrols and tabitem; normal ones and ones 
 public ICommand NewTabCommand { get; set; }
 public ICommand CloseTabCommand { get; set; }
 ```
-You can change these in the DarkTheme.xaml file. These commands automatically bind when the datacontext is set. How you setup clicking Add or Close to do something is up to you.
+You can change these in the DarkTheme.xaml file. These commands automatically bind when the datacontext is set. How you setup clicking Add or Close to do something is up to you, but i use a custom class i made called Command which is included.
 For giving tabcontrols/tabitems the add/close buttons, use these templates:
 ```
 Template="{DynamicResource CloseButtons}" 
