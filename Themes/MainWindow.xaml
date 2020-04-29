@@ -225,23 +225,22 @@
                             <TabItem Header="????">
                                 <Grid>
                                     <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
-                                    <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="80,2,0,0" VerticalAlignment="Top"/>
-                                    <Label Content="Label" HorizontalAlignment="Left" Margin="168,0,0,0" VerticalAlignment="Top"/>
-                                    <ListBox Margin="0,0,506,359" Height="81" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="102">
+                                    <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="80,3,0,0" VerticalAlignment="Top"/>
+                                    <Label Content="Label" HorizontalAlignment="Left" Margin="174,0,0,0" VerticalAlignment="Top"/>
+                                    <ListBox Margin="10,45,0,0" Height="81" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150">
                                         <ListBoxItem Content="A ListBoxItem Here"/>
                                         <ListBoxItem Content="A ListBoxItem Here"/>
                                         <ListBoxItem Content="A ListBoxItem Here"/>
                                         <ListBoxItem Content="A ListBoxItem Here"/>
                                     </ListBox>
-                                    <ListView Margin="0,0,506,278" Height="81" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="102">
+                                    <ListView Margin="10,131,0,0" Height="86" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150">
                                         <ListViewItem Content="A ListViewItem Here"/>
                                         <ListViewItem Content="A ListViewItem Here"/>
                                         <ListViewItem Content="A ListViewItem Here"/>
                                         <ListViewItem Content="A ListViewItem Here"/>
                                     </ListView>
-                                    <Calendar HorizontalAlignment="Right" Margin="0,31,329,0" VerticalAlignment="Top"/>
-                                    <DocumentViewer Margin="10,0,10,11" VerticalAlignment="Bottom" Height="224"/>
-                                    <PasswordBox HorizontalAlignment="Left" Margin="10,202,0,0" VerticalAlignment="Top" Width="144"/>
+                                    <Calendar HorizontalAlignment="Right" Margin="0,45,268,0" VerticalAlignment="Top"/>
+                                    <PasswordBox HorizontalAlignment="Left" Margin="10,222,0,0" VerticalAlignment="Top" Width="150"/>
                                 </Grid>
                             </TabItem>
                             <TabItem Header="????">

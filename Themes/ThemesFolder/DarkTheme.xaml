@@ -3,11 +3,12 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2" 
                     xmlns:Documents="clr-namespace:System.Windows.Documents;assembly=PresentationUI">
-    <SolidColorBrush x:Key="TransparentBrush" Color="Transparent"/>
+    <!-- Window Colours. Background, Border and TitleBar colours. -->
     <SolidColorBrush x:Key="BackgroundColour"  Color="#FF191919" />
-    <SolidColorBrush x:Key="WindowBorderColour"  Color="#FF202020" />
-    <SolidColorBrush x:Key="WindowTitleColour"  Color="#FF1D1D1D" />
+    <SolidColorBrush x:Key="WindowBorderColour"  Color="#FF2A2A2A" />
+    <SolidColorBrush x:Key="WindowTitleColour"  Color="#FF242424" />
 
+    <!-- Control colour themes. dont mess with em okay unless youre good at styles -->
     <SolidColorBrush x:Key="ContainerBackground" Color="#FF202020"/>
     <SolidColorBrush x:Key="ContainerBorder" Color="#FF232323"/>
 
@@ -63,7 +64,7 @@
     <SolidColorBrush x:Key="ControlMouseOverPrimaryColourBorderBrush"   Color="#FF4673C8"/>
     <SolidColorBrush x:Key="ControlMouseOverSecondaryColourBorderBrush" Color="#FFE68C2D"/>
     <SolidColorBrush x:Key="ControlMouseOverTertiaryColourBorderBrush"  Color="#FF8C19FF"/>
-    <!--Menu style. automatically does stuff so no need to use template things. -->
+    <SolidColorBrush x:Key="TransparentBrush" Color="Transparent"/>
 
     <ControlTemplate x:Key="ContextmenuStyle" TargetType="{x:Type ContextMenu}">
         <Border x:Name="Border" Background="{TemplateBinding Background}" BorderThickness="1">
@@ -2018,7 +2019,7 @@
     </Style>
 
     <Style x:Key="CustomWindowStyle" TargetType="{x:Type Window}">
-        <Setter Property="BorderBrush" Value="{StaticResource ContainerBorder}" />
+        <Setter Property="BorderBrush" Value="{StaticResource WindowBorderColour}" />
         <Setter Property="Background" Value="{StaticResource BackgroundColour}" />
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="ResizeMode" Value="CanResizeWithGrip"/>
@@ -2044,7 +2045,7 @@
                                     <ContentPresenter />
                                 </AdornerDecorator>
                                 <Grid Height="30" x:Name="titlebar"
-                                      Background="{TemplateBinding BorderBrush}"
+                                      Background="{StaticResource WindowTitleColour}"
                                       VerticalAlignment="Top" Margin="0">
                                     <DockPanel Margin="0,0,130,0">
                                         <Image HorizontalAlignment="Left" VerticalAlignment="Top" Margin="4,4,0,0" Source="{Binding Icon, RelativeSource={RelativeSource TemplatedParent}}" Height="24"  />
@@ -2065,7 +2066,7 @@
                                                 VerticalContentAlignment="Bottom"
                                                 WindowChrome.IsHitTestVisibleInChrome="True" 
                                                 Click="Minimize_Event">
-                                            <Image Source="/Resources/minimizeWindow.png" Margin="7"/>
+                                            <Rectangle Width="10" VerticalAlignment="Center" Margin="1 1 0 0" Stroke="{StaticResource ControlGlythColour}" StrokeThickness="2"/>
                                         </Button>
 
                                         <Button x:Name="btnRestore"
@@ -2074,16 +2075,22 @@
                                                 Width="40"
                                                 WindowChrome.IsHitTestVisibleInChrome="True" 
                                                 Click="AutoMinimize_Event">
-                                            <Image Source="/Resources/maximizeRestoreWindow.png" Margin="7"/>
+                                            <Grid Width="12" Height="12">
+                                                <Rectangle StrokeThickness="2" Stroke="{StaticResource ControlGlythColour}" Margin="3,0,0,3"/>
+                                                <Rectangle StrokeThickness="2" Fill="{TemplateBinding BorderBrush}" Stroke="{StaticResource ControlGlythColour}" Margin="0 3 3 0"/>
+                                            </Grid>
                                         </Button>
                                         <Button x:Name="btnClose"
                                                 Background="Transparent"
                                                 BorderBrush="Transparent"
                                                 Template="{DynamicResource CloseWindowButton}"
-                                                Width="50"
+                                                Width="40"
                                                 WindowChrome.IsHitTestVisibleInChrome="True" 
                                                 Click="CloseWindow_Event">
-                                            <Image Source="/Resources/closeWindow.png" Margin="7"/>
+                                            <Grid Margin="0 1 0 0">
+                                                <Line X1="0" Y1="0" X2="11" Y2="11" Stroke="{StaticResource ControlGlythColour}" StrokeThickness="2" />
+                                                <Line X1="0" Y2="0" Y1="11" X2="11" Stroke="{StaticResource ControlGlythColour}" StrokeThickness="2" />
+                                            </Grid>
                                         </Button>
                                     </StackPanel>
                                 </Grid>
@@ -3421,49 +3428,5 @@
                 <Setter Property="SelectionBrush" Value="{StaticResource ControlDisabledGlythColour}"/>
             </MultiTrigger>
         </Style.Triggers>
-    </Style>
-
-    <Style TargetType="{x:Type DocumentViewer}">
-        <Setter Property="Foreground" Value="{StaticResource ControlDefaultForeground}"/>
-        <Setter Property="Background" Value="{StaticResource ControlDefaultBackground}"/>
-        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-        <Setter Property="ContextMenu" Value="{DynamicResource {ComponentResourceKey ResourceId=PUIDocumentViewerContextMenu, TypeInTargetAssembly={x:Type Documents:PresentationUIStyleResources}}}"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type DocumentViewer}">
-                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Focusable="False">
-                        <Grid Background="{TemplateBinding Background}" KeyboardNavigation.TabNavigation="Local">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="Auto"/>
-                            </Grid.RowDefinitions>
-                            <ContentControl Grid.Column="0" Focusable="{TemplateBinding Focusable}" Grid.Row="0" Style="{DynamicResource {ComponentResourceKey ResourceId=PUIDocumentViewerToolBarStyleKey, TypeInTargetAssembly={x:Type Documents:PresentationUIStyleResources}}}" TabIndex="0"/>
-                            <ScrollViewer x:Name="PART_ContentHost" CanContentScroll="true" Grid.Column="0" Focusable="{TemplateBinding Focusable}" HorizontalScrollBarVisibility="Auto" IsTabStop="true" Grid.Row="1" TabIndex="1"/>
-                            <DockPanel Grid.Row="1">
-                                <FrameworkElement DockPanel.Dock="Right" Width="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}"/>
-                                <Rectangle Height="10" Visibility="Visible" VerticalAlignment="top">
-                                    <Rectangle.Fill>
-                                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                                            <LinearGradientBrush.GradientStops>
-                                                <GradientStopCollection>
-                                                    <GradientStop Color="#66000000" Offset="0"/>
-                                                    <GradientStop Color="Transparent" Offset="1"/>
-                                                </GradientStopCollection>
-                                            </LinearGradientBrush.GradientStops>
-                                        </LinearGradientBrush>
-                                    </Rectangle.Fill>
-                                </Rectangle>
-                            </DockPanel>
-                            <!-- idk how to style this xdddd -->
-                            <ContentControl x:Name="PART_FindToolBarHost" Grid.Column="0" Focusable="{TemplateBinding Focusable}" Grid.Row="2" TabIndex="2"/>
-                        </Grid>
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
     </Style>
 </ResourceDictionary>
