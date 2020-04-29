@@ -138,21 +138,21 @@
                             <ComboBoxItem Content="osososos"/>
                         </ComboBox>
                         <TextBox Height="24" Margin="10,0,117,10" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Bottom"/>
-                        <ListView Margin="0,0,10,10" Height="133" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="102">
-                            <ListViewItem Content="A ListBoxItem Here"/>
-                            <ListViewItem Content="A ListBoxItem Here"/>
-                            <ListViewItem Content="A ListBoxItem Here"/>
-                            <ListViewItem Content="A ListBoxItem Here"/>
-                            <ListViewItem Content="A ListBoxItem Here"/>
-                            <ListViewItem Content="A ListBoxItem Here"/>
-                            <ListViewItem Content="A ListBoxItem Here"/>
-                            <ListViewItem Content="A ListBoxItem Here"/>
-                            <ListViewItem Content="A ListBoxItem Here"/>
-                            <ListViewItem Content="A ListBoxItem Here"/>
-                            <ListViewItem Content="A ListBoxItem Here"/>
-                            <ListViewItem Content="A ListBoxItem Here"/>
-                            <ListViewItem Content="A ListBoxItem Here"/>
-                        </ListView>
+                        <ListBox Margin="0,0,10,10" Height="133" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="102">
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                        </ListBox>
                         <TextBlock HorizontalAlignment="Left" Margin="192,356,0,0" Text="A ListBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
                         <CheckBox Content="Check Box 1" HorizontalAlignment="Left" Margin="10,164,0,0" VerticalAlignment="Top" Height="20" Width="140"/>
                         <CheckBox Content="Check Box 1" HorizontalAlignment="Left" Margin="10,188,0,0" VerticalAlignment="Top" Height="20" Width="140"/>
