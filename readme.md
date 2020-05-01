@@ -22,7 +22,7 @@ and thats about it. Enjoy :)
 - And finally improved the RadioBoxes by giving them a more circular shape, like they normally have.
 
 Here's a preview of the latest update:
-![](latestUpdate4.png)
+![](latestUpdate5.png)
 # How to use MenuItems properly (sort of)
 MenuItems are relatively challenging to auto-style, so they require just a tiny bit of effort to give them the dark theme. MenuItems use a POPUP thingy which is quite difficult to get to work sometimes. But i think i did okay tbh. but i haven't managed to put the little arrow which shows when the MenuItem has children MenuItems.
 this is the code for making a fully themed menu:
