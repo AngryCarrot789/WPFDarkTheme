@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Themes.ViewModels;
 
 namespace Themes
 {
@@ -20,7 +21,7 @@ namespace Themes
     /// </summary>
     public partial class MainWindow : Window
     {
-        private static App CurrentApp;
+        private App CurrentApp;
         public enum Theme
         {
             Dark, Light
@@ -28,44 +29,16 @@ namespace Themes
         public MainWindow(App currApp)
         {
             InitializeComponent();
+            MainViewModel mainViewModel = new MainViewModel(this);
+            DataContext = mainViewModel;
             CurrentApp = currApp;
-            //SetTheme(Theme.Light);
+            SetTheme(Theme.Dark);
         }
 
-        public static void SetTheme(Theme theme)
+        public void SetTheme(Theme theme)
         {
             if (CurrentApp != null)
                 CurrentApp.SetTheme(theme);
-        }
-
-        public void CloseWindow()
-        {
-            //WindowStyle = WindowStyle.SingleBorderWindow;
-            this.Close();
-        }
-
-        public void MaximizeRestore()
-        {
-            //WindowChrome chrome = WindowChrome.GetWindowChrome(this);
-            //chrome.ResizeBorderThickness = new Thickness(10, 10, 10, 10);
-            if (this.WindowState == WindowState.Maximized)
-            {
-                //WindowStyle = WindowStyle.SingleBorderWindow;
-                WindowState = WindowState.Normal;
-                //WindowStyle = WindowStyle.None;
-            }
-            else if (WindowState == WindowState.Normal)
-            {
-                //WindowStyle = WindowStyle.SingleBorderWindow;
-                WindowState = WindowState.Maximized;
-                //WindowStyle = WindowStyle.None;
-            }
-        }
-
-        public void Minimize()
-        {
-            //WindowStyle = WindowStyle.SingleBorderWindow;
-            this.WindowState = WindowState.Minimized;
         }
     }
 }

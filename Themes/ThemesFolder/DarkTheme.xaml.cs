@@ -7,17 +7,17 @@ namespace Themes
         private void CloseWindow_Event(object sender, RoutedEventArgs e)
         {
             if (e.Source != null)
-                CloseWind(Window.GetWindow((FrameworkElement)e.Source));
+                try { CloseWind(Window.GetWindow((FrameworkElement)e.Source)); } catch { }
         }
         private void AutoMinimize_Event(object sender, RoutedEventArgs e)
         {
             if (e.Source != null)
-                MaximizeRestore(Window.GetWindow((FrameworkElement)e.Source));
+                try { MaximizeRestore(Window.GetWindow((FrameworkElement)e.Source)); } catch { }
         }
         private void Minimize_Event(object sender, RoutedEventArgs e)
         {
             if (e.Source != null)
-                MinimizeWind(Window.GetWindow((FrameworkElement)e.Source));
+                try { MinimizeWind(Window.GetWindow((FrameworkElement)e.Source)); } catch { }
         }
 
         public void CloseWind(Window window) => window.Close();
