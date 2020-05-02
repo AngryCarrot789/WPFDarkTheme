@@ -1,39 +1,42 @@
-# The dark theme app
-i started making this maybe a few weeks ago. just drag and drop the Dark.xaml (located in the ThemesFolder folder) into your project (anywhere) and inside App.xaml place this:
-```xml
-<Application.Resources>
-    <ResourceDictionary>
-        <ResourceDictionary.MergedDictionaries>
-            <ResourceDictionary Source="/ThemesFolder/Dark.xaml"/>
-        </ResourceDictionary.MergedDictionaries>
-    </ResourceDictionary>
-</Application.Resources>
-```
-Also, i added some stuff used for MVVM for some reason. I only really used it for the light/dark combobox at the bottom left of the screen.
-and thats about it. Enjoy :)
-# Latest (big) Update
+# The Dark Theme app
+I started making this so that me, or anyone really, can easily have a nice looking theme on their program without needing to write any extra code. 
+### There's currently 4 themes: Light, Colourful Light, Dark and Colourful Dark. Colourful mainly adds extra colours to controls when you hover over them or select them.
+Here's a preview of the latest update: (Order is: Light, ColourfulLight, Dark, ColourfulDark)
+![](latestUpdate6.png)
+# Latest Updates (time is from bottom to top)
+- Colourful Light/Dark theme has arrived! i find the Colourful light theme and original dark theme go well, but that's my opinion ;)
 - Themed the titlebar! All of the buttons' functionality (close, minimize, autothing) automatically apply to any window.
-- Improved other controls
-- Improved the ComboBox; themed the ComboBoxItems
+- Improved the ComboBox; themed the ComboBoxItems and other controls too
 - added more colours to be used for styling, and a "special primary colour", which is dark blue atm.
-- Improved the slider; rounded corners on the 'slider-puller-handle-thing', improved the different sizes of the progress bits on the slider, and the slider uses the "special primary colour".
+- Improved the slider; rounded corners on the slider thumb, and the slider uses the "special primary colours" instead of plain grey.
 - Also improved the ScrollBars (the scroll handle bit was darker than the backgroundy bit, so i changed that.
 - Added some colours to the light theme too (not sure why you'd want to use it but eh)
 - And finally improved the RadioBoxes by giving them a more circular shape, like they normally have.
 
-Here's a preview of the latest update: (i failed to photoshop the bit on the right correctly -__-)
-![](latestUpdate5.png)
+# How to install/use
+just drag and drop the theme(s) you want (located in the ThemesFolder folder btw) into your project (i'd recommend putting them inside a themes folder) and inside App.xaml place this: (and repalce DarkTheme with whatever theme you want, like LightTheme, ColourfulDarkTheme, etc)
+```xml
+<Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary Source="/ThemesFolder/DarkTheme.xaml"/>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+</Application.Resources>
+```
+
 # How to use MenuItems properly (sort of)
-MenuItems are relatively challenging to auto-style, so they require just a tiny bit of effort to give them the dark theme. MenuItems use a POPUP thingy which is quite difficult to get to work sometimes. But i think i did okay tbh. but i haven't managed to put the little arrow which shows when the MenuItem has children MenuItems.
+MenuItems are relatively challenging to auto-style, so they require just a tiny bit of effort to give them the correct theme. MenuItems use a POPUP thingy which is quite difficult to get to work sometimes. But i think i did okay tbh. However, the arrow thing doesn't auto show, so you have to account for that unfortunately. There are 2 templates: SingleDropDownMenuItem (for a menuitem that wont have children), and DropDownMenuItemStyle. the genuin only difference between the 2 is the little arrow that shows when a menuitem has children.
 this is the code for making a fully themed menu:
 ```xml
 <Menu VerticalAlignment="Top">
     <MenuItem Header="File">
-        <MenuItem Header="Save"                Template="{DynamicResource DropDownMenuItemTemplate}"/>
-        <MenuItem Header="Save as..."          Template="{DynamicResource DropDownMenuItemTemplate}">
-            <MenuItem Header="Text File (txt)" Template="{DynamicResource DropDownMenuItemTemplate}"/>
-            <MenuItem Header="XML (xml)"       Template="{DynamicResource DropDownMenuItemTemplate}"/>
-            <MenuItem Header="C# File (cs)"    Template="{DynamicResource DropDownMenuItemTemplate}"/>
+        <MenuItem Header="Save"       Template="{DynamicResource SingleDropDownMenuItem}"/>
+        <MenuItem Header="Save as..." Template="{DynamicResource DropDownMenuItemStyle}">
+            <MenuItem Header="Text File (txt)" Template="{DynamicResource SingleDropDownMenuItem}"/>
+            <MenuItem Header="XML (xml)"       Template="{DynamicResource SingleDropDownMenuItem}"/>
+            <MenuItem Header="C# File (cs)"    Template="{DynamicResource SingleDropDownMenuItem}"/>
+        </MenuItem>
         </MenuItem>
     </MenuItem>
 </Menu>
@@ -44,7 +47,7 @@ I added 2 different templates for tabcontrols and tabitem; normal ones and ones 
 public ICommand NewTabCommand { get; set; }
 public ICommand CloseTabCommand { get; set; }
 ```
-You can change these in the DarkTheme.xaml file. These commands automatically bind when the datacontext is set. How you setup clicking Add or Close to do something is up to you, but i use a custom class i made called Command which is included.
+You can change these in the (Theme).xaml file. These commands automatically bind when the datacontext is set. How you setup clicking Add or Close to do something is up to you; i use a custom class i made called Command which is included in this program.
 For giving tabcontrols/tabitems the add/close buttons, use these templates:
 ```
 Template="{DynamicResource CloseButtons}" 
@@ -67,5 +70,6 @@ and for using add/close buttons, use this:
     </TabItem>
 </TabControl>
 ```
+I should mention, i haven't yet adjusted the size (well, the height) of the CloseButtons template. so the TabItem will be bigger than normal, meaning the tabs will be bigger unfortunately. will fix soon
 ## Other things 
 Also, if you absolutely need my consent to do stuff like edit/use this theme stuff, then you can edit this and publish this all you want :) would be nice if you credited me at this github link, but eh.
