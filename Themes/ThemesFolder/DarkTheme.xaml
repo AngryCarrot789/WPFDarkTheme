@@ -37,7 +37,7 @@
     <SolidColorBrush x:Key="ControlPrimaryColourBorderBrush"         Color="#FF3294E8" />
     <SolidColorBrush x:Key="ControlBrightPrimaryColourBackground"    Color="#FF3296FA"/>
     <SolidColorBrush x:Key="ControlBrightPrimaryColourBorderBrush"   Color="#FF50A4FA" />
-
+    
     <!-- Setup Stuff -->
 
     <!-- Focus Visual -->
@@ -1493,12 +1493,12 @@
                             <Path x:Name="GlyphPanel" Data="F1M10,1.2L4.7,9.1 4.5,9.1 0,5.2 1.3,3.5 4.3,6.1 8.3,0 10,1.2z" Fill="{TemplateBinding Foreground}" FlowDirection="LeftToRight" Margin="3" Visibility="Collapsed" VerticalAlignment="Center"/>
                             <ContentPresenter x:Name="ContentPresenter" ContentTemplate="{TemplateBinding HeaderTemplate}" Content="{TemplateBinding Header}" Grid.Column="1" ContentStringFormat="{TemplateBinding HeaderStringFormat}" ContentSource="Header" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
                             <Popup x:Name="PART_Popup" AllowsTransparency="True" Focusable="False" 
-                       IsOpen="{Binding IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}" 
-                       PopupAnimation="{DynamicResource {x:Static SystemParameters.MenuPopupAnimationKey}}" 
-                       Placement="Bottom">
+                                   IsOpen="{Binding IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}" 
+                                   PopupAnimation="{DynamicResource {x:Static SystemParameters.MenuPopupAnimationKey}}" 
+                                   Placement="Bottom">
                                 <Border x:Name="SubMenuBorder"
-                            BorderBrush="{StaticResource ControlDefaultBorderBrush}" BorderThickness="1" 
-                            Background="{StaticResource ControlDefaultBackground}"   Padding="0">
+                                        BorderBrush="{StaticResource ControlDefaultBorderBrush}" BorderThickness="1" 
+                                        Background="{StaticResource ControlDefaultBackground}"   Padding="0">
                                     <ScrollViewer x:Name="SubMenuScrollViewer" Style="{DynamicResource {ComponentResourceKey ResourceId=MenuScrollViewer, TypeInTargetAssembly={x:Type FrameworkElement}}}">
                                         <Grid x:Name="Grid1" RenderOptions.ClearTypeHint="Enabled">
                                             <Canvas x:Name="Canvas" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Stretch" Width="22">
@@ -1507,10 +1507,10 @@
                                             <Rectangle x:Name="Rectangle" Fill="{StaticResource ControlDarkerBorderBrush}" HorizontalAlignment="Left" Margin="22,0,0,0" Width="1"/>
                                             <Rectangle Fill="{StaticResource ControlBrightDefaultBackground}" HorizontalAlignment="Left" Margin="0" Width="22"/>
                                             <ItemsPresenter x:Name="ItemsPresenter" 
-                                                KeyboardNavigation.DirectionalNavigation="Cycle"
-                                                Grid.IsSharedSizeScope="True" 
-                                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                                KeyboardNavigation.TabNavigation="Cycle"/>
+                                                            KeyboardNavigation.DirectionalNavigation="Cycle"
+                                                            Grid.IsSharedSizeScope="True" 
+                                                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                            KeyboardNavigation.TabNavigation="Cycle"/>
                                         </Grid>
                                     </ScrollViewer>
                                 </Border>
@@ -1563,10 +1563,14 @@
                 <ContentPresenter ContentTemplate="{TemplateBinding HeaderTemplate}" Content="{TemplateBinding Header}" Grid.Column="2" ContentStringFormat="{TemplateBinding HeaderStringFormat}" ContentSource="Header" HorizontalAlignment="Left" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="Center"/>
                 <TextBlock Grid.Column="4" Margin="{TemplateBinding Padding}" Opacity="0.7" Text="{TemplateBinding InputGestureText}" VerticalAlignment="Center"/>
                 <Path x:Name="RightArrow" Grid.Column="5" Data="M0,0L4,3.5 0,7z" Fill="{StaticResource ControlGlythColour}" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
-                <Popup x:Name="PART_Popup" AllowsTransparency="True" Focusable="False" HorizontalOffset="-2" IsOpen="{Binding IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}" PopupAnimation="{DynamicResource {x:Static SystemParameters.MenuPopupAnimationKey}}" Placement="Right" VerticalOffset="-3">
+                <Popup x:Name="PART_Popup" AllowsTransparency="True" Focusable="False" HorizontalOffset="-2" IsOpen="{Binding IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}" 
+                       PopupAnimation="Fade" 
+                       Placement="Right" VerticalOffset="-3">
                     <Border x:Name="SubMenuBorder" 
-                            BorderBrush="{StaticResource ControlDefaultBorderBrush}" BorderThickness="1" 
-                            Background="{StaticResource ControlDefaultBackground}"   Padding="0">
+                            BorderBrush="{StaticResource ControlDefaultBorderBrush}" 
+                            Background="{StaticResource ControlDefaultBackground}"   
+                            BorderThickness="1" 
+                            Padding="0">
                         <ScrollViewer x:Name="SubMenuScrollViewer" Style="{DynamicResource {ComponentResourceKey ResourceId=MenuScrollViewer, TypeInTargetAssembly={x:Type FrameworkElement}}}">
                             <Grid RenderOptions.ClearTypeHint="Enabled">
                                 <Canvas x:Name="Canvas" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Stretch" Width="22">
@@ -1625,7 +1629,11 @@
                 <ContentPresenter ContentTemplate="{TemplateBinding HeaderTemplate}" Content="{TemplateBinding Header}" Grid.Column="2" ContentStringFormat="{TemplateBinding HeaderStringFormat}" ContentSource="Header" HorizontalAlignment="Left" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="Center"/>
                 <TextBlock Grid.Column="4" Margin="{TemplateBinding Padding}" Opacity="0.7" Text="{TemplateBinding InputGestureText}" VerticalAlignment="Center"/>
                 <Path x:Name="RightArrow" Grid.Column="5" Data="M0,0L4,3.5 0,7z" Visibility="Hidden" Fill="{StaticResource ControlGlythColour}" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
-                <Popup x:Name="PART_Popup" AllowsTransparency="True" Focusable="False" HorizontalOffset="-2" IsOpen="{Binding IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}" PopupAnimation="{DynamicResource {x:Static SystemParameters.MenuPopupAnimationKey}}" Placement="Right" VerticalOffset="-3">
+                <Popup x:Name="PART_Popup" AllowsTransparency="True" Focusable="False" 
+                       HorizontalOffset="-2" 
+                       IsOpen="{Binding IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}" 
+                       PopupAnimation="Fade"
+                       Placement="Right" VerticalOffset="-3">
                     <Border x:Name="SubMenuBorder" 
                             BorderBrush="{StaticResource ControlDefaultBorderBrush}" BorderThickness="1" 
                             Background="{StaticResource ControlDefaultBackground}"   Padding="0">
@@ -3461,8 +3469,8 @@
     </ControlTemplate>
     <!-- Simple Win32 Window style -->
     <Style x:Key="MainWindowStyle" TargetType="{x:Type Window}">
-        <Setter Property="Foreground" Value="{DynamicResource ControlDefaultForeground}"/>
-        <Setter Property="Background" Value="{DynamicResource BackgroundColour}"/>
+        <Setter Property="Foreground" Value="{StaticResource ControlDefaultForeground}"/>
+        <Setter Property="Background" Value="{StaticResource BackgroundColour}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Window}">
@@ -3507,12 +3515,6 @@
                         <Border Background="{TemplateBinding Background}"
                                 BorderBrush="{TemplateBinding BorderBrush}"
                                 BorderThickness="{TemplateBinding BorderThickness}">
-                            <Border.Effect>
-                                <DropShadowEffect Color="Black"
-                                                  Direction="270"
-                                                  BlurRadius="10"
-                                                  ShadowDepth="3" />
-                            </Border.Effect>
                             <Grid>
                                 <AdornerDecorator Margin="0,30,0,0">
                                     <ContentPresenter />
@@ -3526,7 +3528,7 @@
                                                    VerticalAlignment="Center"
                                                    HorizontalAlignment="Stretch"
                                                    FontSize="14" Width="Auto"
-                                                   Foreground="{DynamicResource ControlDefaultForeground}"
+                                                   Foreground="{StaticResource ControlDefaultForeground}"
                                                    Text="{Binding Title, RelativeSource={RelativeSource TemplatedParent}}"   
                                                    Grid.Column="1" TextAlignment="Left"/>
                                     </DockPanel>
@@ -3539,7 +3541,11 @@
                                                 VerticalContentAlignment="Bottom"
                                                 WindowChrome.IsHitTestVisibleInChrome="True" 
                                                 Click="Minimize_Event">
-                                            <Rectangle Width="10" VerticalAlignment="Center" Margin="1 1 0 0" Stroke="{StaticResource ControlGlythColour}" StrokeThickness="2"/>
+                                            <Rectangle Width="10" 
+                                                       VerticalAlignment="Center" 
+                                                       Margin="1 1 0 0" 
+                                                       Stroke="{StaticResource ControlGlythColour}" 
+                                                       StrokeThickness="2"/>
                                         </Button>
 
                                         <Button x:Name="btnRestore"
@@ -3549,8 +3555,13 @@
                                                 WindowChrome.IsHitTestVisibleInChrome="True" 
                                                 Click="AutoMinimize_Event">
                                             <Grid Width="12" Height="12">
-                                                <Rectangle StrokeThickness="2" Stroke="{StaticResource ControlGlythColour}" Margin="3,0,0,3"/>
-                                                <Rectangle StrokeThickness="2" Fill="{TemplateBinding BorderBrush}" Stroke="{StaticResource ControlGlythColour}" Margin="0 3 3 0"/>
+                                                <Rectangle StrokeThickness="2" 
+                                                           Stroke="{StaticResource ControlGlythColour}"
+                                                           Margin="3,0,0,3"/>
+                                                <Rectangle StrokeThickness="2" 
+                                                           Fill="{TemplateBinding BorderBrush}"
+                                                           Stroke="{StaticResource ControlGlythColour}"
+                                                           Margin="0 3 3 0"/>
                                             </Grid>
                                         </Button>
                                         <Button x:Name="btnClose"
@@ -3608,12 +3619,6 @@
                         <Border Background="{TemplateBinding Background}"
                                 BorderBrush="{TemplateBinding BorderBrush}"
                                 BorderThickness="{TemplateBinding BorderThickness}">
-                            <Border.Effect>
-                                <DropShadowEffect Color="Black"
-                                                  Direction="270"
-                                                  BlurRadius="10"
-                                                  ShadowDepth="3" />
-                            </Border.Effect>
                             <Grid>
                                 <AdornerDecorator Margin="0,30,0,0">
                                     <ContentPresenter />
@@ -3627,7 +3632,7 @@
                                                    VerticalAlignment="Center"
                                                    HorizontalAlignment="Stretch"
                                                    FontSize="14" Width="Auto"
-                                                   Foreground="{DynamicResource ControlDefaultForeground}"
+                                                   Foreground="{StaticResource ControlDefaultForeground}"
                                                    Text="{Binding Title, RelativeSource={RelativeSource TemplatedParent}}"   
                                                    Grid.Column="1" TextAlignment="Left"/>
                                     </DockPanel>
@@ -3640,7 +3645,11 @@
                                                 VerticalContentAlignment="Bottom"
                                                 WindowChrome.IsHitTestVisibleInChrome="True" 
                                                 Click="Minimize_Event">
-                                            <Rectangle Width="10" VerticalAlignment="Center" Margin="1 1 0 0" Stroke="{StaticResource ControlGlythColour}" StrokeThickness="2"/>
+                                            <Rectangle Width="10"
+                                                       VerticalAlignment="Center"
+                                                       Margin="1 1 0 0" 
+                                                       Stroke="{StaticResource ControlGlythColour}"
+                                                       StrokeThickness="2"/>
                                         </Button>
                                         <Button x:Name="btnClose"
                                                 Background="Transparent"
@@ -3694,12 +3703,12 @@
                 <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource ControlMouseOverBorderBrush}"/>
             </Trigger>
             <Trigger Property="IsMouseOver" Value="true">
-                <Setter Property="Background" TargetName="border" Value="#e81123"/>
-                <Setter Property="BorderBrush" TargetName="border" Value="#e81123"/>
+                <Setter Property="Background" TargetName="border" Value="#FFF01428"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="#FFF01428"/>
             </Trigger>
             <Trigger Property="IsPressed" Value="true">
-                <Setter Property="Background" TargetName="border" Value="DarkRed"/>
-                <Setter Property="BorderBrush" TargetName="border" Value="DarkRed"/>
+                <Setter Property="Background" TargetName="border" Value="#FF940A14"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="#FF940A14"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="false">
                 <Setter Property="Background" TargetName="border" Value="{StaticResource ControlBrightDefaultBackground}"/>
