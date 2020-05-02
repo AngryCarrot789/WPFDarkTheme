@@ -9,7 +9,6 @@
         xmlns:utils="clr-namespace:Themes.Utilities"
         Height="749" Width="1280" FontSize="16" 
         Style="{DynamicResource CustomWindowStyle}">
-    <!-- idk but taskbariteminfo progressvalue doesnt work -->
     <Window.Resources>
         <DrawingImage x:Key="PlayImage">
             <DrawingImage.Drawing>
