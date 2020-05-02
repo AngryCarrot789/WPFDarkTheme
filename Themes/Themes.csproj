@@ -59,6 +59,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ThemesFolder\ColourfulTheme.xaml.cs">
+      <DependentUpon>ColourfulTheme.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ThemesFolder\DarkTheme.xaml.cs">
       <DependentUpon>DarkTheme.xaml</DependentUpon>
     </Compile>

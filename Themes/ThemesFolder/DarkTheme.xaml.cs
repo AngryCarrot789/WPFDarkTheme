@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Themes
+namespace Themes.ThemesFolder
 {
     public partial class DarkTheme
     {
