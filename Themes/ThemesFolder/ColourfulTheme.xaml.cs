@@ -2,7 +2,7 @@
 
 namespace Themes.ThemesFolder
 {
-    public partial class LightTheme
+    public partial class ColourfulTheme
     {
         private void CloseWindow_Event(object sender, RoutedEventArgs e)
         {
