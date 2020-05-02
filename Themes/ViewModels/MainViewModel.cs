@@ -34,10 +34,13 @@ namespace Themes.ViewModels
         {
             if (MainWindow != null)
             {
-                if (ThemeIndex == 0)
-                    MainWindow.SetTheme(MainWindow.Theme.Light);
-                else if (ThemeIndex == 1)
-                    MainWindow.SetTheme(MainWindow.Theme.Dark);
+                switch (ThemeIndex)
+                {
+                    case 0: MainWindow.SetTheme(MainWindow.Theme.Light); break;
+                    case 1: MainWindow.SetTheme(MainWindow.Theme.Dark); break;
+                    case 2: MainWindow.SetTheme(MainWindow.Theme.ColourfulDark); break;
+                    case 3: MainWindow.SetTheme(MainWindow.Theme.ColourfulLight); break;
+                }
             }
         }
     }

@@ -24,7 +24,9 @@ namespace Themes
         private App CurrentApp;
         public enum Theme
         {
-            Dark, Light
+            Dark, Light,
+            ColourfulDark,
+            ColourfulLight,
         }
         public MainWindow(App currApp)
         {

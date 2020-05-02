@@ -8,65 +8,35 @@
     <SolidColorBrush x:Key="WindowTitleColour"  Color="#FF242424" />
     <!-- Control colour themes. dont mess with em okay unless youre good at styles -->
     <!-- Complete DarkTheme Colours -->
-    <SolidColorBrush x:Key="TransparentBrush" Color="Transparent"/>
-    <SolidColorBrush x:Key="ContainerBackground" Color="#FF1D1D1D"/>
-    <SolidColorBrush x:Key="ContainerBorder" Color="#FF212121"/>
+    <SolidColorBrush x:Key="TransparentBrush"                    Color="Transparent"/>
+    <SolidColorBrush x:Key="ContainerBackground"                 Color="#FF1D1D1D"/>
+    <SolidColorBrush x:Key="ContainerBorder"                     Color="#FF212121"/>
+    <SolidColorBrush x:Key="ControlDefaultForeground"            Color="#FFEBEBEB"/>
 
-    <SolidColorBrush x:Key="ControlDarkerBackground"  Color="#FF202020" />
-    <SolidColorBrush x:Key="ControlDarkerBorderBrush" Color="#FF252525" />
-
-    <SolidColorBrush x:Key="ControlDefaultBackground"  Color="#FF232323" />
-    <SolidColorBrush x:Key="ControlDefaultBorderBrush" Color="#FF282828" />
-    <SolidColorBrush x:Key="ControlDefaultForeground"  Color="#FFEBEBEB" />
-
-    <SolidColorBrush x:Key="ControlBrightDefaultBackground"  Color="#FF2A2A2A" />
-    <SolidColorBrush x:Key="ControlBrightDefaultBorderBrush"  Color="#FF323232" />
-
-    <SolidColorBrush x:Key="ControlDisabledBackground"  Color="#FF383838" />
-    <SolidColorBrush x:Key="ControlDisabledBorderBrush"  Color="#FF3C3C3C" />
-
-    <SolidColorBrush x:Key="ControlMouseOverBackground"  Color="#FF353535" />
-    <SolidColorBrush x:Key="ControlMouseOverBorderBrush" Color="#FF373737"/>
-
-    <SolidColorBrush x:Key="ControlSelectedBackground" Color="#FF282828"/>
-    <SolidColorBrush x:Key="ControlSelectedBorderBrush" Color="#FF2D2D2D"/>
-    <SolidColorBrush x:Key="ControlSelectedMouseOverBackground" Color="#FF353535"/>
+    <SolidColorBrush x:Key="ControlDarkerBackground"             Color="#FF202020" />
+    <SolidColorBrush x:Key="ControlDarkerBorderBrush"            Color="#FF252525" />
+    <SolidColorBrush x:Key="ControlDefaultBackground"            Color="#FF232323" />
+    <SolidColorBrush x:Key="ControlDefaultBorderBrush"           Color="#FF282828" />
+    <SolidColorBrush x:Key="ControlBrightDefaultBackground"      Color="#FF2A2A2A" />
+    <SolidColorBrush x:Key="ControlBrightDefaultBorderBrush"     Color="#FF323232" />
+    <SolidColorBrush x:Key="ControlDisabledBackground"           Color="#FF383838" />
+    <SolidColorBrush x:Key="ControlDisabledBorderBrush"          Color="#FF3C3C3C" />
+    <SolidColorBrush x:Key="ControlMouseOverBackground"          Color="#FF353535" />
+    <SolidColorBrush x:Key="ControlMouseOverBorderBrush"         Color="#FF373737"/>
+    <SolidColorBrush x:Key="ControlSelectedBackground"           Color="#FF282828"/>
+    <SolidColorBrush x:Key="ControlSelectedBorderBrush"          Color="#FF2D2D2D"/>
+    <SolidColorBrush x:Key="ControlSelectedMouseOverBackground"  Color="#FF353535"/>
     <SolidColorBrush x:Key="ControlSelectedMouseOverBorderBrush" Color="#FF383838"/>
-
-    <SolidColorBrush x:Key="ControlGlythColour"  Color="#FFEBEBEB" />
-    <SolidColorBrush x:Key="ControlMouseOverGlythColour"  Color="#FFD7D7D7" />
-    <SolidColorBrush x:Key="ControlSelectedGlythColour"  Color="#FFC8C8C8" />
-    <SolidColorBrush x:Key="ControlDisabledGlythColour"  Color="#FFA0A0A0" />
-
+    <SolidColorBrush x:Key="ControlGlythColour"                  Color="#FFEBEBEB" />
+    <SolidColorBrush x:Key="ControlMouseOverGlythColour"         Color="#FFD7D7D7" />
+    <SolidColorBrush x:Key="ControlSelectedGlythColour"          Color="#FFC8C8C8" />
+    <SolidColorBrush x:Key="ControlDisabledGlythColour"          Color="#FFA0A0A0" />
+    
     <!-- Colourful theme  Colours -->
-
-    <SolidColorBrush x:Key="ControlPrimaryColourBackground"    Color="#FF0A50C8" />
-    <SolidColorBrush x:Key="ControlSecondaryColourBackground"  Color="#FFDC5014"/>
-    <SolidColorBrush x:Key="ControlTertiaryColourBackground"   Color="#FF6400DC"/>
-    <SolidColorBrush x:Key="ControlPrimaryColourBorderBrush"   Color="#FF1455C8" />
-    <SolidColorBrush x:Key="ControlSecondaryColourBorderBrush" Color="#FFDC5A19"/>
-    <SolidColorBrush x:Key="ControlTertiaryColourBorderBrush"  Color="#FF6900E6"/>
-
-    <SolidColorBrush x:Key="ControlBrightPrimaryColourBackground"    Color="#FF1E5AC8"/>
-    <SolidColorBrush x:Key="ControlBrightSecondaryColourBackground"  Color="#FFDC641E"/>
-    <SolidColorBrush x:Key="ControlBrightTertiaryColourBackground"   Color="#FF6E00F0"/>
-    <SolidColorBrush x:Key="ControlBrightPrimaryColourBorderBrush"   Color="#FF285FC8" />
-    <SolidColorBrush x:Key="ControlBrightSecondaryColourBorderBrush" Color="#FFDC6E23"/>
-    <SolidColorBrush x:Key="ControlBrightTertiaryColourBorderBrush"  Color="#FF7300FA"/>
-
-    <SolidColorBrush x:Key="ControlSelectedPrimaryColourBackground"    Color="#FF285FC8"/>
-    <SolidColorBrush x:Key="ControlSelectedSecondaryColourBackground"  Color="#FFDC6E23"/>
-    <SolidColorBrush x:Key="ControlSelectedTertiaryColourBackground"   Color="#FF7300FA"/>
-    <SolidColorBrush x:Key="ControlSelectedPrimaryColourBorderBrush"   Color="#FF3264C8"/>
-    <SolidColorBrush x:Key="ControlSelectedSecondaryColourBorderBrush" Color="#FFDC7828"/>
-    <SolidColorBrush x:Key="ControlSelectedTertiaryColourBorderBrush"  Color="#FF7805FF"/>
-
-    <SolidColorBrush x:Key="ControlMouseOverPrimaryColourBackground"    Color="#FF3D6EC8"/>
-    <SolidColorBrush x:Key="ControlMouseOverSecondaryColourBackground"  Color="#FFDC872D"/>
-    <SolidColorBrush x:Key="ControlMouseOverTertiaryColourBackground"   Color="#FF820AFF"/>
-    <SolidColorBrush x:Key="ControlMouseOverPrimaryColourBorderBrush"   Color="#FF4673C8"/>
-    <SolidColorBrush x:Key="ControlMouseOverSecondaryColourBorderBrush" Color="#FFE68C2D"/>
-    <SolidColorBrush x:Key="ControlMouseOverTertiaryColourBorderBrush"  Color="#FF8C19FF"/>
+    <SolidColorBrush x:Key="ControlPrimaryColourBackground"          Color="#FF2084E8" />
+    <SolidColorBrush x:Key="ControlPrimaryColourBorderBrush"         Color="#FF3294E8" />
+    <SolidColorBrush x:Key="ControlBrightPrimaryColourBackground"    Color="#FF3296FA"/>
+    <SolidColorBrush x:Key="ControlBrightPrimaryColourBorderBrush"   Color="#FF50A4FA" />
 
     <!-- Setup Stuff -->
 
@@ -75,7 +45,11 @@
         <Setter Property="Control.Template">
             <Setter.Value>
                 <ControlTemplate>
-                    <Rectangle StrokeDashArray="1 2" StrokeThickness="1" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" Margin="2"/>
+                    <Rectangle StrokeDashArray="1 2" 
+                               StrokeThickness="1" 
+                               Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" 
+                               SnapsToDevicePixels="true" 
+                               Margin="2"/>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -92,7 +66,9 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RepeatButton}">
-                    <Rectangle Fill="{TemplateBinding Background}" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}"/>
+                    <Rectangle Fill="{TemplateBinding Background}" 
+                               Height="{TemplateBinding Height}" 
+                               Width="{TemplateBinding Width}"/>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -1267,7 +1243,7 @@
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderBrush" Value="{StaticResource ControlBrightDefaultBorderBrush}"/>
         <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Foreground" Value="{StaticResource ControlDefaultForeground}"/>
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
         <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
         <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
@@ -1360,7 +1336,7 @@
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderBrush" Value="{StaticResource ControlBrightDefaultBorderBrush}"/>
         <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Foreground" Value="{StaticResource ControlDefaultForeground}"/>
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
         <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
         <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
@@ -1962,60 +1938,12 @@
 
     <!-- ScrollBar -->
 
-    <Style x:Key="ScrollBarThumbVertical" TargetType="{x:Type Thumb}">
-        <Setter Property="OverridesDefaultStyle" Value="true"/>
-        <Setter Property="Background" Value="{StaticResource ControlBrightDefaultBackground}"/>
-        <Setter Property="BorderBrush" Value="{StaticResource ControlBrightDefaultBorderBrush}"/>
-        <Setter Property="IsTabStop" Value="false"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Thumb}">
-                    <Grid Height="{TemplateBinding Height}" Width="{TemplateBinding Width}">
-                        <Rectangle x:Name="rectangle" Fill="{TemplateBinding Background}" SnapsToDevicePixels="True"/>
-                        <Grid HorizontalAlignment="Stretch" Height="12" Margin="1 0 0 0" VerticalAlignment="Center" Width="12">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="0" Grid.Row="0"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="1"  Grid.Row="0"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="2"  Grid.Row="0"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="0" Grid.Row="1"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="1" Grid.Row="1"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="2" Grid.Row="1"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="0" Grid.Row="2"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="1" Grid.Row="2"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="2" Grid.Row="2"/>
-                        </Grid>
-                    </Grid>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Fill" TargetName="rectangle" Value="{StaticResource ControlMouseOverBackground}"/>
-                            <Setter Property="BorderBrush" Value="{StaticResource ControlMouseOverBorderBrush}"/>
-                        </Trigger>
-                        <Trigger Property="IsDragging" Value="true">
-                            <Setter Property="Fill" TargetName="rectangle" Value="{StaticResource ControlBrightDefaultBackground}"/>
-                            <Setter Property="BorderBrush" Value="{StaticResource ControlBrightDefaultBorderBrush}"/>
-                            <Setter Property="Foreground" Value="{StaticResource ControlDisabledGlythColour}"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-
     <Style TargetType="{x:Type ScrollBar}">
         <Setter Property="Stylus.IsPressAndHoldEnabled" Value="false"/>
         <Setter Property="Stylus.IsFlicksEnabled" Value="false"/>
         <Setter Property="Background" Value="{StaticResource ControlDefaultBackground}"/>
         <Setter Property="BorderBrush" Value="{StaticResource ControlDefaultBorderBrush}"/>
-        <Setter Property="Foreground" Value="{StaticResource ControlDefaultForeground}"/>
+        <Setter Property="Foreground" Value="{StaticResource ControlBrightDefaultBorderBrush}"/>
         <Setter Property="BorderThickness" Value="1,0"/>
         <Setter Property="Width" Value="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}"/>
         <Setter Property="MinWidth" Value="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}"/>
@@ -2028,29 +1956,32 @@
                             <RowDefinition Height="0.00001*"/>
                             <RowDefinition MaxHeight="{DynamicResource {x:Static SystemParameters.VerticalScrollBarButtonHeightKey}}"/>
                         </Grid.RowDefinitions>
-                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"
-                                Background="{TemplateBinding Background}" 
-                                Grid.Row="1"/>
                         <Button x:Name="PART_LineUpButton" 
                                         Command="{x:Static ScrollBar.LineUpCommand}" 
-                                        IsEnabled="{TemplateBinding IsMouseOver}">
+                                        BorderThickness="1 1 1 0">
                             <Path x:Name="ArrowTop" Data="M 0,4 C0,4 0,6 0,6 0,6 3.5,2.5 3.5,2.5 3.5,2.5 7,6 7,6 7,6 7,4 7,4 7,4 3.5,0.5 3.5,0.5 3.5,0.5 0,4 0,4 z"
                                   Fill="{StaticResource ControlGlythColour}" Margin="3,4,3,3" Stretch="Uniform"/>
                         </Button>
-                        <Track x:Name="PART_Track" IsDirectionReversed="true" IsEnabled="{TemplateBinding IsMouseOver}" Grid.Row="1">
-                            <Track.DecreaseRepeatButton>
-                                <RepeatButton Command="{x:Static ScrollBar.PageUpCommand}" Style="{StaticResource RepeatButtonTransparent}"/>
-                            </Track.DecreaseRepeatButton>
-                            <Track.IncreaseRepeatButton>
-                                <RepeatButton Command="{x:Static ScrollBar.PageDownCommand}" Style="{StaticResource RepeatButtonTransparent}"/>
-                            </Track.IncreaseRepeatButton>
-                            <Track.Thumb>
-                                <Thumb Style="{DynamicResource ScrollBarThumbVertical}"/>
-                            </Track.Thumb>
-                        </Track>
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="1 0 1 0" 
+                                Background="{TemplateBinding Background}" 
+                                Grid.Row="1">
+                            <Track x:Name="PART_Track" IsDirectionReversed="true"  Grid.Row="1">
+                                <Track.DecreaseRepeatButton>
+                                    <RepeatButton Command="{x:Static ScrollBar.PageUpCommand}" Style="{StaticResource RepeatButtonTransparent}"/>
+                                </Track.DecreaseRepeatButton>
+                                <Track.IncreaseRepeatButton>
+                                    <RepeatButton Command="{x:Static ScrollBar.PageDownCommand}" Style="{StaticResource RepeatButtonTransparent}"/>
+                                </Track.IncreaseRepeatButton>
+                                <Track.Thumb>
+                                    <Thumb Style="{DynamicResource ScrollBarThumbVertical}"/>
+                                </Track.Thumb>
+                            </Track>
+                        </Border>
+
                         <Button x:Name="PART_LineDownButton" 
                                         Command="{x:Static ScrollBar.LineDownCommand}"
-                                        IsEnabled="{TemplateBinding IsMouseOver}" 
+                                         BorderThickness="1 0 1 1"
                                         Grid.Row="2">
                             <Path x:Name="ArrowBottom"
                                   Data="M 0,2.5 C0,2.5 0,0.5 0,0.5 0,0.5 3.5,4 3.5,4 3.5,4 7,0.5 7,0.5 7,0.5 7,2.5 7,2.5 7,2.5 3.5,6 3.5,6 3.5,6 0,2.5 0,2.5 z" 
@@ -2099,11 +2030,11 @@
                 <Setter Property="Width" Value="Auto"/>
                 <Setter Property="Background" Value="{StaticResource ControlDefaultBackground}"/>
                 <Setter Property="BorderBrush" Value="{StaticResource ControlDefaultBorderBrush}"/>
-                <Setter Property="Foreground" Value="{StaticResource ControlDefaultForeground}"/>
+                <Setter Property="Foreground" Value="{StaticResource ControlBrightDefaultBorderBrush}"/>
                 <Setter Property="MinWidth" Value="0"/>
                 <Setter Property="Height" Value="{DynamicResource {x:Static SystemParameters.HorizontalScrollBarHeightKey}}"/>
                 <Setter Property="MinHeight" Value="{DynamicResource {x:Static SystemParameters.HorizontalScrollBarHeightKey}}"/>
-                <Setter Property="BorderThickness" Value="0,1"/>
+                <Setter Property="BorderThickness" Value="1"/>
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type ScrollBar}">
@@ -2113,11 +2044,17 @@
                                     <ColumnDefinition Width="0.00001*"/>
                                     <ColumnDefinition MaxWidth="{DynamicResource {x:Static SystemParameters.HorizontalScrollBarButtonWidthKey}}"/>
                                 </Grid.ColumnDefinitions>
-                                <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Grid.Column="1"/>
-                                <Button x:Name="PART_LineLeftButton" Command="{x:Static ScrollBar.LineLeftCommand}" IsEnabled="{TemplateBinding IsMouseOver}">
-                                    <Path x:Name="ArrowLeft" Data="M 3.18,7 C3.18,7 5,7 5,7 5,7 1.81,3.5 1.81,3.5 1.81,3.5 5,0 5,0 5,0 3.18,0 3.18,0 3.18,0 0,3.5 0,3.5 0,3.5 3.18,7 3.18,7 z" Fill="{StaticResource ControlGlythColour}" Margin="3" Stretch="Uniform"/>
+                                <Button x:Name="PART_LineLeftButton" 
+                                        BorderThickness="1 1 0 1"
+                                        Command="{x:Static ScrollBar.LineLeftCommand}" >
+                                    <Path x:Name="ArrowLeft" Data="M 3.18,7 C3.18,7 5,7 5,7 5,7 1.81,3.5 1.81,3.5 1.81,3.5 5,0 5,0 5,0 3.18,0 3.18,0 3.18,0 0,3.5 0,3.5 0,3.5 3.18,7 3.18,7 z" 
+                                          Fill="{StaticResource ControlGlythColour}" Margin="3" Stretch="Uniform"/>
                                 </Button>
-                                <Track x:Name="PART_Track" Grid.Column="1" IsEnabled="{TemplateBinding IsMouseOver}">
+                                <Border BorderBrush="{TemplateBinding BorderBrush}" 
+                                        BorderThickness="0 1 0 1" 
+                                        Background="{TemplateBinding Background}" 
+                                        Grid.Column="1">
+                                    <Track x:Name="PART_Track" Grid.Column="1" >
                                     <Track.DecreaseRepeatButton>
                                         <RepeatButton Command="{x:Static ScrollBar.PageLeftCommand}" Style="{StaticResource RepeatButtonTransparent}"/>
                                     </Track.DecreaseRepeatButton>
@@ -2128,7 +2065,10 @@
                                         <Thumb Style="{DynamicResource ScrollBarThumbHorizontal}"/>
                                     </Track.Thumb>
                                 </Track>
-                                <Button x:Name="PART_LineRightButton" Grid.Column="2" Command="{x:Static ScrollBar.LineRightCommand}" IsEnabled="{TemplateBinding IsMouseOver}">
+                                </Border>
+                                
+                                <Button x:Name="PART_LineRightButton" Grid.Column="2" Command="{x:Static ScrollBar.LineRightCommand}" 
+                                        BorderThickness="0 1 1 1">
                                     <Path x:Name="ArrowRight" Data="M 1.81,7 C1.81,7 0,7 0,7 0,7 3.18,3.5 3.18,3.5 3.18,3.5 0,0 0,0 0,0 1.81,0 1.81,0 1.81,0 5,3.5 5,3.5 5,3.5 1.81,7 1.81,7 z" Fill="{StaticResource ControlGlythColour}" Margin="3" Stretch="Uniform"/>
                                 </Button>
                             </Grid>
@@ -2172,6 +2112,7 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+
     <Style x:Key="ScrollBarButton" TargetType="{x:Type RepeatButton}">
         <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
         <Setter Property="BorderThickness" Value="1"/>
@@ -2214,6 +2155,34 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style x:Key="ScrollBarThumbVertical" TargetType="{x:Type Thumb}">
+        <Setter Property="OverridesDefaultStyle" Value="true"/>
+        <Setter Property="Background" Value="{StaticResource ControlBrightDefaultBackground}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource ControlBrightDefaultBorderBrush}"/>
+        <Setter Property="IsTabStop" Value="false"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Thumb}">
+                    <Grid Height="{TemplateBinding Height}" Width="{TemplateBinding Width}">
+                        <Rectangle x:Name="rectangle" Fill="{TemplateBinding Background}" SnapsToDevicePixels="True"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Fill" TargetName="rectangle" Value="{StaticResource ControlMouseOverBackground}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource ControlMouseOverBorderBrush}"/>
+                        </Trigger>
+                        <Trigger Property="IsDragging" Value="true">
+                            <Setter Property="Fill" TargetName="rectangle" Value="{StaticResource ControlBrightDefaultBackground}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource ControlBrightDefaultBackground}"/>
+                            <Setter Property="Foreground" Value="{StaticResource ControlBrightDefaultBorderBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
     <Style x:Key="ScrollBarThumbHorizontal" TargetType="{x:Type Thumb}">
         <Setter Property="OverridesDefaultStyle" Value="true"/>
         <Setter Property="Background" Value="{StaticResource ControlBrightDefaultBackground}"/>
@@ -2224,27 +2193,7 @@
                 <ControlTemplate TargetType="{x:Type Thumb}">
                     <Grid Height="{TemplateBinding Height}" Width="{TemplateBinding Width}">
                         <Rectangle x:Name="rectangle" Fill="{TemplateBinding Background}" SnapsToDevicePixels="True"/>
-                        <Grid HorizontalAlignment="Stretch" Height="12" Margin="0 1 0 0" VerticalAlignment="Center" Width="12">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="0" Grid.Row="0"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="1"  Grid.Row="0"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="2"  Grid.Row="0"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="0" Grid.Row="1"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="1" Grid.Row="1"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="2" Grid.Row="1"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="0" Grid.Row="2"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="1" Grid.Row="2"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="2" Grid.Row="2"/>
-                        </Grid>
+                        
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="true">
@@ -2253,8 +2202,8 @@
                         </Trigger>
                         <Trigger Property="IsDragging" Value="true">
                             <Setter Property="Fill" TargetName="rectangle" Value="{StaticResource ControlBrightDefaultBackground}"/>
-                            <Setter Property="BorderBrush" Value="{StaticResource ControlBrightDefaultBorderBrush}"/>
-                            <Setter Property="Foreground" Value="{StaticResource ControlDisabledGlythColour}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource ControlBrightDefaultBackground}"/>
+                            <Setter Property="Foreground" Value="{StaticResource ControlBrightDefaultBorderBrush}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -2584,7 +2533,6 @@
 
     <!-- -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
 
-    <!-- Tab Control -->
     <!-- Tab Control -->
     <Style TargetType="{x:Type TabControl}">
         <Setter Property="Padding" Value="2"/>
