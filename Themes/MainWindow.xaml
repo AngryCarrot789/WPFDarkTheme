@@ -55,7 +55,7 @@
                 <MenuItem Header="Save" Template="{DynamicResource SingleDropDownMenuItem}"/>
                 <MenuItem Header="Save" Template="{DynamicResource SingleDropDownMenuItem}"/>
                 <MenuItem Header="Save" Template="{DynamicResource SingleDropDownMenuItem}"/>
-                <MenuItem Header="Save" Template="{DynamicResource SingleDropDownMenuItem}">
+                <MenuItem Header="Save" Template="{DynamicResource DropDownMenuItemStyle}">
                     <MenuItem Header="Save" Template="{DynamicResource SingleDropDownMenuItem}"/>
                 </MenuItem>
                 <MenuItem Header="Save" Template="{DynamicResource SingleDropDownMenuItem}"/>

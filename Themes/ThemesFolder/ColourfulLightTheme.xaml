@@ -1824,7 +1824,8 @@
         <Setter Property="BorderBrush" Value="{StaticResource ControlDefaultBorderBrush}"/>
         <Setter Property="Foreground" Value="{StaticResource ControlDefaultForeground}"/>
         <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="MinHeight" Value="20"/>
+        <Setter Property="MinHeight" Value="16"/>
+        <Setter Property="Height" Value="20"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RadioButton}">
@@ -1834,20 +1835,20 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <Border x:Name="radioButtonBorder" 
-                                        BorderBrush="{TemplateBinding BorderBrush}" 
-                                        BorderThickness="{TemplateBinding BorderThickness}" 
-                                        Background="{TemplateBinding Background}" CornerRadius="6" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                Background="{TemplateBinding Background}" CornerRadius="6" 
                                 HorizontalAlignment="Center" VerticalAlignment="Center" 
                                 Height="16" Width="16">
                             <Grid x:Name="markGrid" Margin="2">
-                                <Ellipse x:Name="optionMark" Fill="{StaticResource ControlPrimaryGlythColour}" MinWidth="6" MinHeight="6" Opacity="0"/>
+                                <Ellipse x:Name="optionMark" Fill="{DynamicResource ControlPrimaryGlythColour}" MinWidth="6" MinHeight="6" Opacity="0"/>
                             </Grid>
                         </Border>
                         <ContentPresenter x:Name="contentPresenter" 
-                                                  Grid.Column="1" Focusable="False"
-                                                  HorizontalAlignment="Center" Margin="4,3" RecognizesAccessKey="True" 
-                                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
-                                                  VerticalAlignment="Center" Height="22"/>
+                                          Grid.Column="1" Focusable="False"
+                                          HorizontalAlignment="Left" RecognizesAccessKey="True" 
+                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
+                                          VerticalAlignment="Center" Margin="3 0 0 0"/>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="HasContent" Value="true">

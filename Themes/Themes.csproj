@@ -89,12 +89,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ThemesFolder\ColourfulDarkTheme.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="ThemesFolder\ColourfulLightTheme.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="ThemesFolder\DarkTheme.xaml">
       <Generator>MSBuild:Compile</Generator>
