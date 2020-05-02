@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary x:Class="Themes.ThemesFolder.ColourfulDarkTheme" 
                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:Themes.ThemesFolder" xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2">
+                    xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2">
     <!-- Window Colours. Background, Border and TitleBar colours. -->
     <SolidColorBrush x:Key="BackgroundColour"  Color="#FF191919" />
     <SolidColorBrush x:Key="WindowBorderColour"  Color="#FF2A2A2A" />
@@ -55,7 +55,7 @@
     <SolidColorBrush x:Key="ControlPrimarySelectedGlythColour"          Color="#FF42A5F5"/>
     <SolidColorBrush x:Key="ControlPrimarySelectedMouseOverGlythColour" Color="#FF339AF7"/>
     <SolidColorBrush x:Key="ControlPrimaryDisabledGlythColour"          Color="#FF081E3C"/>
-
+    
     <!-- Setup Stuff -->
 
     <!-- Focus Visual -->
@@ -3519,8 +3519,8 @@
     </ControlTemplate>
     <!-- Simple Win32 Window style -->
     <Style x:Key="MainWindowStyle" TargetType="{x:Type Window}">
-        <Setter Property="Foreground" Value="{DynamicResource ControlDefaultForeground}"/>
-        <Setter Property="Background" Value="{DynamicResource BackgroundColour}"/>
+        <Setter Property="Foreground" Value="{StaticResource ControlDefaultForeground}"/>
+        <Setter Property="Background" Value="{StaticResource BackgroundColour}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Window}">
@@ -3578,7 +3578,7 @@
                                                    VerticalAlignment="Center"
                                                    HorizontalAlignment="Stretch"
                                                    FontSize="14" Width="Auto"
-                                                   Foreground="{DynamicResource ControlDefaultForeground}"
+                                                   Foreground="{StaticResource ControlDefaultForeground}"
                                                    Text="{Binding Title, RelativeSource={RelativeSource TemplatedParent}}"   
                                                    Grid.Column="1" TextAlignment="Left"/>
                                     </DockPanel>
@@ -3682,7 +3682,7 @@
                                                    VerticalAlignment="Center"
                                                    HorizontalAlignment="Stretch"
                                                    FontSize="14" Width="Auto"
-                                                   Foreground="{DynamicResource ControlDefaultForeground}"
+                                                   Foreground="{StaticResource ControlDefaultForeground}"
                                                    Text="{Binding Title, RelativeSource={RelativeSource TemplatedParent}}"   
                                                    Grid.Column="1" TextAlignment="Left"/>
                                     </DockPanel>
