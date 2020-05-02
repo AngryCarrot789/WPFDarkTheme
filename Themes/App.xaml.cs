@@ -42,6 +42,8 @@ namespace Themes
             {
                 case Theme.Dark: themeName = "DarkTheme"; break;
                 case Theme.Light: themeName = "LightTheme"; break;
+                case Theme.ColourfulDark: themeName = "ColourfulDarkTheme"; break;
+                case Theme.ColourfulLight: themeName = "ColourfulLightTheme"; break;
             }
 
             try

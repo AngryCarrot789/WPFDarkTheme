@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Themes"
         xmlns:viewmodels="clr-namespace:Themes.ViewModels"
         mc:Ignorable="d" Title="EEEEEEEEEEEEEEEEEEEEE (themes program)"
+        xmlns:utils="clr-namespace:Themes.Utilities"
         Height="749" Width="1280" FontSize="16" 
         Style="{DynamicResource CustomWindowStyle}">
     <!-- idk but taskbariteminfo progressvalue doesnt work -->
@@ -87,6 +88,8 @@
             <ComboBox SelectedIndex="{Binding ThemeIndex, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Stretch" FontSize="16">
                 <ComboBoxItem Content="Light"/>
                 <ComboBoxItem Content="Dark"/>
+                <ComboBoxItem Content="Colourful Dark"/>
+                <ComboBoxItem Content="Colourufl Light"/>
             </ComboBox>
         </GroupBox>
         <GroupBox Header="GroupBox" HorizontalAlignment="Left" Margin="10,23,0,85" Width="236">
@@ -105,7 +108,7 @@
                 <RadioButton Content="A radio button here" HorizontalAlignment="Left" Margin="10,194,0,0" VerticalAlignment="Top" Height="20"/>
                 <RadioButton Content="A radio button here" HorizontalAlignment="Left" Margin="10,219,0,0" VerticalAlignment="Top" Height="20"/>
                 <RadioButton Content="A radio button here" HorizontalAlignment="Left" Margin="10,244,0,0" VerticalAlignment="Top" Height="20"/>
-                <RadioButton Content="A radio button here" HorizontalAlignment="Left" Margin="10,269,0,0" VerticalAlignment="Top" Height="20"/>
+                <RadioButton Content="A radio button here" IsChecked="True" HorizontalAlignment="Left" Margin="10,269,0,0" VerticalAlignment="Top" Height="20"/>
                 <ComboBox HorizontalAlignment="Left" SelectedIndex="2" Margin="10,294,0,0" VerticalAlignment="Top" Width="204">
                     <TextBlock Text="blocc"/>
                     <TextBlock Text="tblocc"/>
@@ -142,14 +145,13 @@
                             <Button Content="Button 3" Margin="2,0,10,0" VerticalAlignment="Bottom" Height="60" Grid.Column="1" FontSize="16"/>
                         </Grid>
                         <CheckBox Content="Check Box 1" HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top" Height="20" Width="140"/>
-                        <CheckBox Content="Check Box 1" HorizontalAlignment="Left" Margin="155,140,0,0" VerticalAlignment="Top" Height="20" Width="139"/>
-                        <Expander Header="Expander" HorizontalAlignment="Left" Margin="10,385,0,71" Width="177">
+                        <Expander Header="Expander" Margin="150,140,0,0" Height="108" VerticalAlignment="Top">
                             <Grid Background="Transparent">
                                 <Button Margin="10" Content="Hello there :))"/>
                             </Grid>
                         </Expander>
-                        <TextBlock HorizontalAlignment="Left" Margin="0,217,0,0" Text="A ListView" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
-                        <ListView Margin="0,243,0,0" Height="103" VerticalAlignment="Top">
+                        <TextBlock HorizontalAlignment="Left" Margin="0,227,0,0" Text="A ListView" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
+                        <ListView Margin="0,253,0,0" Height="93" VerticalAlignment="Top">
                             <ListViewItem Content="A ListViewItem Here"/>
                             <ListViewItem Content="A ListViewItem Here"/>
                             <ListViewItem Content="A ListViewItem Here"/>
@@ -179,7 +181,7 @@
                             <ComboBoxItem Content="osososos"/>
                         </ComboBox>
                         <TextBox Height="34" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Bottom"/>
-                        <ListBox Margin="0,382,0,76">
+                        <ListBox utils:ScrollViewerHelper.ShiftWheelScrollsHorizontally="True" Margin="0,382,0,76" HorizontalAlignment="Left" Width="102">
                             <ListBoxItem Content="A ListBoxItem Here"/>
                             <ListBoxItem Content="A ListBoxItem Here"/>
                             <ListBoxItem Content="A ListBoxItem Here"/>
@@ -197,8 +199,36 @@
                         <TextBlock HorizontalAlignment="Left" Margin="0,356,0,0" Text="A ListBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
                         <CheckBox Content="Check Box 1" HorizontalAlignment="Left" Margin="10,164,0,0" VerticalAlignment="Top" Height="20" Width="140"/>
                         <CheckBox Content="Check Box 1" HorizontalAlignment="Left" Margin="10,188,0,0" VerticalAlignment="Top" Height="20" Width="140"/>
-                        <CheckBox Content="Check Box 1" HorizontalAlignment="Left" Margin="155,164,0,0" VerticalAlignment="Top" Height="20" Width="139"/>
-                        <CheckBox Content="Check Box 1" HorizontalAlignment="Left" Margin="155,188,0,0" VerticalAlignment="Top" Height="20" Width="139"/>
+                        <ListBox utils:ScrollViewerHelper.ShiftWheelScrollsHorizontally="True" Margin="107,382,95,76">
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                        </ListBox>
+                        <ListBox utils:ScrollViewerHelper.ShiftWheelScrollsHorizontally="True" Margin="214,382,0,76">
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                        </ListBox>
                     </Grid>
                 </GroupBox>
                 <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,10"/>
@@ -265,9 +295,9 @@
                             </TabItem>
                             <TabItem Header="Mostly Every Styled Control">
                                 <ScrollViewer>
-                                    <StackPanel>
+                                    <StackPanel Margin="0 0 1 0">
                                         <Button Content="Button"/>
-                                        <ScrollViewer HorizontalScrollBarVisibility="Visible">
+                                        <ScrollViewer HorizontalScrollBarVisibility="Visible" Margin="0 1 0 0">
                                             <StackPanel Orientation="Horizontal" Height="175">
                                                 <Calendar HorizontalAlignment="Left"/>
                                                 <StackPanel HorizontalAlignment="Stretch" Width="125">
@@ -287,16 +317,10 @@
                                                     <ListBoxItem Content="11111111111111111111111111111111111111"/>
                                                     <ListBoxItem Content="11111111111111111111111111111111111111"/>
                                                 </ListBox>
-                                                <ListView ScrollViewer.VerticalScrollBarVisibility="Visible" Width="90" Margin="5">
-                                                    <ListViewItem Content="eleeeeeeeeeee"/>
-                                                    <ListViewItem Content="eleeeeeeeeeee"/>
-                                                    <ListViewItem Content="eleeeeeeeeeee"/>
-                                                    <ListViewItem Content="eleeeeeeeeeee"/>
-                                                    <ListViewItem Content="eleeeeeeeeeee"/>
-                                                    <ListViewItem Content="eleeeeeeeeeee"/>
-                                                    <ListViewItem Content="eleeeeeeeeeee"/>
-                                                    <ListViewItem Content="eleeeeeeeeeee"/>
-                                                    <ListViewItem Content="eleeeeeeeeeee"/>
+                                                <ListView ScrollViewer.VerticalScrollBarVisibility="Visible" Width="148" Margin="5,5,5,86">
+                                                    <ListViewItem Content="Some list items here"/>
+                                                    <ListViewItem Content="Some list items here"/>
+                                                    <ListViewItem Content="Some list items here"/>
                                                 </ListView>
                                                 <ListView Width="90" Margin="5">
                                                     <ListViewItem Content="eae"/>
@@ -335,7 +359,7 @@
                                                 </Paragraph>
                                             </FlowDocument>
                                         </RichTextBox>
-                                        <ScrollBar Orientation="Horizontal" Value="40" Minimum="0" Maximum="100"/>
+                                        <ScrollBar Orientation="Horizontal" Value="40" Minimum="0" Margin="5" Maximum="100"/>
                                         <ScrollViewer Height="100">
                                             <StackPanel>
                                                 <Button Style="{DynamicResource RoundedCorners}" Margin="2" Content="heheeee" Height="32"/>
