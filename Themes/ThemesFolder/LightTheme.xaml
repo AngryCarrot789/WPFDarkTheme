@@ -1962,6 +1962,102 @@
     <!-- -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
 
     <!-- ScrollBar -->
+
+    <Style x:Key="ScrollBarThumbVertical" TargetType="{x:Type Thumb}">
+        <Setter Property="OverridesDefaultStyle" Value="true"/>
+        <Setter Property="Background" Value="{StaticResource ControlDarkerBackground}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource ControlDefaultBorderBrush}"/>
+        <Setter Property="IsTabStop" Value="false"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Thumb}">
+                    <Grid Height="{TemplateBinding Height}" Width="{TemplateBinding Width}">
+                        <Rectangle x:Name="rectangle" Fill="{TemplateBinding Background}" SnapsToDevicePixels="True"/>
+                        <Grid HorizontalAlignment="Stretch" Height="12" Margin="1 0 0 0" VerticalAlignment="Center" Width="12">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="0" Grid.Row="0"/>
+                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="1"  Grid.Row="0"/>
+                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="2"  Grid.Row="0"/>
+                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="0" Grid.Row="1"/>
+                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="1" Grid.Row="1"/>
+                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="2" Grid.Row="1"/>
+                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="0" Grid.Row="2"/>
+                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="1" Grid.Row="2"/>
+                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="2" Grid.Row="2"/>
+                        </Grid>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Fill" TargetName="rectangle" Value="{StaticResource ControlMouseOverBackground}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource ControlMouseOverBorderBrush}"/>
+                        </Trigger>
+                        <Trigger Property="IsDragging" Value="true">
+                            <Setter Property="Fill" TargetName="rectangle" Value="{StaticResource ControlBrightDefaultBackground}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource ControlBrightDefaultBorderBrush}"/>
+                            <Setter Property="Foreground" Value="{StaticResource ControlDisabledGlythColour}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ScrollBarThumbHorizontal" TargetType="{x:Type Thumb}">
+        <Setter Property="OverridesDefaultStyle" Value="true"/>
+        <Setter Property="Background" Value="{StaticResource ControlBrightDefaultBackground}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource ControlDefaultBorderBrush}"/>
+        <Setter Property="IsTabStop" Value="false"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Thumb}">
+                    <Grid Height="{TemplateBinding Height}" Width="{TemplateBinding Width}">
+                        <Rectangle x:Name="rectangle" Fill="{TemplateBinding Background}" SnapsToDevicePixels="True"/>
+                        <Grid HorizontalAlignment="Stretch" Height="12" Margin="0 1 0 0" VerticalAlignment="Center" Width="12">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="0" Grid.Row="0"/>
+                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="1"  Grid.Row="0"/>
+                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="2"  Grid.Row="0"/>
+                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="0" Grid.Row="1"/>
+                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="1" Grid.Row="1"/>
+                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="2" Grid.Row="1"/>
+                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="0" Grid.Row="2"/>
+                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="1" Grid.Row="2"/>
+                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="2" Grid.Row="2"/>
+                        </Grid>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Fill" TargetName="rectangle" Value="{StaticResource ControlMouseOverBackground}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource ControlMouseOverBorderBrush}"/>
+                        </Trigger>
+                        <Trigger Property="IsDragging" Value="true">
+                            <Setter Property="Fill" TargetName="rectangle" Value="{StaticResource ControlBrightDefaultBackground}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource ControlBrightDefaultBorderBrush}"/>
+                            <Setter Property="Foreground" Value="{StaticResource ControlDisabledGlythColour}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
     <Style TargetType="{x:Type ScrollBar}">
         <Setter Property="Stylus.IsPressAndHoldEnabled" Value="false"/>
         <Setter Property="Stylus.IsFlicksEnabled" Value="false"/>
@@ -2167,107 +2263,13 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style x:Key="ScrollBarThumbVertical" TargetType="{x:Type Thumb}">
-        <Setter Property="OverridesDefaultStyle" Value="true"/>
-        <Setter Property="Background" Value="{StaticResource ControlDarkerBackground}"/>
-        <Setter Property="BorderBrush" Value="{StaticResource ControlDefaultBorderBrush}"/>
-        <Setter Property="IsTabStop" Value="false"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Thumb}">
-                    <Grid Height="{TemplateBinding Height}" Width="{TemplateBinding Width}">
-                        <Rectangle x:Name="rectangle" Fill="{TemplateBinding Background}" SnapsToDevicePixels="True"/>
-                        <Grid HorizontalAlignment="Stretch" Height="12" Margin="1 0 0 0" VerticalAlignment="Center" Width="12">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="0" Grid.Row="0"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="1"  Grid.Row="0"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="2"  Grid.Row="0"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="0" Grid.Row="1"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="1" Grid.Row="1"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="2" Grid.Row="1"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="0" Grid.Row="2"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="1" Grid.Row="2"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="2" Grid.Row="2"/>
-                        </Grid>
-                    </Grid>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Fill" TargetName="rectangle" Value="{StaticResource ControlMouseOverBackground}"/>
-                            <Setter Property="BorderBrush" Value="{StaticResource ControlMouseOverBorderBrush}"/>
-                        </Trigger>
-                        <Trigger Property="IsDragging" Value="true">
-                            <Setter Property="Fill" TargetName="rectangle" Value="{StaticResource ControlBrightDefaultBackground}"/>
-                            <Setter Property="BorderBrush" Value="{StaticResource ControlBrightDefaultBorderBrush}"/>
-                            <Setter Property="Foreground" Value="{StaticResource ControlDisabledGlythColour}"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <Style x:Key="ScrollBarThumbHorizontal" TargetType="{x:Type Thumb}">
-        <Setter Property="OverridesDefaultStyle" Value="true"/>
-        <Setter Property="Background" Value="{StaticResource ControlBrightDefaultBackground}"/>
-        <Setter Property="BorderBrush" Value="{StaticResource ControlDefaultBorderBrush}"/>
-        <Setter Property="IsTabStop" Value="false"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Thumb}">
-                    <Grid Height="{TemplateBinding Height}" Width="{TemplateBinding Width}">
-                        <Rectangle x:Name="rectangle" Fill="{TemplateBinding Background}" SnapsToDevicePixels="True"/>
-                        <Grid HorizontalAlignment="Stretch" Height="12" Margin="0 1 0 0" VerticalAlignment="Center" Width="12">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="0" Grid.Row="0"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="1"  Grid.Row="0"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="2"  Grid.Row="0"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="0" Grid.Row="1"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="1" Grid.Row="1"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="2" Grid.Row="1"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="0" Grid.Row="2"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="1" Grid.Row="2"/>
-                            <Rectangle Fill="{TemplateBinding Foreground}" Margin="1" Grid.Column="2" Grid.Row="2"/>
-                        </Grid>
-                    </Grid>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Fill" TargetName="rectangle" Value="{StaticResource ControlMouseOverBackground}"/>
-                            <Setter Property="BorderBrush" Value="{StaticResource ControlMouseOverBorderBrush}"/>
-                        </Trigger>
-                        <Trigger Property="IsDragging" Value="true">
-                            <Setter Property="Fill" TargetName="rectangle" Value="{StaticResource ControlBrightDefaultBackground}"/>
-                            <Setter Property="BorderBrush" Value="{StaticResource ControlBrightDefaultBorderBrush}"/>
-                            <Setter Property="Foreground" Value="{StaticResource ControlDisabledGlythColour}"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
 
     <!-- -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
 
     <!-- ScrollViewer -->
     <Style TargetType="{x:Type ScrollViewer}">
-        <Setter Property="Background" Value="{StaticResource BackgroundColour}"/>
-        <Setter Property="BorderBrush" Value="{StaticResource ControlDefaultBorderBrush}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ScrollViewer}">
@@ -3108,7 +3110,7 @@
         <Setter Property="BorderBrush" Value="{StaticResource ControlDefaultBorderBrush}"/>
         <Setter Property="Foreground" Value="{StaticResource ControlDefaultForeground}"/>
         <Setter Property="CaretBrush" Value="{StaticResource ControlDefaultForeground}"/>
-        <Setter Property="SelectionBrush" Value="{StaticResource ControlBrightPrimaryColourBackground}"/>
+        <Setter Property="SelectionBrush" Value="{StaticResource ControlPrimaryColourBackground}"/>
         <Setter Property="SelectionOpacity" Value="0.7"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
@@ -3122,9 +3124,12 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">
-                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" 
-                            BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
-                        <ScrollViewer  x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                    <Border x:Name="border" 
+                            BorderBrush="{TemplateBinding BorderBrush}" 
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            Background="{TemplateBinding Background}" 
+                            SnapsToDevicePixels="True">
+                        <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsEnabled" Value="false">
