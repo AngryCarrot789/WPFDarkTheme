@@ -1,6 +1,6 @@
-# The dark theme app
-I started making this so that me, or anyone really, can easily have a nice looking theme on their program without needing to write any extra code. 
-Here's a preview of the latest update:
+# The Dark Theme app
+I started making this so that me, or anyone really, can easily have a nice looking theme on their program without needing to write any extra code. There's currently 4 themes: Light, Colourful Light, Dark and Colourful Dark. Colourful mainly adds extra colours to controls when you hover over them or select them.
+Here's a preview of the latest update: (Order is: Light, ColourfulLight, Dark, ColourfulDark)
 ![](latestUpdate6.png)
 # Latest Updates (time is from bottom to top)
 - Colourful Light/Dark theme has arrived! i find the Colourful light theme and original dark theme go well, but that's my opinion ;)
