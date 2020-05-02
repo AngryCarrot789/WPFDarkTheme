@@ -12,6 +12,7 @@ i started making this maybe a few weeks ago. just drag and drop the Dark.xaml (l
 Also, i added some stuff used for MVVM for some reason. I only really used it for the light/dark combobox at the bottom left of the screen.
 and thats about it. Enjoy :)
 # Latest (big) Update
+- Colourful Light/Dark theme has arrived! i find the Colourful light theme and original dark theme go well, but that's my opinion ;)
 - Themed the titlebar! All of the buttons' functionality (close, minimize, autothing) automatically apply to any window.
 - Improved other controls
 - Improved the ComboBox; themed the ComboBoxItems
@@ -22,18 +23,19 @@ and thats about it. Enjoy :)
 - And finally improved the RadioBoxes by giving them a more circular shape, like they normally have.
 
 Here's a preview of the latest update: (i failed to photoshop the bit on the right correctly -__-)
-![](latestUpdate5.png)
+![](latestUpdate6.png)
 # How to use MenuItems properly (sort of)
-MenuItems are relatively challenging to auto-style, so they require just a tiny bit of effort to give them the dark theme. MenuItems use a POPUP thingy which is quite difficult to get to work sometimes. But i think i did okay tbh. but i haven't managed to put the little arrow which shows when the MenuItem has children MenuItems.
+MenuItems are relatively challenging to auto-style, so they require just a tiny bit of effort to give them the correct theme. MenuItems use a POPUP thingy which is quite difficult to get to work sometimes. But i think i did okay tbh. However, the arrow thing doesn't auto show, so you have to account for that unfortunately. There are 2 templates: SingleDropDownMenuItem (for a menuitem has wont have children, no arrow basically), and DropDownMenuItemStyle. the genuin only difference between the 2 is the little arrow that shows when a menuitem has children.
 this is the code for making a fully themed menu:
 ```xml
 <Menu VerticalAlignment="Top">
     <MenuItem Header="File">
-        <MenuItem Header="Save"                Template="{DynamicResource DropDownMenuItemTemplate}"/>
-        <MenuItem Header="Save as..."          Template="{DynamicResource DropDownMenuItemTemplate}">
-            <MenuItem Header="Text File (txt)" Template="{DynamicResource DropDownMenuItemTemplate}"/>
-            <MenuItem Header="XML (xml)"       Template="{DynamicResource DropDownMenuItemTemplate}"/>
-            <MenuItem Header="C# File (cs)"    Template="{DynamicResource DropDownMenuItemTemplate}"/>
+        <MenuItem Header="Save"       Template="{DynamicResource SingleDropDownMenuItem}"/>
+        <MenuItem Header="Save as..." Template="{DynamicResource DropDownMenuItemStyle}">
+            <MenuItem Header="Text File (txt)" Template="{DynamicResource SingleDropDownMenuItem}"/>
+            <MenuItem Header="XML (xml)"       Template="{DynamicResource SingleDropDownMenuItem}"/>
+            <MenuItem Header="C# File (cs)"    Template="{DynamicResource SingleDropDownMenuItem}"/>
+        </MenuItem>
         </MenuItem>
     </MenuItem>
 </Menu>
@@ -44,7 +46,7 @@ I added 2 different templates for tabcontrols and tabitem; normal ones and ones 
 public ICommand NewTabCommand { get; set; }
 public ICommand CloseTabCommand { get; set; }
 ```
-You can change these in the DarkTheme.xaml file. These commands automatically bind when the datacontext is set. How you setup clicking Add or Close to do something is up to you, but i use a custom class i made called Command which is included.
+You can change these in the (Theme).xaml file. These commands automatically bind when the datacontext is set. How you setup clicking Add or Close to do something is up to you; i use a custom class i made called Command which is included in this program.
 For giving tabcontrols/tabitems the add/close buttons, use these templates:
 ```
 Template="{DynamicResource CloseButtons}" 
@@ -67,5 +69,6 @@ and for using add/close buttons, use this:
     </TabItem>
 </TabControl>
 ```
+I should mention, i haven't yet adjusted the size (well, the height) of the CloseButtons template. so the TabItem will be bigger than normal, meaning the tabs will be bigger unfortunately. will fix soon
 ## Other things 
 Also, if you absolutely need my consent to do stuff like edit/use this theme stuff, then you can edit this and publish this all you want :) would be nice if you credited me at this github link, but eh.
