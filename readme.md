@@ -11,18 +11,17 @@ i started making this maybe a few weeks ago. just drag and drop the Dark.xaml (l
 ```
 Also, i added some stuff used for MVVM for some reason. I only really used it for the light/dark combobox at the bottom left of the screen.
 and thats about it. Enjoy :)
-# Latest (big) Update
+# Latest (big) Update (time is from bottom to top)
 - Colourful Light/Dark theme has arrived! i find the Colourful light theme and original dark theme go well, but that's my opinion ;)
 - Themed the titlebar! All of the buttons' functionality (close, minimize, autothing) automatically apply to any window.
-- Improved other controls
-- Improved the ComboBox; themed the ComboBoxItems
+- Improved the ComboBox; themed the ComboBoxItems and other controls too
 - added more colours to be used for styling, and a "special primary colour", which is dark blue atm.
-- Improved the slider; rounded corners on the 'slider-puller-handle-thing', improved the different sizes of the progress bits on the slider, and the slider uses the "special primary colour".
+- Improved the slider; rounded corners on the slider thumb, and the slider uses the "special primary colours" instead of plain grey.
 - Also improved the ScrollBars (the scroll handle bit was darker than the backgroundy bit, so i changed that.
 - Added some colours to the light theme too (not sure why you'd want to use it but eh)
 - And finally improved the RadioBoxes by giving them a more circular shape, like they normally have.
 
-Here's a preview of the latest update: (i failed to photoshop the bit on the right correctly -__-)
+Here's a preview of the latest update:
 ![](latestUpdate6.png)
 # How to use MenuItems properly (sort of)
 MenuItems are relatively challenging to auto-style, so they require just a tiny bit of effort to give them the correct theme. MenuItems use a POPUP thingy which is quite difficult to get to work sometimes. But i think i did okay tbh. However, the arrow thing doesn't auto show, so you have to account for that unfortunately. There are 2 templates: SingleDropDownMenuItem (for a menuitem has wont have children, no arrow basically), and DropDownMenuItemStyle. the genuin only difference between the 2 is the little arrow that shows when a menuitem has children.
