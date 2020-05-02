@@ -1,17 +1,8 @@
 # The dark theme app
-i started making this maybe a few weeks ago. just drag and drop the Dark.xaml (located in the ThemesFolder folder) into your project (anywhere) and inside App.xaml place this:
-```xml
-<Application.Resources>
-    <ResourceDictionary>
-        <ResourceDictionary.MergedDictionaries>
-            <ResourceDictionary Source="/ThemesFolder/Dark.xaml"/>
-        </ResourceDictionary.MergedDictionaries>
-    </ResourceDictionary>
-</Application.Resources>
-```
-Also, i added some stuff used for MVVM for some reason. I only really used it for the light/dark combobox at the bottom left of the screen.
-and thats about it. Enjoy :)
-# Latest (big) Update (time is from bottom to top)
+I started making this so that me, or anyone really, can easily have a nice looking theme on their program without needing to write any extra code. 
+Here's a preview of the latest update:
+![](latestUpdate6.png)
+# Latest Updates (time is from bottom to top)
 - Colourful Light/Dark theme has arrived! i find the Colourful light theme and original dark theme go well, but that's my opinion ;)
 - Themed the titlebar! All of the buttons' functionality (close, minimize, autothing) automatically apply to any window.
 - Improved the ComboBox; themed the ComboBoxItems and other controls too
@@ -21,8 +12,18 @@ and thats about it. Enjoy :)
 - Added some colours to the light theme too (not sure why you'd want to use it but eh)
 - And finally improved the RadioBoxes by giving them a more circular shape, like they normally have.
 
-Here's a preview of the latest update:
-![](latestUpdate6.png)
+# How to install/use
+just drag and drop the theme(s) you want (located in the ThemesFolder folder btw) into your project (i'd recommend putting them inside a themes folder) and inside App.xaml place this: (and repalce DarkTheme with whatever theme you want, like LightTheme, ColourfulDarkTheme, etc)
+```xml
+<Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary Source="/ThemesFolder/DarkTheme.xaml"/>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+</Application.Resources>
+```
+
 # How to use MenuItems properly (sort of)
 MenuItems are relatively challenging to auto-style, so they require just a tiny bit of effort to give them the correct theme. MenuItems use a POPUP thingy which is quite difficult to get to work sometimes. But i think i did okay tbh. However, the arrow thing doesn't auto show, so you have to account for that unfortunately. There are 2 templates: SingleDropDownMenuItem (for a menuitem has wont have children, no arrow basically), and DropDownMenuItemStyle. the genuin only difference between the 2 is the little arrow that shows when a menuitem has children.
 this is the code for making a fully themed menu:
