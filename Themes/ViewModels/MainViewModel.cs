@@ -26,8 +26,8 @@ namespace Themes.ViewModels
         public MainWindow MainWindow { get; set; }
         public MainViewModel(MainWindow mainWindow)
         {
-            ThemeIndex = 1;
             MainWindow = mainWindow;
+            ThemeIndex = 3;
         }
 
         public void SetTheme()

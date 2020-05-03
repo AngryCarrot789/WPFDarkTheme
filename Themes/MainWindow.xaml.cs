@@ -32,9 +32,8 @@ namespace Themes
         {
             InitializeComponent();
             MainViewModel mainViewModel = new MainViewModel(this);
-            DataContext = mainViewModel;
             CurrentApp = currApp;
-            SetTheme(Theme.Dark);
+            DataContext = mainViewModel;
         }
 
         public void SetTheme(Theme theme)
