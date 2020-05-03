@@ -109,18 +109,20 @@
                 <RadioButton Content="A radio button here" HorizontalAlignment="Left" Margin="10,244,0,0" VerticalAlignment="Top" Height="20"/>
                 <RadioButton Content="A radio button here" IsChecked="True" HorizontalAlignment="Left" Margin="10,269,0,0" VerticalAlignment="Top" Height="20"/>
                 <ComboBox HorizontalAlignment="Left" SelectedIndex="2" Margin="10,294,0,0" VerticalAlignment="Top" Width="204">
-                    <TextBlock Text="blocc"/>
-                    <TextBlock Text="tblocc"/>
+                    <ComboBoxItem Content="aaaaa"/>
+                    <ComboBoxItem Content="eeeee"/>
+                    <ComboBoxItem Content="vcdfdfdfsg"/>
+                    <ComboBoxItem Content="dtjhtgfdj"/>
                     <ComboBoxItem Content="contentstuff"/>
                 </ComboBox>
                 <ComboBox HorizontalAlignment="Left" IsEditable="True" SelectedIndex="2" Margin="10,326,0,0" VerticalAlignment="Top" Width="204">
-                    <TextBlock Text="blocc"/>
-                    <TextBlock Text="tblocc"/>
+                    <ComboBoxItem Content="blocc"/>
+                    <ComboBoxItem Content="tblocc"/>
                     <ComboBoxItem Content="contentstuff"/>
                 </ComboBox>
                 <ComboBox HorizontalAlignment="Left" IsEditable="True" SelectedIndex="2" Margin="10,358,0,0" VerticalAlignment="Top" Width="204">
-                    <TextBlock Text="blocc"/>
-                    <TextBlock Text="tblocc"/>
+                    <ComboBoxItem Content="conteddzf\dntstuff"/>
+                    <ComboBoxItem Content="dsd"/>
                     <ComboBoxItem Content="contentstuff"/>
                 </ComboBox>
             </Grid>
@@ -198,7 +200,7 @@
                         <TextBlock HorizontalAlignment="Left" Margin="0,356,0,0" Text="A ListBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
                         <CheckBox Content="Check Box 1" HorizontalAlignment="Left" Margin="10,164,0,0" VerticalAlignment="Top" Height="20" Width="140"/>
                         <CheckBox Content="Check Box 1" HorizontalAlignment="Left" Margin="10,188,0,0" VerticalAlignment="Top" Height="20" Width="140"/>
-                        <ListBox utils:ScrollViewerHelper.ShiftWheelScrollsHorizontally="True" Margin="107,382,95,76">
+                        <ListBox utils:ScrollViewerHelper.ShiftWheelScrollsHorizontally="True" Margin="107,382,0,76" HorizontalAlignment="Left" Width="102">
                             <ListBoxItem Content="A ListBoxItem Here"/>
                             <ListBoxItem Content="A ListBoxItem Here"/>
                             <ListBoxItem Content="A ListBoxItem Here"/>
