@@ -43,6 +43,7 @@ this is the code for making a fully themed menu:
     </MenuItem>
 </Menu>
 ```
+Also, make sure to use DynamicResource and not StaticResource. This is because, if you're planning to include, say, the light and dark theme, using StaticResources mean the themes wont actually change for that specific template. Dynamic just means it can change, Static means it cant. Simple enough ;)
 # How to use the TabControls properly (with add/close buttons)
 I added 2 different templates for tabcontrols and tabitem; normal ones and ones with add/close buttons. to use them, you first need to set the DataContext of the tabcontrol, or set the datacontext of the window the tabcontrol is on, like the mainwindow. this datacontext would be set to a class (MainViewModel maybe) which contains 2 ICommands:
 ```
