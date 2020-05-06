@@ -21,25 +21,30 @@ namespace Themes
     /// </summary>
     public partial class MainWindow : Window
     {
-        private App CurrentApp;
-        public enum Theme
-        {
-            Dark, Light,
-            ColourfulDark,
-            ColourfulLight,
-        }
-        public MainWindow(App currApp)
+        public App CurrentApplication { get; set; }
+        public MainWindow()
         {
             InitializeComponent();
-            MainViewModel mainViewModel = new MainViewModel(this);
-            CurrentApp = currApp;
-            DataContext = mainViewModel;
+            DataContext = new MainViewModel();
+
+            Uri iconUri = new Uri("pack://application:,,,/Resources/idektbh.png", UriKind.RelativeOrAbsolute);
+            this.Icon = BitmapFrame.Create(iconUri);
         }
 
-        public void SetTheme(Theme theme)
+        private void ChangeTheme(object sender, RoutedEventArgs e)
         {
-            if (CurrentApp != null)
-                CurrentApp.SetTheme(theme);
+            switch (int.Parse(((MenuItem)sender).Uid))
+            {
+                // light
+                case 0: CurrentApplication.SetTheme(App.Theme.Light); break;
+                // colourful light
+                case 1: CurrentApplication.SetTheme(App.Theme.ColourfulLight); break;
+                // dark
+                case 2: CurrentApplication.SetTheme(App.Theme.Dark); break;
+                // colourful dark
+                case 3: CurrentApplication.SetTheme(App.Theme.ColourfulDark); break;
+            }
+            e.Handled = true;
         }
     }
 }

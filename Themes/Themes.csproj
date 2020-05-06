@@ -59,16 +59,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ThemesFolder\ColourfulDarkTheme.xaml.cs">
+    <Compile Include="Themes\ColourfulDarkTheme.xaml.cs">
       <DependentUpon>ColourfulDarkTheme.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ThemesFolder\ColourfulLightTheme.xaml.cs">
+    <Compile Include="Themes\ColourfulLightTheme.xaml.cs">
       <DependentUpon>ColourfulLightTheme.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ThemesFolder\DarkTheme.xaml.cs">
+    <Compile Include="Themes\DarkTheme.xaml.cs">
       <DependentUpon>DarkTheme.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ThemesFolder\LightTheme.xaml.cs">
+    <Compile Include="Themes\LightTheme.xaml.cs">
       <DependentUpon>LightTheme.xaml</DependentUpon>
     </Compile>
     <Compile Include="Utilities\BaseViewModel.cs" />
@@ -88,19 +88,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ThemesFolder\ColourfulDarkTheme.xaml">
+    <Page Include="Themes\ColourfulDarkTheme.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="ThemesFolder\ColourfulLightTheme.xaml">
+    <Page Include="Themes\ColourfulLightTheme.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="ThemesFolder\DarkTheme.xaml">
+    <Page Include="Themes\DarkTheme.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="ThemesFolder\LightTheme.xaml">
+    <Page Include="Themes\LightTheme.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -131,8 +131,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Resources\Images\" />
+    <Resource Include="Resources\idektbh.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
