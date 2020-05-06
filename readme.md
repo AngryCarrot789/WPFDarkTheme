@@ -2,7 +2,7 @@
 I started making this so that me, or anyone really, can easily have a nice looking theme on their program without needing to write any extra code. 
 ### There's currently 4 themes: Light, Colourful Light, Dark and Colourful Dark. Colourful mainly adds extra colours to controls when you hover over them or select them.
 Here's a preview of the latest update: (Order is: Light, ColourfulLight, Dark, ColourfulDark)
-![](latestUpdate6.png)
+![](latestUpdate7.png)
 # Latest Updates (time is from bottom to top)
 - Colourful Light/Dark theme has arrived! i find the Colourful light theme and original dark theme go well, but that's my opinion ;)
 - Themed the titlebar! All of the buttons' functionality (close, minimize, autothing) automatically apply to any window.
@@ -12,7 +12,8 @@ Here's a preview of the latest update: (Order is: Light, ColourfulLight, Dark, C
 - Also improved the ScrollBars (the scroll handle bit was darker than the backgroundy bit, so i changed that.
 - Added some colours to the light theme too (not sure why you'd want to use it but eh)
 - And finally improved the RadioBoxes by giving them a more circular shape, like they normally have.
-
+### Some smaller updates
+- Improved colourful light theme by making the foreground of any blue surface white instead of black so that it stands out better.
 # How to install/use
 just drag and drop the theme(s) you want (located in the ThemesFolder folder btw) into your project (i'd recommend putting them inside a themes folder) and inside App.xaml place this: (and repalce DarkTheme with whatever theme you want, like LightTheme, ColourfulDarkTheme, etc)
 ```xml
