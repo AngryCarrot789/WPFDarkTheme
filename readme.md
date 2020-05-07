@@ -5,6 +5,7 @@ Here's a preview of the latest update: (Order is: Light, ColourfulLight, Dark, C
 (INFO) now, the ColourfulLight has changed; foreground stays black, and the colours have became a brighter blue. haven't updated the image yet
 ![](latestUpdate7.png)
 # Latest Updates (time is from bottom to top)
+- Had to change the slider to fix the orientations and the tick placements. they now no longer have the blue trail after them. although i could try and add it later
 - Colourful Light/Dark theme has arrived! i find the Colourful light theme and original dark theme go well, but that's my opinion ;)
 - Themed the titlebar! All of the buttons' functionality (close, minimize, autothing) automatically apply to any window.
 - Improved the ComboBox; themed the ComboBoxItems and other controls too
