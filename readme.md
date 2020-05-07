@@ -1,7 +1,8 @@
 # The Dark Theme app
 I started making this so that me, or anyone really, can easily have a nice looking theme on their program without needing to write any extra code. 
 ### There's currently 4 themes: Light, Colourful Light, Dark and Colourful Dark. Colourful mainly adds extra colours to controls when you hover over them or select them.
-Here's a preview of the latest update: (Order is: Light, ColourfulLight, Dark, ColourfulDark)
+Here's a preview of the latest update: (Order is: Light, ColourfulLight, Dark, ColourfulDark).
+(INFO) now, the ColourfulLight has changed; foreground stays black, and the colours have became a brighter blue. haven't updated the image yet
 ![](latestUpdate7.png)
 # Latest Updates (time is from bottom to top)
 - Colourful Light/Dark theme has arrived! i find the Colourful light theme and original dark theme go well, but that's my opinion ;)
@@ -42,6 +43,7 @@ this is the code for making a fully themed menu:
     </MenuItem>
 </Menu>
 ```
+Also, make sure to use DynamicResource and not StaticResource. This is because, if you're planning to include, say, the light and dark theme, using StaticResources mean the themes wont actually change for that specific template. Dynamic just means it can change, Static means it cant. Simple enough ;)
 # How to use the TabControls properly (with add/close buttons)
 I added 2 different templates for tabcontrols and tabitem; normal ones and ones with add/close buttons. to use them, you first need to set the DataContext of the tabcontrol, or set the datacontext of the window the tabcontrol is on, like the mainwindow. this datacontext would be set to a class (MainViewModel maybe) which contains 2 ICommands:
 ```
