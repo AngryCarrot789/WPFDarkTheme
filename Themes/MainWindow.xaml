@@ -181,12 +181,30 @@
                         </Grid>
                     </ListBox>
                     <Label Margin="5 5 5 0" Content="ListView below"/>
-                    <ListView Margin="5 0 5 5" HorizontalContentAlignment="Stretch">
-                        <ListViewItem Content="A listviewitem here"/>
-                        <ListViewItem Content="A listviewitem here"/>
-                        <ListViewItem Content="A listviewitem here"/>
-                        <ListViewItem Content="A listviewitem here"/>
-                    </ListView>
+                    <Grid Height="242">
+                        <StackPanel HorizontalAlignment="Left" Width="110">
+                            <ListView Margin="5,0,5,5" HorizontalContentAlignment="Stretch">
+                                <ListViewItem Content="A listviewitem here"/>
+                                <ListViewItem Content="A listviewitem here"/>
+                                <ListViewItem Content="A listviewitem here"/>
+                                <ListViewItem Content="A listviewitem here"/>
+                            </ListView>
+                            <ListView Margin="5,0,5,5" HorizontalContentAlignment="Stretch">
+                                <ListViewItem Content="A listviewitem here"/>
+                                <ListViewItem Content="A listviewitem here"/>
+                                <ListViewItem Content="A listviewitem here"/>
+                                <ListViewItem Content="A listviewitem here"/>
+                            </ListView>
+                        </StackPanel>
+                        <Slider Value="8" Minimum="0" Maximum="30" HorizontalAlignment="Left" SmallChange="0" Orientation="Vertical" TickPlacement="TopLeft" Margin="110,10,0,10"/>
+                        <Slider Value="8" Minimum="0" Maximum="30" HorizontalAlignment="Left" SmallChange="0" Orientation="Vertical" TickPlacement="BottomRight" Margin="139,10,0,10"/>
+                        <Slider Value="8" Minimum="0" Maximum="30" HorizontalAlignment="Left" SmallChange="0" Orientation="Vertical" TickPlacement="Both" Margin="168,10,0,10"/>
+                        <Slider Value="8" Minimum="0" Maximum="30" SmallChange="0" Margin="226,10,10,0" VerticalAlignment="Top"/>
+                        <Slider Value="8" Minimum="0" Maximum="30" SmallChange="0" TickPlacement="TopLeft" Margin="226,35,10,0" VerticalAlignment="Top"/>
+                        <Slider Value="8" Minimum="0" Maximum="30" HorizontalAlignment="Left" SmallChange="0" Orientation="Vertical" Margin="203,10,0,10"/>
+                        <Slider Value="8" Minimum="0" Maximum="30" SmallChange="0" TickPlacement="BottomRight" Margin="226,66,10,0" VerticalAlignment="Top"/>
+                        <Slider Value="8" Minimum="0" Maximum="30" SmallChange="0" TickPlacement="Both" Margin="226,97,10,0" VerticalAlignment="Top"/>
+                    </Grid>
                 </StackPanel>
             </GroupBox>
             <GridSplitter HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="3"/>

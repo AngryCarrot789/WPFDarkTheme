@@ -55,7 +55,7 @@
     <SolidColorBrush x:Key="ControlPrimarySelectedGlythColour"          Color="#FF42A5F5"/>
     <SolidColorBrush x:Key="ControlPrimarySelectedMouseOverGlythColour" Color="#FF339AF7"/>
     <SolidColorBrush x:Key="ControlPrimaryDisabledGlythColour"          Color="#FF081E3C"/>
-    
+
     <!-- Setup Stuff -->
 
     <!-- Focus Visual -->
@@ -65,7 +65,7 @@
                 <ControlTemplate>
                     <Rectangle StrokeDashArray="1 2" 
                                StrokeThickness="1" 
-                               Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" 
+                               Stroke="{StaticResource ControlBrightPrimaryColourBorderBrush}"
                                SnapsToDevicePixels="true" 
                                Margin="2"/>
                 </ControlTemplate>
@@ -78,7 +78,7 @@
     <!-- RepeatButton -->
     <Style x:Key="RepeatButtonTransparent" TargetType="{x:Type RepeatButton}">
         <Setter Property="OverridesDefaultStyle" Value="true"/>
-        <Setter Property="Background" Value="{StaticResource ControlDefaultBackground}"/>
+        <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Focusable" Value="false"/>
         <Setter Property="IsTabStop" Value="false"/>
         <Setter Property="Template">
@@ -2336,18 +2336,21 @@
     <ControlTemplate x:Key="SliderThumbHorizontalTop" TargetType="{x:Type Thumb}">
         <Grid HorizontalAlignment="Center" UseLayoutRounding="True" VerticalAlignment="Center">
             <Path x:Name="grip" Data="M 0,6 C0,6 5.5,0 5.5,0 5.5,0 11,6 11,6 11,6 11,18 11,18 11,18 0,18 0,18 0,18 0,6 0,6 z" 
-                  Fill="{StaticResource ControlDefaultBackground}" Stroke="{StaticResource ControlDefaultBorderBrush}"
-                  Stretch="Fill" SnapsToDevicePixels="True" 
-                  StrokeThickness="1" UseLayoutRounding="True" VerticalAlignment="Center"/>
+                  Fill="{StaticResource ControlBrightDefaultBackground}" Stretch="Fill" 
+                  SnapsToDevicePixels="True" 
+                  Stroke="{StaticResource ControlBrightDefaultBorderBrush}" 
+                  StrokeThickness="1" UseLayoutRounding="True" 
+                  VerticalAlignment="Center"
+                  StrokeLineJoin="Round"/>
         </Grid>
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="true">
-                <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlMouseOverBackground}"/>
-                <Setter Property="Stroke" TargetName="grip" Value="{StaticResource ControlMouseOverBorderBrush}"/>
+                <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlPrimaryDarkerBackground}"/>
+                <Setter Property="Stroke" TargetName="grip" Value="{StaticResource ControlPrimaryDarkerBorderBrush}"/>
             </Trigger>
             <Trigger Property="IsDragging" Value="true">
-                <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlSelectedBackground}"/>
-                <Setter Property="Stroke" TargetName="grip" Value="{StaticResource ControlSelectedBorderBrush}"/>
+                <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlPrimarySelectedMouseOverBackground}"/>
+                <Setter Property="Stroke" TargetName="grip" Value="{StaticResource ControlPrimarySelectedMouseOverBorderBrush}"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="false">
                 <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlDisabledBackground}"/>
@@ -2358,19 +2361,21 @@
     <ControlTemplate x:Key="SliderThumbHorizontalBottom" TargetType="{x:Type Thumb}">
         <Grid HorizontalAlignment="Center" UseLayoutRounding="True" VerticalAlignment="Center">
             <Path x:Name="grip" Data="M 0,12 C0,12 5.5,18 5.5,18 5.5,18 11,12 11,12 11,12 11,0 11,0 11,0 0,0 0,0 0,0 0,12 0,12 z" 
-                          Fill="{StaticResource ControlGlythColour}" 
-                          Stretch="Fill" SnapsToDevicePixels="True" 
-                          Stroke="{StaticResource ControlGlythColour}" 
-                          StrokeThickness="1" UseLayoutRounding="True" VerticalAlignment="Center"/>
+                  Fill="{StaticResource ControlBrightDefaultBackground}" Stretch="Fill"
+                  SnapsToDevicePixels="True" 
+                  Stroke="{StaticResource ControlBrightDefaultBorderBrush}" 
+                  StrokeThickness="1" UseLayoutRounding="True" 
+                  VerticalAlignment="Center"
+                  StrokeLineJoin="Round"/>
         </Grid>
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="true">
-                <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlMouseOverBackground}"/>
-                <Setter Property="Stroke" TargetName="grip" Value="{StaticResource ControlMouseOverBorderBrush}"/>
+                <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlPrimaryDarkerBackground}"/>
+                <Setter Property="Stroke" TargetName="grip" Value="{StaticResource ControlPrimaryDarkerBorderBrush}"/>
             </Trigger>
             <Trigger Property="IsDragging" Value="true">
-                <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlSelectedBackground}"/>
-                <Setter Property="Stroke" TargetName="grip" Value="{StaticResource ControlSelectedBorderBrush}"/>
+                <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlPrimarySelectedMouseOverBackground}"/>
+                <Setter Property="Stroke" TargetName="grip" Value="{StaticResource ControlPrimarySelectedMouseOverBorderBrush}"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="false">
                 <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlDisabledBackground}"/>
@@ -2378,33 +2383,23 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
-
+    <SolidColorBrush x:Key="SliderThumb.Track.Border" Color="#FFD6D6D6"/>
+    <SolidColorBrush x:Key="SliderThumb.Track.Background" Color="#FFE7EAEA"/>
     <ControlTemplate x:Key="SliderThumbHorizontalDefault" TargetType="{x:Type Thumb}">
-        <Grid HorizontalAlignment="Center" UseLayoutRounding="True" VerticalAlignment="Center">
-            <Path x:Name="grip"
-                  Fill="{DynamicResource ControlBrightDefaultBackground}" Stretch="Fill" SnapsToDevicePixels="True" 
-                  Stroke="{DynamicResource ControlBrightDefaultBorderBrush}" StrokeThickness="1" UseLayoutRounding="True" 
-                  VerticalAlignment="Center" Margin="0,-1" Height="21">
-                <Path.Data>
-                    <CombinedGeometry GeometryCombineMode="Union">
-                        <CombinedGeometry.Geometry1>
-                            <RectangleGeometry Rect="0,0,300,170" RadiusX="20" RadiusY="20"/>
-                        </CombinedGeometry.Geometry1>
-                        <CombinedGeometry.Geometry2>
-                            <EllipseGeometry Center="150,150" RadiusX="20" RadiusY="20"/>
-                        </CombinedGeometry.Geometry2>
-                    </CombinedGeometry>
-                </Path.Data>
-            </Path>
+        <Grid HorizontalAlignment="Center" UseLayoutRounding="True" VerticalAlignment="Stretch" Margin="0" Width="11">
+            <Rectangle x:Name="grip" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" StrokeLineJoin="Round"
+                       Fill="{StaticResource ControlBrightDefaultBackground}" SnapsToDevicePixels="True" 
+                       Stroke="{StaticResource ControlBrightDefaultBorderBrush}" StrokeThickness="1" 
+                       UseLayoutRounding="True" RadiusX="1" RadiusY="1"/>
         </Grid>
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="true">
-                <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlMouseOverBackground}"/>
-                <Setter Property="Stroke" TargetName="grip" Value="{StaticResource ControlMouseOverBorderBrush}"/>
+                <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlPrimaryDarkerBackground}"/>
+                <Setter Property="Stroke" TargetName="grip" Value="{StaticResource ControlPrimaryDarkerBorderBrush}"/>
             </Trigger>
             <Trigger Property="IsDragging" Value="true">
-                <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlSelectedBackground}"/>
-                <Setter Property="Stroke" TargetName="grip" Value="{StaticResource ControlSelectedBorderBrush}"/>
+                <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlPrimarySelectedMouseOverBackground}"/>
+                <Setter Property="Stroke" TargetName="grip" Value="{StaticResource ControlPrimarySelectedMouseOverBorderBrush}"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="false">
                 <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlDisabledBackground}"/>
@@ -2412,31 +2407,30 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
-
     <ControlTemplate x:Key="SliderHorizontal" TargetType="{x:Type Slider}">
-        <Border x:Name="border" SnapsToDevicePixels="True">
+        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
             <Grid>
-                <TickBar x:Name="TopTick" Fill="{TemplateBinding Foreground}" Height="4" Margin="0,0,0,17" Placement="Top" Grid.Row="0" Visibility="Collapsed"/>
-                <TickBar x:Name="BottomTick" Fill="{TemplateBinding Foreground}" Height="4" Margin="0,2,0,-6" Placement="Bottom" Grid.Row="2" Visibility="Collapsed"/>
-                <Border x:Name="TrackBackground" Height="4.0" Margin="5,9,5,8" Grid.Row="0" VerticalAlignment="center">
-                    <Canvas Margin="-2,-1">
-                        <Rectangle x:Name="PART_SelectionRange" Height="4.0" Visibility="Hidden"/>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" MinHeight="{TemplateBinding MinHeight}"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TickBar x:Name="TopTick" Fill="{TemplateBinding Foreground}" Height="4" Margin="0,0,0,2" Placement="Top" Grid.Row="0" Visibility="Collapsed"/>
+                <TickBar x:Name="BottomTick" Fill="{TemplateBinding Foreground}" Height="4" Margin="0,2,0,0" Placement="Bottom" Grid.Row="2" Visibility="Collapsed"/>
+                <Border x:Name="TrackBackground" BorderBrush="{StaticResource ControlDefaultBorderBrush}" BorderThickness="1" Background="{StaticResource ControlDefaultBackground}" Height="4.0" Margin="5,0" Grid.Row="1" VerticalAlignment="center">
+                    <Canvas Margin="-6,-1">
+                        <Rectangle x:Name="PART_SelectionRange" Fill="Red" Height="4.0" Visibility="Hidden"/>
                     </Canvas>
                 </Border>
-                <Track x:Name="PART_Track" Grid.Row="0" Margin="0">
+                <Track x:Name="PART_Track" Grid.Row="1">
                     <Track.DecreaseRepeatButton>
-                        <RepeatButton Margin="0 2 0 2" Command="{x:Static Slider.DecreaseLarge}" Style="{StaticResource RepeatButtonTransparent}" Background="{DynamicResource ControlPrimaryDefaultBackground}"/>
+                        <RepeatButton Command="{x:Static Slider.DecreaseLarge}" Style="{StaticResource RepeatButtonTransparent}"/>
                     </Track.DecreaseRepeatButton>
                     <Track.IncreaseRepeatButton>
-                        <RepeatButton Margin="0 3 0 3" Command="{x:Static Slider.IncreaseLarge}" Style="{StaticResource RepeatButtonTransparent}" Background="{TemplateBinding Background}"/>
+                        <RepeatButton Command="{x:Static Slider.IncreaseLarge}" Style="{StaticResource RepeatButtonTransparent}"/>
                     </Track.IncreaseRepeatButton>
                     <Track.Thumb>
-                        <Thumb x:Name="Thumb" 
-                                       Focusable="False" 
-                                       Height="Auto" 
-                                       OverridesDefaultStyle="True" 
-                                       Template="{StaticResource SliderThumbHorizontalDefault}" 
-                                       Width="12"/>
+                        <Thumb x:Name="Thumb" Focusable="False" Height="20" OverridesDefaultStyle="True" Template="{StaticResource SliderThumbHorizontalDefault}" VerticalAlignment="Center" Width="11"/>
                     </Track.Thumb>
                 </Track>
             </Grid>
@@ -2466,16 +2460,21 @@
     </ControlTemplate>
     <ControlTemplate x:Key="SliderThumbVerticalLeft" TargetType="{x:Type Thumb}">
         <Grid HorizontalAlignment="Center" UseLayoutRounding="True" VerticalAlignment="Center">
-            <Path x:Name="grip" Data="M 6,11 C6,11 0,5.5 0,5.5 0,5.5 6,0 6,0 6,0 18,0 18,0 18,0 18,11 18,11 18,11 6,11 6,11 z" Stretch="Fill" Fill="{StaticResource ControlDefaultBackground}" Stroke="{StaticResource ControlDefaultBorderBrush}"/>
+            <Path x:Name="grip" Data="M 6,11 C6,11 0,5.5 0,5.5 0,5.5 6,0 6,0 6,0 18,0 18,0 18,0 18,11 18,11 18,11 6,11 6,11 z" 
+                  Fill="{StaticResource ControlBrightDefaultBackground}"
+                  SnapsToDevicePixels="True" 
+                  Stretch="Fill"
+                  StrokeLineJoin="Round"
+                  Stroke="{StaticResource ControlBrightDefaultBorderBrush}" StrokeThickness="1"/>
         </Grid>
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="true">
-                <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlMouseOverBackground}"/>
-                <Setter Property="Stroke" TargetName="grip" Value="{StaticResource ControlMouseOverBorderBrush}"/>
+                <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlPrimaryDarkerBackground}"/>
+                <Setter Property="Stroke" TargetName="grip" Value="{StaticResource ControlPrimaryDarkerBorderBrush}"/>
             </Trigger>
             <Trigger Property="IsDragging" Value="true">
-                <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlSelectedBackground}"/>
-                <Setter Property="Stroke" TargetName="grip" Value="{StaticResource ControlSelectedBorderBrush}"/>
+                <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlPrimarySelectedMouseOverBackground}"/>
+                <Setter Property="Stroke" TargetName="grip" Value="{StaticResource ControlPrimarySelectedMouseOverBorderBrush}"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="false">
                 <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlDisabledBackground}"/>
@@ -2485,16 +2484,21 @@
     </ControlTemplate>
     <ControlTemplate x:Key="SliderThumbVerticalRight" TargetType="{x:Type Thumb}">
         <Grid HorizontalAlignment="Center" UseLayoutRounding="True" VerticalAlignment="Center">
-            <Path x:Name="grip" Data="M 12,11 C12,11 18,5.5 18,5.5 18,5.5 12,0 12,0 12,0 0,0 0,0 0,0 0,11 0,11 0,11 12,11 12,11 z" Fill="{StaticResource ControlDefaultBackground}" Stroke="{StaticResource ControlDefaultBorderBrush}" Stretch="Fill"/>
+            <Path x:Name="grip" Data="M 12,11 C12,11 18,5.5 18,5.5 18,5.5 12,0 12,0 12,0 0,0 0,0 0,0 0,11 0,11 0,11 12,11 12,11 z" 
+                  Fill="{StaticResource ControlBrightDefaultBackground}"
+                  SnapsToDevicePixels="True" 
+                  Stretch="Fill"
+                  StrokeLineJoin="Round"
+                  Stroke="{StaticResource ControlBrightDefaultBorderBrush}"/>
         </Grid>
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="true">
-                <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlMouseOverBackground}"/>
-                <Setter Property="Stroke" TargetName="grip" Value="{StaticResource ControlMouseOverBorderBrush}"/>
+                <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlPrimaryDarkerBackground}"/>
+                <Setter Property="Stroke" TargetName="grip" Value="{StaticResource ControlPrimaryDarkerBorderBrush}"/>
             </Trigger>
             <Trigger Property="IsDragging" Value="true">
-                <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlSelectedBackground}"/>
-                <Setter Property="Stroke" TargetName="grip" Value="{StaticResource ControlSelectedBorderBrush}"/>
+                <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlPrimarySelectedMouseOverBackground}"/>
+                <Setter Property="Stroke" TargetName="grip" Value="{StaticResource ControlPrimarySelectedMouseOverBorderBrush}"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="false">
                 <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlDisabledBackground}"/>
@@ -2504,16 +2508,19 @@
     </ControlTemplate>
     <ControlTemplate x:Key="SliderThumbVerticalDefault" TargetType="{x:Type Thumb}">
         <Grid HorizontalAlignment="Center" UseLayoutRounding="True" VerticalAlignment="Center">
-            <Path x:Name="grip" Data="M0.5,0.5 L18.5,0.5 18.5,11.5 0.5,11.5z" Stretch="Fill" Fill="{StaticResource ControlDefaultBackground}" Stroke="{StaticResource ControlDefaultBorderBrush}"/>
+            <Rectangle x:Name="grip" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" StrokeLineJoin="Round"
+                       Fill="{StaticResource ControlBrightDefaultBackground}" SnapsToDevicePixels="True" 
+                       Stroke="{StaticResource ControlBrightDefaultBorderBrush}" StrokeThickness="1" 
+                       UseLayoutRounding="True" RadiusX="1" RadiusY="1" Width="18" Height="11"/>
         </Grid>
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="true">
-                <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlMouseOverBackground}"/>
-                <Setter Property="Stroke" TargetName="grip" Value="{StaticResource ControlMouseOverBorderBrush}"/>
+                <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlPrimaryDarkerBackground}"/>
+                <Setter Property="Stroke" TargetName="grip" Value="{StaticResource ControlPrimaryDarkerBorderBrush}"/>
             </Trigger>
             <Trigger Property="IsDragging" Value="true">
-                <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlSelectedBackground}"/>
-                <Setter Property="Stroke" TargetName="grip" Value="{StaticResource ControlSelectedBorderBrush}"/>
+                <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlPrimarySelectedMouseOverBackground}"/>
+                <Setter Property="Stroke" TargetName="grip" Value="{StaticResource ControlPrimarySelectedMouseOverBorderBrush}"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="false">
                 <Setter Property="Fill" TargetName="grip" Value="{StaticResource ControlDisabledBackground}"/>
@@ -2531,9 +2538,9 @@
                 </Grid.ColumnDefinitions>
                 <TickBar x:Name="TopTick" Grid.Column="0" Fill="{TemplateBinding Foreground}" Margin="0,0,2,0" Placement="Left" Visibility="Collapsed" Width="4"/>
                 <TickBar x:Name="BottomTick" Grid.Column="2" Fill="{TemplateBinding Foreground}" Margin="2,0,0,0" Placement="Right" Visibility="Collapsed" Width="4"/>
-                <Border x:Name="TrackBackground" Background="{StaticResource ControlDefaultBackground}" BorderBrush="{StaticResource ControlDefaultBorderBrush}" BorderThickness="1" Grid.Column="1" HorizontalAlignment="center" Margin="0,5" Width="4.0">
+                <Border x:Name="TrackBackground" BorderBrush="{StaticResource ControlDefaultBorderBrush}" BorderThickness="1" Background="{StaticResource ControlDefaultBackground}" Grid.Column="1" HorizontalAlignment="center" Margin="0,5" Width="4.0">
                     <Canvas Margin="-1,-6">
-                        <Rectangle x:Name="PART_SelectionRange" Fill="{StaticResource ControlBrightDefaultBackground}" Visibility="Hidden" Width="4.0"/>
+                        <Rectangle x:Name="PART_SelectionRange" Fill="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" Visibility="Hidden" Width="4.0"/>
                     </Canvas>
                 </Border>
                 <Track x:Name="PART_Track" Grid.Column="1">
@@ -2574,9 +2581,9 @@
     </ControlTemplate>
     <Style TargetType="{x:Type Slider}">
         <Setter Property="Stylus.IsPressAndHoldEnabled" Value="false"/>
-        <Setter Property="Background" Value="{StaticResource ControlDefaultBorderBrush}"/>
-        <Setter Property="BorderBrush" Value="{StaticResource ControlDefaultBackground}"/>
-        <Setter Property="Foreground" Value="{StaticResource ControlDefaultForeground}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{StaticResource ControlPrimaryGlythColour}"/>
         <Setter Property="Template" Value="{StaticResource SliderHorizontal}"/>
         <Style.Triggers>
             <Trigger Property="Orientation" Value="Vertical">
@@ -3780,6 +3787,5 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
-
     <!-- -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
 </ResourceDictionary>
