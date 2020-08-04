@@ -12,7 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Themes.Utilities;
 using Themes.ViewModels;
+using TheRThemes;
 
 namespace Themes
 {
@@ -27,6 +29,7 @@ namespace Themes
             InitializeComponent();
             DataContext = new MainViewModel();
 
+            // loads a png icon, not an ico. 
             Uri iconUri = new Uri("pack://application:,,,/Resources/idektbh.png", UriKind.RelativeOrAbsolute);
             this.Icon = BitmapFrame.Create(iconUri);
         }
@@ -35,14 +38,10 @@ namespace Themes
         {
             switch (int.Parse(((MenuItem)sender).Uid))
             {
-                // light
-                case 0: CurrentApplication.SetTheme(App.Theme.Light); break;
-                // colourful light
-                case 1: CurrentApplication.SetTheme(App.Theme.ColourfulLight); break;
-                // dark
-                case 2: CurrentApplication.SetTheme(App.Theme.Dark); break;
-                // colourful dark
-                case 3: CurrentApplication.SetTheme(App.Theme.ColourfulDark); break;
+                case 0: ThemesController.SetTheme(ThemesController.ThemeTypes.Light); break;
+                case 1: ThemesController.SetTheme(ThemesController.ThemeTypes.ColourfulLight); break;
+                case 2: ThemesController.SetTheme(ThemesController.ThemeTypes.Dark); break;
+                case 3: ThemesController.SetTheme(ThemesController.ThemeTypes.ColourfulDark); break;
             }
             e.Handled = true;
         }

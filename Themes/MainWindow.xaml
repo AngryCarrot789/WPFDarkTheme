@@ -2,14 +2,20 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="clr-namespace:Themes.Controls" xmlns:system="clr-namespace:System;assembly=mscorlib"
         Height="720" Width="1280"
         Style="{DynamicResource CustomWindowStyle}"
         Title="A custom window with a dark theme">
     <Window.Resources>
         <DropShadowBitmapEffect x:Key="NormalShadow" ShadowDepth="2" Softness="0.2" Opacity="0.64"/>
+        <x:Array Type="system:String" x:Key="temps">
+            <system:String>ello1</system:String>
+            <system:String>ello2</system:String>
+            <system:String>ello3</system:String>
+            <system:String>ello4</system:String>
+        </x:Array>
     </Window.Resources>
-    <Grid Margin="5">
+    <Grid>
         <Menu VerticalAlignment="Top">
             <MenuItem Header="File">
                 <MenuItem Header="Open file maybe?" InputGestureText="CTRL + O" Template="{DynamicResource SingleDropDownMenuItem}">
@@ -24,11 +30,11 @@
                 <MenuItem Header="Another menuitem" Template="{DynamicResource SingleDropDownMenuItem}"/>
                 <MenuItem Header="Another menuitem" Template="{DynamicResource SingleDropDownMenuItem}"/>
                 <MenuItem Header="Another menuitem" Template="{DynamicResource SingleDropDownMenuItem}"/>
-                <Separator/>
+                <Separator Style="{DynamicResource MenuItemSeparator}"/>
                 <MenuItem Header="Another menuitem" Template="{DynamicResource SingleDropDownMenuItem}"/>
                 <MenuItem Header="Another menuitem" Template="{DynamicResource SingleDropDownMenuItem}"/>
                 <MenuItem Header="Another menuitem" Template="{DynamicResource SingleDropDownMenuItem}"/>
-                <Separator/>
+                <Separator Style="{DynamicResource MenuItemSeparator}"/>
                 <MenuItem Header="MenuItem with many others" Template="{DynamicResource DropDownMenuItemStyle}">
                     <MenuItem Header="Another MenuItem with many others" Template="{DynamicResource DropDownMenuItemStyle}">
                         <MenuItem Header="MenuItem with many others" Template="{DynamicResource DropDownMenuItemStyle}">
@@ -126,7 +132,7 @@
                 </MenuItem>
             </MenuItem>
         </Menu>
-        <Grid Margin="0,18,0,0">
+        <Grid Margin="4,18,4,4">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="2"/>
@@ -136,8 +142,8 @@
             </Grid.ColumnDefinitions>
             <GroupBox Header="A GroupBox Here... with things inside" Margin="0,0,2,0">
                 <StackPanel>
-                    <Button Content="A Button Here" Height="40" Margin="5"/>
-                    <Button Content="A Button Here" Height="40" Margin="5"/>
+                    <controls:LabelledItemSelector LabelText="Resolution" ItemsSource="{Binding SomeItems, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Button Command="{Binding owo}" Content="A Button Here" Height="40" Margin="5"/>
                     <CheckBox Content="A CheckBox Here" Margin="5"/>
                     <CheckBox Content="A CheckBox Here" Margin="5"/>
                     <CheckBox Content="A CheckBox Here" Margin="5"/>
@@ -156,56 +162,57 @@
             </GroupBox>
             <GridSplitter HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1"/>
             <GroupBox Header="A GroupBox Here... with things inside" Margin="2,0,3,0" Grid.Column="2">
-                <StackPanel>
-                    <Label Content="A Label here" Margin="5 5 5 0"/>
-                    <Label Content="Another Label here" Margin="5 5 5 5"/>
-                    <Separator/>
-                    <Label Margin="5 5 5 0" Content="ListVBox below"/>
-                    <ListBox Margin="5 0 5 0" Height="200" HorizontalContentAlignment="Stretch">
-                        <ListBoxItem Content="A listboxitem here"/>
-                        <ListBoxItem Content="Another listboxitem here"/>
-                        <ListBoxItem Content="1"/>
-                        <ListBoxItem Content="2"/>
-                        <ListBoxItem Content="3"/>
-                        <Grid>
-                            <Label HorizontalAlignment="Left" Content="A button to the right"/>
-                            <Button Content="A button" Margin="125,0,0,0"/>
-                        </Grid>
-                        <Grid>
-                            <Label HorizontalAlignment="Left" Content="A button to the right"/>
-                            <Button Content="A button" Margin="125,0,0,0"/>
-                        </Grid>
-                        <Grid>
-                            <Label HorizontalAlignment="Left" Content="A button to the right"/>
-                            <Button Content="A button" Margin="125,0,0,0"/>
-                        </Grid>
-                    </ListBox>
-                    <Label Margin="5 5 5 0" Content="ListView below"/>
-                    <Grid Height="242">
-                        <StackPanel HorizontalAlignment="Left" Width="110">
-                            <ListView Margin="5,0,5,5" HorizontalContentAlignment="Stretch">
-                                <ListViewItem Content="A listviewitem here"/>
-                                <ListViewItem Content="A listviewitem here"/>
-                                <ListViewItem Content="A listviewitem here"/>
-                                <ListViewItem Content="A listviewitem here"/>
-                            </ListView>
-                            <ListView Margin="5,0,5,5" HorizontalContentAlignment="Stretch">
-                                <ListViewItem Content="A listviewitem here"/>
-                                <ListViewItem Content="A listviewitem here"/>
-                                <ListViewItem Content="A listviewitem here"/>
-                                <ListViewItem Content="A listviewitem here"/>
-                            </ListView>
-                        </StackPanel>
-                        <Slider HorizontalAlignment="Left" SmallChange="0" Orientation="Vertical" TickPlacement="TopLeft" Margin="110,10,0,10"/>
-                        <Slider HorizontalAlignment="Left" SmallChange="0" Orientation="Vertical" TickPlacement="BottomRight" Margin="139,10,0,10"/>
-                        <Slider HorizontalAlignment="Left" SmallChange="0" Orientation="Vertical" TickPlacement="Both" Margin="168,10,0,10"/>
-                        <Slider SmallChange="0" Margin="226,10,10,0" VerticalAlignment="Top"/>
-                        <Slider SmallChange="0" TickPlacement="TopLeft" Margin="226,35,10,0" VerticalAlignment="Top"/>
-                        <Slider HorizontalAlignment="Left" SmallChange="0" Orientation="Vertical" Margin="203,10,0,10"/>
-                        <Slider SmallChange="0" TickPlacement="BottomRight" Margin="226,66,10,0" VerticalAlignment="Top"/>
-                        <Slider SmallChange="0" TickPlacement="Both" Margin="226,97,10,0" VerticalAlignment="Top"/>
+                <Grid>
+                    <StackPanel>
+                        <Label Content="A Label here" Margin="5 5 5 0"/>
+                        <Label Content="Another Label here" Margin="5 5 5 5"/>
+                        <Separator/>
+                        <Label Margin="5 5 5 0" Content="ListVBox below"/>
+                        <ListBox Margin="5 0 5 0" Height="200" HorizontalContentAlignment="Stretch">
+                            <ListBoxItem Content="A listboxitem here"/>
+                            <ListBoxItem Content="Another listboxitem here"/>
+                            <ListBoxItem Content="1"/>
+                            <ListBoxItem Content="2"/>
+                            <ListBoxItem Content="3"/>
+                            <Grid>
+                                <Label HorizontalAlignment="Left" Content="A button to the right"/>
+                                <Button Content="A button" Margin="125,0,0,0"/>
+                            </Grid>
+                            <Grid>
+                                <Label HorizontalAlignment="Left" Content="A button to the right"/>
+                                <Button Content="A button" Margin="125,0,0,0"/>
+                            </Grid>
+                            <Grid>
+                                <Label HorizontalAlignment="Left" Content="A button to the right"/>
+                                <Button Content="A button" Margin="125,0,0,0"/>
+                            </Grid>
+                        </ListBox>
+                    </StackPanel>
+                    <Grid Margin="0,312,0,0">
+                        <Label Margin="5 5 5 0" Content="ListView below" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                        <ListView Margin="5,28,0,0" HorizontalContentAlignment="Stretch" Height="119" VerticalAlignment="Top" HorizontalAlignment="Left" Width="216">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="owo" Width="75"/>
+                                    <GridViewColumn Header="hello" Width="125"/>
+                                </GridView>
+                            </ListView.View>
+                            <ListViewItem Content="A listviewitem here"/>
+                            <ListViewItem Content="A listviewitem here"/>
+                            <ListViewItem Content="A listviewitem here"/>
+                            <ListViewItem Content="A listviewitem here"/>
+                        </ListView>
+                        <Slider HorizontalAlignment="Left" SmallChange="1" Orientation="Vertical" TickPlacement="TopLeft" Margin="5,147,0,0" Maximum="50" TickFrequency="2" Value="43"/>
+                        <Slider HorizontalAlignment="Left" SmallChange="1" Orientation="Vertical" TickPlacement="BottomRight" Margin="34,147,0,0" Maximum="50" TickFrequency="2" Value="2"/>
+                        <Slider HorizontalAlignment="Left" SmallChange="1" Orientation="Vertical" TickPlacement="Both" Margin="63,147,0,0" Maximum="50" TickFrequency="2" Value="22"/>
+                        <Slider SmallChange="0" Margin="226,28,0,0" VerticalAlignment="Top" Maximum="50" TickFrequency="2" Value="20"/>
+                        <Slider SmallChange="0" TickPlacement="TopLeft" Margin="226,53,0,0" VerticalAlignment="Top" Maximum="50" TickFrequency="2" Value="32"/>
+                        <Slider HorizontalAlignment="Left" SmallChange="0" Orientation="Vertical" Margin="98,147,0,0" Maximum="50" TickFrequency="2" Value="28"/>
+                        <Slider SmallChange="0" TickPlacement="BottomRight" Margin="226,84,0,0" VerticalAlignment="Top" Maximum="50" TickFrequency="2" Value="50"/>
+                        <Slider SmallChange="0" TickPlacement="Both" Margin="226,115,0,0" VerticalAlignment="Top" Maximum="50" TickFrequency="2" Value="14"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="121,152,0,0" Text="TextBlock" VerticalAlignment="Top"/>
                     </Grid>
-                </StackPanel>
+                </Grid>
             </GroupBox>
             <GridSplitter HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="3"/>
             <GroupBox Header="A list of some controls" Grid.Column="4" Margin="3,0,0,0">
