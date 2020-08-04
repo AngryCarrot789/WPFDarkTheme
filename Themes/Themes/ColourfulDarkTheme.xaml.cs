@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Themes.ThemesFolder
+namespace TheRThemes
 {
     public partial class ColourfulDarkTheme
     {
