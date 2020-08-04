@@ -5,6 +5,7 @@ Here's a preview of the latest update: (Order is: Light, ColourfulLight, Dark, C
 (INFO) now, the ColourfulLight has changed; foreground stays black, and the colours have became a brighter blue. haven't updated the image yet
 ![](latestUpdate7.png)
 # Latest Updates (time is from bottom to top)
+- Had to change the slider to fix the orientations and the tick placements. they now no longer have the blue trail after them. although i could try and add it later
 - Colourful Light/Dark theme has arrived! i find the Colourful light theme and original dark theme go well, but that's my opinion ;)
 - Themed the titlebar! All of the buttons' functionality (close, minimize, autothing) automatically apply to any window.
 - Improved the ComboBox; themed the ComboBoxItems and other controls too
@@ -16,7 +17,8 @@ Here's a preview of the latest update: (Order is: Light, ColourfulLight, Dark, C
 ### Some smaller updates
 - Improved colourful light theme by making the foreground of any blue surface white instead of black so that it stands out better.
 # How to install/use
-just drag and drop the theme(s) you want (located in the ThemesFolder folder btw) into your project (i'd recommend putting them inside a themes folder) and inside App.xaml place this: (and repalce DarkTheme with whatever theme you want, like LightTheme, ColourfulDarkTheme, etc)
+Firstly, in your WPF project, right click References in the solution explorer bit, add reference, goto Assemblies and double click/include PresentationFramework.Aero2. this allows the use of drop shadows and stuff.
+Then, just drag and drop the theme(s) you want (located in the ThemesFolder folder btw) into your project (i'd recommend putting them inside a themes folder) and inside App.xaml place this: (and repalce DarkTheme with whatever theme you want, like LightTheme, ColourfulDarkTheme, etc)
 ```xml
 <Application.Resources>
     <ResourceDictionary>
@@ -27,7 +29,7 @@ just drag and drop the theme(s) you want (located in the ThemesFolder folder btw
 </Application.Resources>
 ```
 
-# How to use MenuItems properly (sort of)
+# How to style MenuItems properly
 MenuItems are relatively challenging to auto-style, so they require just a tiny bit of effort to give them the correct theme. MenuItems use a POPUP thingy which is quite difficult to get to work sometimes. But i think i did okay tbh. However, the arrow thing doesn't auto show, so you have to account for that unfortunately. There are 2 templates: SingleDropDownMenuItem (for a menuitem that wont have children), and DropDownMenuItemStyle. the genuin only difference between the 2 is the little arrow that shows when a menuitem has children.
 this is the code for making a fully themed menu:
 ```xml
