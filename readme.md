@@ -2,7 +2,6 @@
 I started making this so that me, or anyone really, can easily have a nice looking theme on their program without needing to write any extra code. 
 ### There's currently 4 themes: Light, Colourful Light, Dark and Colourful Dark. Colourful mainly adds extra colours to controls when you hover over them or select them.
 Here's a preview of the latest update: (Order is: Light, ColourfulLight, Dark, ColourfulDark).
-(INFO) now, the ColourfulLight has changed; foreground stays black, and the colours have became a brighter blue. haven't updated the image yet
 ![](pics.png)
 # Latest Updates (time is from bottom to top)
 - Had to change the slider to fix the orientations and the tick placements. they now no longer have the blue trail after them. although i could try and add it later
