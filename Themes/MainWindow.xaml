@@ -190,7 +190,7 @@
                     </StackPanel>
                     <Grid Margin="0,312,0,0">
                         <Label Margin="5 5 5 0" Content="ListView below" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                        <ListView Margin="5,28,0,0" HorizontalContentAlignment="Stretch" Height="119" VerticalAlignment="Top" HorizontalAlignment="Left" Width="216">
+                        <ListView Margin="5,28,139,0" HorizontalContentAlignment="Stretch" Height="119" VerticalAlignment="Top">
                             <ListView.View>
                                 <GridView>
                                     <GridViewColumn Header="owo" Width="75"/>
@@ -205,11 +205,11 @@
                         <Slider HorizontalAlignment="Left" SmallChange="1" Orientation="Vertical" TickPlacement="TopLeft" Margin="5,147,0,0" Maximum="50" TickFrequency="2" Value="43"/>
                         <Slider HorizontalAlignment="Left" SmallChange="1" Orientation="Vertical" TickPlacement="BottomRight" Margin="34,147,0,0" Maximum="50" TickFrequency="2" Value="2"/>
                         <Slider HorizontalAlignment="Left" SmallChange="1" Orientation="Vertical" TickPlacement="Both" Margin="63,147,0,0" Maximum="50" TickFrequency="2" Value="22"/>
-                        <Slider SmallChange="0" Margin="226,28,0,0" VerticalAlignment="Top" Maximum="50" TickFrequency="2" Value="20"/>
-                        <Slider SmallChange="0" TickPlacement="TopLeft" Margin="226,53,0,0" VerticalAlignment="Top" Maximum="50" TickFrequency="2" Value="32"/>
+                        <Slider SmallChange="0" Margin="0,28,0,0" VerticalAlignment="Top" Maximum="50" TickFrequency="2" Value="20" HorizontalAlignment="Right" Width="134"/>
+                        <Slider SmallChange="0" TickPlacement="TopLeft" Margin="0,53,0,0" VerticalAlignment="Top" Maximum="50" TickFrequency="2" Value="32" HorizontalAlignment="Right" Width="134"/>
                         <Slider HorizontalAlignment="Left" SmallChange="0" Orientation="Vertical" Margin="98,147,0,0" Maximum="50" TickFrequency="2" Value="28"/>
-                        <Slider SmallChange="0" TickPlacement="BottomRight" Margin="226,84,0,0" VerticalAlignment="Top" Maximum="50" TickFrequency="2" Value="50"/>
-                        <Slider SmallChange="0" TickPlacement="Both" Margin="226,115,0,0" VerticalAlignment="Top" Maximum="50" TickFrequency="2" Value="14"/>
+                        <Slider SmallChange="0" TickPlacement="BottomRight" Margin="0,84,0,0" VerticalAlignment="Top" Maximum="50" TickFrequency="2" Value="50" HorizontalAlignment="Right" Width="134"/>
+                        <Slider SmallChange="0" TickPlacement="Both" Margin="0,115,0,0" VerticalAlignment="Top" Maximum="50" TickFrequency="2" Value="14" HorizontalAlignment="Right" Width="134"/>
                         <TextBlock HorizontalAlignment="Left" Margin="121,152,0,0" Text="TextBlock" VerticalAlignment="Top"/>
                     </Grid>
                 </Grid>

@@ -15,7 +15,6 @@ namespace TheRThemes
 
         private static ResourceDictionary ThemeDictionary
         {
-            // You could probably get it via its name with some query logic as well.
             get { return Application.Current.Resources.MergedDictionaries[0]; }
             set { Application.Current.Resources.MergedDictionaries[0] = value; }
         }

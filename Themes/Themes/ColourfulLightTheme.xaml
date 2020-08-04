@@ -18,12 +18,12 @@
     <SolidColorBrush x:Key="ControlDarkerBackground"             Color="#FFC7C7C7"/>
     <SolidColorBrush x:Key="ControlDarkerBorderBrush"            Color="#FFBEBEBE"/>
     <SolidColorBrush x:Key="ControlDefaultBackground"            Color="#FFE0E0E0"/>
-    <SolidColorBrush x:Key="ControlDefaultBorderBrush"           Color="#FFA1A1A1"/>
+    <SolidColorBrush x:Key="ControlDefaultBorderBrush"           Color="#FFACACAC"/>
     <SolidColorBrush x:Key="ControlBrightDefaultBackground"      Color="#FFC8C8C8"/>
-    <SolidColorBrush x:Key="ControlBrightDefaultBorderBrush"     Color="#FF8C8C8C"/>
+    <SolidColorBrush x:Key="ControlBrightDefaultBorderBrush"     Color="#ffa6a6a6"/>
     <SolidColorBrush x:Key="ControlDisabledBackground"           Color="#FFB4B4B4"/>
     <SolidColorBrush x:Key="ControlDisabledBorderBrush"          Color="#FF8C8C8C"/>
-    <SolidColorBrush x:Key="ControlMouseOverBackground"          Color="#FFD8D8D8"/>
+    <SolidColorBrush x:Key="ControlMouseOverBackground"          Color="#FFD2D2D2"/>
     <SolidColorBrush x:Key="ControlMouseOverBorderBrush"         Color="#FFBEBEBE"/>
     <SolidColorBrush x:Key="ControlSelectedBackground"           Color="#FFE0E0E0"/>
     <SolidColorBrush x:Key="ControlSelectedBorderBrush"          Color="#FFCCCCCC"/>
