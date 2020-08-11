@@ -1717,7 +1717,8 @@
                     <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="3" SnapsToDevicePixels="true">
                         <DockPanel>
                             <ToggleButton x:Name="HeaderSite" ContentTemplate="{TemplateBinding HeaderTemplate}" ContentTemplateSelector="{TemplateBinding HeaderTemplateSelector}" Content="{TemplateBinding Header}" DockPanel.Dock="Top" Foreground="{TemplateBinding Foreground}" FontWeight="{TemplateBinding FontWeight}" FocusVisualStyle="{StaticResource ExpanderHeaderFocusVisual}" FontStyle="{TemplateBinding FontStyle}" FontStretch="{TemplateBinding FontStretch}" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" IsChecked="{Binding IsExpanded, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" Margin="1" MinWidth="0" MinHeight="0" Padding="{TemplateBinding Padding}" Style="{StaticResource ExpanderDownHeaderStyle}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                            <ContentPresenter x:Name="ExpandSite" DockPanel.Dock="Bottom" Focusable="false" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" Visibility="Collapsed" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            <ContentPresenter x:Name="ExpandSite" DockPanel.Dock="Bottom" Focusable="false" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" Visibility="Collapsed" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                            </ContentPresenter>
                         </DockPanel>
                     </Border>
                     <ControlTemplate.Triggers>
@@ -4416,7 +4417,7 @@
                 <WindowChrome CaptionHeight="26"
                               ResizeBorderThickness="6"
                               CornerRadius="0"
-                              GlassFrameThickness="0"
+                              GlassFrameThickness="1"
                               NonClientFrameEdges="None"
                               UseAeroCaptionButtons="False"/>
             </Setter.Value>
@@ -4521,7 +4522,7 @@
                 <WindowChrome CaptionHeight="26"
                               ResizeBorderThickness="0"
                               CornerRadius="0"
-                              GlassFrameThickness="0"
+                              GlassFrameThickness="1"
                               NonClientFrameEdges="None"
                               UseAeroCaptionButtons="False"/>
             </Setter.Value>
