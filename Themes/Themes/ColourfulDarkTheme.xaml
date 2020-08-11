@@ -106,6 +106,7 @@
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Padding" Value="1"/>
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
@@ -1638,11 +1639,22 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ContextMenu}">
-                    <Border x:Name="Border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="2">
-                        <ScrollViewer x:Name="ScrollViewer" VerticalScrollBarVisibility="Hidden">
-                            <ItemsPresenter />
-                        </ScrollViewer>
-                    </Border>
+                    <Themes:SystemDropShadowChrome Name="Shdw" 
+                                                   Themes:SystemDropShadowChrome.Color="Transparent" 
+                                                   Themes:SystemDropShadowChrome.CornerRadius="0" 
+                                                   SnapsToDevicePixels="True">
+                        <Border x:Name="Border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="2">
+                            <ScrollViewer x:Name="ScrollViewer" VerticalScrollBarVisibility="Hidden">
+                                <ItemsPresenter />
+                            </ScrollViewer>
+                        </Border>
+                    </Themes:SystemDropShadowChrome>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="HasDropShadow" Value="True">
+                            <Setter TargetName="Shdw" Property="Margin" Value="0,0,5,5" />
+                            <Setter TargetName="Shdw" Property="Themes:SystemDropShadowChrome.Color" Value="#71000000" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -1694,24 +1706,29 @@
                                    IsOpen="{Binding IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}" 
                                    PopupAnimation="{DynamicResource {x:Static SystemParameters.MenuPopupAnimationKey}}" 
                                    Placement="Bottom">
-                                <Border x:Name="SubMenuBorder"
+                                <Themes:SystemDropShadowChrome Name="Shdw" 
+                                                   Themes:SystemDropShadowChrome.Color="#71000000" 
+                                                   Themes:SystemDropShadowChrome.CornerRadius="0" 
+                                                   SnapsToDevicePixels="True" Margin="0 0 5 5">
+                                    <Border x:Name="SubMenuBorder"
                                         BorderBrush="{StaticResource ControlDefaultBorderBrush}" BorderThickness="1" 
                                         Background="{StaticResource ControlDefaultBackground}"   Padding="0">
-                                    <ScrollViewer x:Name="SubMenuScrollViewer" Style="{DynamicResource {ComponentResourceKey ResourceId=MenuScrollViewer, TypeInTargetAssembly={x:Type FrameworkElement}}}">
-                                        <Grid x:Name="Grid1" RenderOptions.ClearTypeHint="Enabled">
-                                            <Canvas x:Name="Canvas" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Stretch" Width="22">
-                                                <Rectangle x:Name="OpaqueRect" Fill="{Binding Background, ElementName=SubMenuBorder}" Height="{Binding ActualHeight, ElementName=SubMenuBorder}" Width="{Binding ActualWidth, ElementName=SubMenuBorder}"/>
-                                            </Canvas>
-                                            <Rectangle x:Name="Rectangle" Fill="{StaticResource ControlDarkerBorderBrush}" HorizontalAlignment="Left" Margin="22,0,0,0" Width="1"/>
-                                            <Rectangle Fill="{StaticResource ControlBrightDefaultBackground}" HorizontalAlignment="Left" Margin="0" Width="22"/>
-                                            <ItemsPresenter x:Name="ItemsPresenter" 
+                                        <ScrollViewer x:Name="SubMenuScrollViewer" Style="{DynamicResource {ComponentResourceKey ResourceId=MenuScrollViewer, TypeInTargetAssembly={x:Type FrameworkElement}}}">
+                                            <Grid x:Name="Grid1" RenderOptions.ClearTypeHint="Enabled">
+                                                <Canvas x:Name="Canvas" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Stretch" Width="22">
+                                                    <Rectangle x:Name="OpaqueRect" Fill="{Binding Background, ElementName=SubMenuBorder}" Height="{Binding ActualHeight, ElementName=SubMenuBorder}" Width="{Binding ActualWidth, ElementName=SubMenuBorder}"/>
+                                                </Canvas>
+                                                <Rectangle x:Name="Rectangle" Fill="{StaticResource ControlDarkerBorderBrush}" HorizontalAlignment="Left" Margin="22,0,0,0" Width="1"/>
+                                                <Rectangle Fill="{StaticResource ControlBrightDefaultBackground}" HorizontalAlignment="Left" Margin="0" Width="22"/>
+                                                <ItemsPresenter x:Name="ItemsPresenter" 
                                                             KeyboardNavigation.DirectionalNavigation="Cycle"
                                                             Grid.IsSharedSizeScope="True" 
                                                             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
                                                             KeyboardNavigation.TabNavigation="Cycle"/>
-                                        </Grid>
-                                    </ScrollViewer>
-                                </Border>
+                                            </Grid>
+                                        </ScrollViewer>
+                                    </Border>
+                                </Themes:SystemDropShadowChrome>
                             </Popup>
                         </Grid>
                     </Border>
@@ -1762,20 +1779,25 @@
                 <TextBlock Grid.Column="4" Margin="{TemplateBinding Padding}" Opacity="0.7" Text="{TemplateBinding InputGestureText}" VerticalAlignment="Center"/>
                 <Path x:Name="RightArrow" Grid.Column="5" Data="M0,0L4,3.5 0,7z" Fill="{StaticResource ControlGlythColour}" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
                 <Popup x:Name="PART_Popup" AllowsTransparency="True" Focusable="False" HorizontalOffset="-2" IsOpen="{Binding IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}" PopupAnimation="{DynamicResource {x:Static SystemParameters.MenuPopupAnimationKey}}" Placement="Right" VerticalOffset="-3">
-                    <Border x:Name="SubMenuBorder" 
+                    <Themes:SystemDropShadowChrome Name="Shdw" 
+                                                   Themes:SystemDropShadowChrome.Color="#71000000" 
+                                                   Themes:SystemDropShadowChrome.CornerRadius="0" 
+                                                   SnapsToDevicePixels="True" Margin="0 0 5 5">
+                        <Border x:Name="SubMenuBorder" 
                             BorderBrush="{StaticResource ControlDefaultBorderBrush}" BorderThickness="1" 
                             Background="{StaticResource ControlDefaultBackground}"   Padding="0">
-                        <ScrollViewer x:Name="SubMenuScrollViewer" Style="{DynamicResource {ComponentResourceKey ResourceId=MenuScrollViewer, TypeInTargetAssembly={x:Type FrameworkElement}}}">
-                            <Grid RenderOptions.ClearTypeHint="Enabled">
-                                <Canvas x:Name="Canvas" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Stretch" Width="22">
-                                    <Rectangle x:Name="OpaqueRect" Fill="{Binding Background, ElementName=SubMenuBorder}" Height="{Binding ActualHeight, ElementName=SubMenuBorder}" Width="{Binding ActualWidth, ElementName=SubMenuBorder}"/>
-                                </Canvas>
-                                <Rectangle x:Name="Rectangle" Fill="{StaticResource ControlDarkerBorderBrush}" HorizontalAlignment="Left" Margin="22,0,0,0" Width="1"/>
-                                <Rectangle Fill="{StaticResource ControlBrightDefaultBackground}" HorizontalAlignment="Left" Margin="0" Width="22"/>
-                                <ItemsPresenter x:Name="ItemsPresenter" KeyboardNavigation.DirectionalNavigation="Cycle" Grid.IsSharedSizeScope="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" KeyboardNavigation.TabNavigation="Cycle"/>
-                            </Grid>
-                        </ScrollViewer>
-                    </Border>
+                            <ScrollViewer x:Name="SubMenuScrollViewer" Style="{DynamicResource {ComponentResourceKey ResourceId=MenuScrollViewer, TypeInTargetAssembly={x:Type FrameworkElement}}}">
+                                <Grid RenderOptions.ClearTypeHint="Enabled">
+                                    <Canvas x:Name="Canvas" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Stretch" Width="22">
+                                        <Rectangle x:Name="OpaqueRect" Fill="{Binding Background, ElementName=SubMenuBorder}" Height="{Binding ActualHeight, ElementName=SubMenuBorder}" Width="{Binding ActualWidth, ElementName=SubMenuBorder}"/>
+                                    </Canvas>
+                                    <Rectangle x:Name="Rectangle" Fill="{StaticResource ControlDarkerBorderBrush}" HorizontalAlignment="Left" Margin="22,0,0,0" Width="1"/>
+                                    <Rectangle Fill="{StaticResource ControlBrightDefaultBackground}" HorizontalAlignment="Left" Margin="0" Width="22"/>
+                                    <ItemsPresenter x:Name="ItemsPresenter" KeyboardNavigation.DirectionalNavigation="Cycle" Grid.IsSharedSizeScope="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" KeyboardNavigation.TabNavigation="Cycle"/>
+                                </Grid>
+                            </ScrollViewer>
+                        </Border>
+                    </Themes:SystemDropShadowChrome>
                 </Popup>
             </Grid>
         </Border>
@@ -3666,22 +3688,32 @@
         <Setter Property="BorderBrush" Value="{StaticResource ControlDefaultBorderBrush}"/>
         <Setter Property="Foreground" Value="{StaticResource ControlDefaultForeground}"/>
         <Setter Property="OverridesDefaultStyle" Value="true" />
-        <Setter Property="HasDropShadow" Value="True" />
+        <Setter Property="HasDropShadow" Value="True"/>
+        <Setter Property="Placement" Value="MousePoint"/>
+        <Setter Property="PlacementRectangle" Value="10 10 5 5"/>
+        <Setter Property="HorizontalOffset" Value="15"/>
+        <Setter Property="VerticalOffset" Value="15"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ToolTip">
-                    <Border Name="Border"
-                            BorderThickness="1"
-                            Width="{TemplateBinding Width}"
-                            Height="{TemplateBinding Height}" 
-                            Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}">
-                        <ContentPresenter Margin="4" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                    </Border>
+                    <Themes:SystemDropShadowChrome Name="Shdw" 
+                                                   Themes:SystemDropShadowChrome.Color="Transparent" 
+                                                   Themes:SystemDropShadowChrome.CornerRadius="0" 
+                                                   SnapsToDevicePixels="True">
+                        <Border Name="Border"
+                                SnapsToDevicePixels="True"
+                                BorderThickness="1"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                Width="{TemplateBinding Width}"
+                                Height="{TemplateBinding Height}">
+                            <ContentPresenter Margin="4" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                        </Border>
+                    </Themes:SystemDropShadowChrome>
                     <ControlTemplate.Triggers>
-                        <Trigger Property="HasDropShadow" Value="true">
-                            <Setter TargetName="Border" Property="CornerRadius" Value="4" />
-                            <Setter TargetName="Border" Property="SnapsToDevicePixels" Value="true" />
+                        <Trigger Property="HasDropShadow" Value="True">
+                            <Setter TargetName="Shdw" Property="Margin" Value="0,0,5,5" />
+                            <Setter TargetName="Shdw" Property="Themes:SystemDropShadowChrome.Color" Value="#71000000" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

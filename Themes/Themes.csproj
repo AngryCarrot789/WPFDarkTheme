@@ -75,9 +75,6 @@
       <DependentUpon>LightTheme.xaml</DependentUpon>
     </Compile>
     <Compile Include="Themes\ThemesController.cs" />
-    <Compile Include="Themes\WindowsColourDarkTheme.xaml.cs">
-      <DependentUpon>WindowsColourDarkTheme.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Utilities\BaseViewModel.cs" />
     <Compile Include="Utilities\Command.cs" />
     <Compile Include="Utilities\CommandParam.cs" />
@@ -114,10 +111,6 @@
     <Page Include="Themes\LightTheme.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\WindowsColourDarkTheme.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
