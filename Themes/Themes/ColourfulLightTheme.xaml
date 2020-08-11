@@ -3844,7 +3844,7 @@
                 <WindowChrome CaptionHeight="26"
                               ResizeBorderThickness="6"
                               CornerRadius="0"
-                              GlassFrameThickness="0"
+                              GlassFrameThickness="1"
                               NonClientFrameEdges="None"
                               UseAeroCaptionButtons="False"/>
             </Setter.Value>
@@ -3949,7 +3949,7 @@
                 <WindowChrome CaptionHeight="26"
                               ResizeBorderThickness="0"
                               CornerRadius="0"
-                              GlassFrameThickness="0"
+                              GlassFrameThickness="1"
                               NonClientFrameEdges="None"
                               UseAeroCaptionButtons="False"/>
             </Setter.Value>
