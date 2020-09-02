@@ -4,6 +4,7 @@ I started making this so that me, or anyone really, can easily have a nice looki
 Here's a preview of the latest update: (Order is: Light, ColourfulLight, Dark, ColourfulDark).
 ![](newPreview.png)
 # Latest Updates (time is from bottom to top)
+- Finally added a shadow to windows. Also added drop shadows to tooltips, context menus and menuitems.
 - Had to change the slider to fix the orientations and the tick placements. they now no longer have the blue trail after them. although i could try and add it later
 - Colourful Light/Dark theme has arrived! i find the Colourful light theme and original dark theme go well, but that's my opinion ;)
 - Themed the titlebar! All of the buttons' functionality (close, minimize, autothing) automatically apply to any window.
