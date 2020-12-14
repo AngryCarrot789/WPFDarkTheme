@@ -82,6 +82,6 @@ and for using add/close buttons, use this:
     </TabItem>
 </TabControl>
 ```
-I should mention, i haven't yet adjusted the size (well, the height) of the CloseButtons template. so the TabItem will be bigger than normal, meaning the tabs will be bigger unfortunately. will fix soon
+I should mention, i haven't yet adjusted the size (well, the height) of the CloseButtons template. so the TabItem will be bigger than normal, meaning the tabs will be bigger unfortunately. will fix soon. and also, it only closes the selected tabitems. not the one you click close on... unfortunately. will fix soon
 ## Other things 
 Also, if you absolutely need my consent to do stuff like edit/use this theme stuff, then you can edit this and publish this all you want :) would be nice if you credited me at this github link, but eh.
