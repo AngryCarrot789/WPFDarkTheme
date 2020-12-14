@@ -15,6 +15,7 @@ Here's a preview of the latest update: (Order is: Light, ColourfulLight, Dark, C
 - Added some colours to the light theme too (not sure why you'd want to use it but eh)
 - And finally improved the RadioBoxes by giving them a more circular shape, like they normally have.
 ### Some smaller updates
+- Removed the update from below because making the foreground white doesnt affect custom controls... stays black but the colours are lighter so the black looks okay with blue
 - Improved colourful light theme by making the foreground of any blue surface white instead of black so that it stands out better.
 # How to install/use
 Firstly, in your WPF project, right click References in the solution explorer bit, add reference, goto Assemblies and double click/include PresentationFramework.Aero2. this allows the use of drop shadows and stuff.
