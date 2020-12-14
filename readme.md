@@ -18,7 +18,7 @@ Here's a preview of the latest update: (Order is: Light, ColourfulLight, Dark, C
 - Improved colourful light theme by making the foreground of any blue surface white instead of black so that it stands out better.
 # How to install/use
 Firstly, in your WPF project, right click References in the solution explorer bit, add reference, goto Assemblies and double click/include PresentationFramework.Aero2. this allows the use of drop shadows and stuff.
-Then, just drag and drop the theme(s) you want (located in the ThemesFolder folder btw) into your project (i'd recommend putting them inside a themes folder) and inside App.xaml place this: (and repalce DarkTheme with whatever theme you want, like LightTheme, ColourfulDarkTheme, etc)
+Then, just drag and drop the theme(s) you want (located in the Themes folder folder btw) into your project (i'd recommend putting them inside a themes folder jus to be organised) and inside App.xaml place this: (and repalce DarkTheme with whatever theme you want, like LightTheme, ColourfulDarkTheme, etc)
 ```xml
 <Application.Resources>
     <ResourceDictionary>
@@ -28,6 +28,7 @@ Then, just drag and drop the theme(s) you want (located in the ThemesFolder fold
     </ResourceDictionary>
 </Application.Resources>
 ```
+and then most things like buttons, listboxes, etc, will automatically be styled. Then to style windows... 
 # How to style windows
 in your window xaml code (where you define height/width, etc), add
 ```xml
