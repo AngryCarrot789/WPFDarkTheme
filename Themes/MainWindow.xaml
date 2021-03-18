@@ -1,8 +1,10 @@
-﻿<Window x:Class="Themes.MainWindow"
+﻿<Window x:Class="REghZyFramework.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="clr-namespace:Themes.Controls" xmlns:system="clr-namespace:System;assembly=mscorlib"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:controls="clr-namespace:REghZyFramework.Controls"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
         Height="720" Width="1280"
         Style="{DynamicResource CustomWindowStyle}"
         Title="A custom window with a dark theme">
@@ -31,7 +33,7 @@
                 <MenuItem Header="Another menuitem" Template="{DynamicResource SingleDropDownMenuItem}"/>
                 <MenuItem Header="Another menuitem" Template="{DynamicResource SingleDropDownMenuItem}"/>
                 <Separator Style="{DynamicResource MenuItemSeparator}"/>
-                <MenuItem Header="Another menuitem" Template="{DynamicResource SingleDropDownMenuItem}"/>
+                <MenuItem Header="Another menuitem" Template="{DynamicResource SingleDropDownMenuItem}" IsEnabled="False"/>
                 <MenuItem Header="Another menuitem" Template="{DynamicResource SingleDropDownMenuItem}"/>
                 <MenuItem Header="Another menuitem" Template="{DynamicResource SingleDropDownMenuItem}"/>
                 <Separator Style="{DynamicResource MenuItemSeparator}"/>
@@ -92,7 +94,7 @@
                     <MenuItem Header="Another menuitem" Template="{DynamicResource SingleDropDownMenuItem}"/>
                 </MenuItem>
             </MenuItem>
-            <MenuItem Header="Edit">
+            <MenuItem Header="Edit" IsEnabled="False">
                 <MenuItem Header="Another menuitem" Template="{DynamicResource SingleDropDownMenuItem}"/>
                 <MenuItem Header="Another menuitem" Template="{DynamicResource SingleDropDownMenuItem}"/>
                 <MenuItem Header="Another menuitem" Template="{DynamicResource SingleDropDownMenuItem}"/>

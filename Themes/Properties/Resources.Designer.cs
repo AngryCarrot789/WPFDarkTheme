@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Themes.Properties
+namespace REghZyFramework.Properties
 {
 
 

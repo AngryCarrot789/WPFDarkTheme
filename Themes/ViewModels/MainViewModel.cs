@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
-using Themes.Utilities;
+using REghZyFramework.Utilities;
 
-namespace Themes.ViewModels
+namespace REghZyFramework.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {

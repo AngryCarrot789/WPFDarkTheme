@@ -1,4 +1,4 @@
-﻿<ResourceDictionary x:Class="TheRThemes.ColourfulLightTheme"
+﻿<ResourceDictionary x:Class="REghZyFramework.Themes.ColourfulLightTheme"
                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2">
@@ -1832,6 +1832,7 @@
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter Property="TextElement.Foreground" TargetName="templateRoot" Value="{StaticResource ControlDisabledGlythColour}"/>
+                            <Setter Property="Background" Value="{StaticResource ControlDisabledBackground}"/>
                         </Trigger>
                         <Trigger Property="CanContentScroll" SourceName="SubMenuScrollViewer" Value="False">
                             <Setter Property="Canvas.Top" TargetName="OpaqueRect" Value="{Binding VerticalOffset, ElementName=SubMenuScrollViewer}"/>
@@ -1904,6 +1905,7 @@
                 <Setter Property="TextElement.Foreground" TargetName="templateRoot" Value="{StaticResource ControlDisabledGlythColour}"/>
                 <Setter Property="Fill" TargetName="Glyph" Value="{StaticResource ControlDisabledGlythColour}"/>
                 <Setter Property="Fill" TargetName="RightArrow" Value="{StaticResource ControlDisabledGlythColour}"/>
+                <Setter Property="Background" Value="{StaticResource ControlDisabledBackground}"/>
             </Trigger>
             <Trigger Property="CanContentScroll" SourceName="SubMenuScrollViewer" Value="False">
                 <Setter Property="Canvas.Top" TargetName="OpaqueRect" Value="{Binding VerticalOffset, ElementName=SubMenuScrollViewer}"/>
@@ -1967,6 +1969,7 @@
                 <Setter Property="TextElement.Foreground" TargetName="templateRoot" Value="{StaticResource ControlDisabledGlythColour}"/>
                 <Setter Property="Fill" TargetName="Glyph" Value="{StaticResource ControlDisabledGlythColour}"/>
                 <Setter Property="Fill" TargetName="RightArrow" Value="{StaticResource ControlDisabledGlythColour}"/>
+                <Setter Property="Background" Value="{StaticResource ControlDisabledBackground}"/>
             </Trigger>
             <Trigger Property="CanContentScroll" SourceName="SubMenuScrollViewer" Value="False">
                 <Setter Property="Canvas.Top" TargetName="OpaqueRect" Value="{Binding VerticalOffset, ElementName=SubMenuScrollViewer}"/>
