@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows;
 
-namespace TheRThemes
+namespace REghZyFramework.Themes
 {
     public static class ThemesController
     {

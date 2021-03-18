@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Themes
+namespace REghZyFramework
 {
     /// <summary>
     /// Interaction logic for App.xaml

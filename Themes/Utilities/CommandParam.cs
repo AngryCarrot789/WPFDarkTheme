@@ -1,66 +1,56 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Themes.Utilities
+namespace REghZyFramework.Utilities
 {
-    public class CommandParam : ICommand
+    /// <summary>
+    /// An always executable capiable of passing parameters
+    /// </summary>
+    /// <typeparam name="Parameter">The parameter type (<see cref="string"/>, <see cref="int"/>, etc)</typeparam>
+    public class CommandParam<Parameter> : ICommand
     {
-        #region Fields
-
-        readonly Action<object> _execute;
-        readonly Predicate<object> _canExecute;
-
-        #endregion // Fields
-
-        #region Constructors
+        readonly Action<Parameter> _execute;
 
         /// <summary>
-        /// Creates a new command that can always execute.
+        /// Creates a new command that can always execute
         /// </summary>
-        /// <param name="execute">The execution logic.</param>
-        public CommandParam(Action<object> execute) : this(execute, null)
-        {
-        }
-
-        /// <summary>
-        /// Creates a new command.
-        /// </summary>
-        /// <param name="execute">The execution logic.</param>
-        /// <param name="canExecute">The execution status logic.</param>
-        public CommandParam(Action<object> execute, Predicate<object> canExecute)
+        /// <param name="execute">The method to execute</param>
+        public CommandParam(Action<Parameter> execute)
         {
             if (execute == null)
-                throw new ArgumentNullException("execute");
+                return;
 
             _execute = execute;
-            _canExecute = canExecute;
         }
 
-        #endregion // Constructors
+        /// <summary>
+        /// Executes the command only if the parameter matches the command's parameter type
+        /// <para>
+        ///     For example, it wont execute if the command requires a <see cref="int"/> but you provide a <see cref="string"/>
+        /// </para>
+        /// </summary>
+        /// <param name="parameter"></param>
+        public void Execute(object parameter)
+        {
+            if (parameter is Parameter p)
+                _execute?.Invoke(p);
+        }
 
-        #region ICommand Members
-
-
+        /// <summary>
+        /// Returns true because this is an always executable command
+        /// </summary>
+        /// <param name="parameter">Ignored</param>
+        /// <returns>True</returns>
         public bool CanExecute(object parameter)
         {
-            return _canExecute == null ? true : _canExecute(parameter);
+            return true;
         }
 
         public event EventHandler CanExecuteChanged
         {
-            add { CommandManager.RequerySuggested += value; }
-            remove { CommandManager.RequerySuggested -= value; }
+            add { } remove { }
+            //add { CommandManager.RequerySuggested += value; }
+            //remove { CommandManager.RequerySuggested -= value; }
         }
-
-        public void Execute(object parameter)
-        {
-            _execute(parameter);
-        }
-
-        #endregion // ICommand Members
     }
 }

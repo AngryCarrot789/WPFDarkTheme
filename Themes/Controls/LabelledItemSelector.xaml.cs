@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 
-namespace Themes.Controls
+namespace REghZyFramework.Controls
 {
     /// <summary>
     /// Interaction logic for LabelledItemSelector.xaml

@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace TheRThemes
+namespace REghZyFramework.Themes
 {
     public partial class LightTheme
     {

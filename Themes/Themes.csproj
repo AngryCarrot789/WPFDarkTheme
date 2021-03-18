@@ -75,10 +75,12 @@
       <DependentUpon>LightTheme.xaml</DependentUpon>
     </Compile>
     <Compile Include="Themes\ThemesController.cs" />
+    <Compile Include="Utilities\BaseView.cs" />
     <Compile Include="Utilities\BaseViewModel.cs" />
     <Compile Include="Utilities\Command.cs" />
     <Compile Include="Utilities\CommandParam.cs" />
     <Compile Include="Utilities\ScrollViewerHelper.cs" />
+    <Compile Include="Utilities\String\StringExtensions.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Page Include="Controls\LabelledItemSelector.xaml">
       <SubType>Designer</SubType>
