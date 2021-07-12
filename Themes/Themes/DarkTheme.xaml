@@ -1780,8 +1780,16 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+        <Style.Triggers>
+            <Trigger Property="Role" Value="SubmenuHeader">
+                <Setter Property="Template" Value="{DynamicResource DropDownMenuItemStyle}" />
+            </Trigger>
+            <Trigger Property="Role" Value="SubmenuItem">
+                <Setter Property="Template" Value="{DynamicResource SingleDropDownMenuItem}" />
+            </Trigger>
+        </Style.Triggers>
     </Style>
-
+    
     <ControlTemplate x:Key="DropDownMenuItemStyle" TargetType="{x:Type MenuItem}">
         <Border x:Name="templateRoot" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
             <Grid Margin="-1">
@@ -3524,6 +3532,11 @@
         <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
         <Setter Property="TextAlignment" Value="Left"/>
         <Setter Property="Foreground" Value="{StaticResource ControlDefaultForeground}"/>
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Opacity" Value="0.5" />
+            </Trigger>
+        </Style.Triggers>
     </Style>
 
     <!-- -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
@@ -4051,7 +4064,7 @@
                                                    Grid.Column="1" TextAlignment="Left"/>
                                     </DockPanel>
                                     <StackPanel Orientation="Horizontal"
-                                        Grid.Column="0" HorizontalAlignment="Right">
+                                                Grid.Column="0" HorizontalAlignment="Right">
                                         <Button x:Name="btnMinimize"
                                                 Background="Transparent"
                                                 BorderBrush="Transparent"
@@ -4061,7 +4074,7 @@
                                                 Click="Minimize_Event">
                                             <Rectangle Width="10" 
                                                        VerticalAlignment="Center" 
-                                                       Margin="1 1 0 0" 
+                                                       Margin="1 2 0 0" 
                                                        Stroke="{StaticResource ControlGlythColour}" 
                                                        StrokeThickness="2"/>
                                         </Button>
@@ -4072,15 +4085,6 @@
                                                 Width="40"
                                                 WindowChrome.IsHitTestVisibleInChrome="True" 
                                                 Click="AutoMinimize_Event">
-                                            <Grid Width="12" Height="12">
-                                                <Rectangle StrokeThickness="2" 
-                                                           Stroke="{StaticResource ControlGlythColour}"
-                                                           Margin="3,0,0,3"/>
-                                                <Rectangle StrokeThickness="2" 
-                                                           Fill="{TemplateBinding BorderBrush}"
-                                                           Stroke="{StaticResource ControlGlythColour}"
-                                                           Margin="0 3 3 0"/>
-                                            </Grid>
                                         </Button>
                                         <Button x:Name="btnClose"
                                                 Background="Transparent"
@@ -4099,6 +4103,34 @@
                             </Grid>
                         </Border>
                     </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="WindowState" Value="Maximized">
+                            <Setter TargetName="btnRestore" Property="Content">
+                                <Setter.Value>
+                                    <Grid Width="14" Height="14">
+                                        <Rectangle StrokeThickness="2" 
+                                                   Stroke="{StaticResource ControlGlythColour}"
+                                                   Margin="3,0,0,3"/>
+                                        <Rectangle StrokeThickness="2" 
+                                                   Fill="{StaticResource WindowBorderColour}"
+                                                   Stroke="{StaticResource ControlGlythColour}"
+                                                   Margin="0,4,4,0"/>
+                                    </Grid>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="WindowState" Value="Normal">
+                            <Setter TargetName="btnRestore" Property="Content">
+                                <Setter.Value>
+                                    <Grid Width="12" Height="12">
+                                        <Rectangle StrokeThickness="2" 
+                                                   Stroke="{StaticResource ControlGlythColour}"
+                                                   Margin="0"/>
+                                    </Grid>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
