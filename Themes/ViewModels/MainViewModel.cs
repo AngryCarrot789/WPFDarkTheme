@@ -14,6 +14,7 @@ namespace REghZyFramework.ViewModels
     public class MainViewModel : BaseViewModel
     {
         public ICommand owo { get; set; }
+
         public ObservableCollection<string> SomeItems
         {
             get;set;
