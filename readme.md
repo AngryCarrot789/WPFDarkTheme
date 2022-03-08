@@ -4,6 +4,7 @@ I started making this so that me, or anyone really, can easily have a nice looki
 Here's a preview of the latest update: (Order is: Light, ColourfulLight, Dark, ColourfulDark).
 ![](newPreview.png)
 # Latest Updates (time is from bottom to top)
+- Added version 2. I only added dark themes to V2 so far, but i might add a light themes. They are located in the ThemesV2 folder. I made the app use them (in App.xaml, which shows how to install them, i commented out the older version)
 - Made menuitems autostyle, improved the looks of disabled controls (which use a textblock as their content, e.g. buttons or menuitems), and also made the maximize/restore button change based on the window state
 - Finally added a shadow to windows. Also added drop shadows to tooltips, context menus and menuitems. These shadows however do introduct another thing... when resizing the window, a white border apears along the axis youre resizing in. It dissapears as soon as the window has fully re-drawn (aka after you stop resizing). idk how to fix this but tbh its not that big of a deal so it can just be ignored 
 - Had to change the slider to fix the orientations and the tick placements. they now no longer have the blue trail after them. although i could try and add it later
