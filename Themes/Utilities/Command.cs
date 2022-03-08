@@ -1,31 +1,27 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace REghZyFramework.Utilities
-{
+namespace REghZyFramework.Utilities {
     /// <summary>
     /// An always executable command
     /// </summary>
-    public class Command : ICommand
-    {
+    public class Command : ICommand {
         private readonly Action _action;
 
         /// <summary>
         /// Creates a command that can always execute
         /// </summary>
         /// <param name="action">The method to be executed</param>
-        public Command(Action action)
-        {
-            _action = action;
+        public Command(Action action) {
+            this._action = action;
         }
 
         /// <summary>
         /// Executes the command
         /// </summary>
         /// <param name="parameter">Ignored</param>
-        public void Execute(object parameter)
-        {
-            _action?.Invoke();
+        public void Execute(object parameter) {
+            this._action?.Invoke();
         }
 
         /// <summary>
@@ -33,8 +29,7 @@ namespace REghZyFramework.Utilities
         /// </summary>
         /// <param name="parameter">Ignored</param>
         /// <returns>True</returns>
-        public bool CanExecute(object parameter)
-        {
+        public bool CanExecute(object parameter) {
             return true;
         }
 

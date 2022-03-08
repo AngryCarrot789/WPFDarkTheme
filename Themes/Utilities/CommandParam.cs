@@ -1,26 +1,23 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace REghZyFramework.Utilities
-{
+namespace REghZyFramework.Utilities {
     /// <summary>
     /// An always executable capiable of passing parameters
     /// </summary>
     /// <typeparam name="Parameter">The parameter type (<see cref="string"/>, <see cref="int"/>, etc)</typeparam>
-    public class CommandParam<Parameter> : ICommand
-    {
+    public class CommandParam<Parameter> : ICommand {
         readonly Action<Parameter> _execute;
 
         /// <summary>
         /// Creates a new command that can always execute
         /// </summary>
         /// <param name="execute">The method to execute</param>
-        public CommandParam(Action<Parameter> execute)
-        {
+        public CommandParam(Action<Parameter> execute) {
             if (execute == null)
                 return;
 
-            _execute = execute;
+            this._execute = execute;
         }
 
         /// <summary>
@@ -30,10 +27,9 @@ namespace REghZyFramework.Utilities
         /// </para>
         /// </summary>
         /// <param name="parameter"></param>
-        public void Execute(object parameter)
-        {
+        public void Execute(object parameter) {
             if (parameter is Parameter p)
-                _execute?.Invoke(p);
+                this._execute?.Invoke(p);
         }
 
         /// <summary>
@@ -41,14 +37,13 @@ namespace REghZyFramework.Utilities
         /// </summary>
         /// <param name="parameter">Ignored</param>
         /// <returns>True</returns>
-        public bool CanExecute(object parameter)
-        {
+        public bool CanExecute(object parameter) {
             return true;
         }
 
-        public event EventHandler CanExecuteChanged
-        {
-            add { } remove { }
+        public event EventHandler CanExecuteChanged {
+            add { }
+            remove { }
             //add { CommandManager.RequerySuggested += value; }
             //remove { CommandManager.RequerySuggested -= value; }
         }
