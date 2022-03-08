@@ -1,17 +1,21 @@
 ﻿<Window
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-        xmlns:controls="clr-namespace:REghZyFramework.Controls"
-        xmlns:system="clr-namespace:System;assembly=mscorlib"
-        xmlns:viewmodels="clr-namespace:REghZyFramework.ViewModels"
-        xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2" x:Class="REghZyFramework.MainWindow"
-        Height="720" Width="1280"
-        Style="{DynamicResource CustomWindowStyle}"
-        Title="A custom window with a dark theme">
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+    xmlns:controls="clr-namespace:REghZyFramework.Controls"
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    xmlns:viewmodels="clr-namespace:REghZyFramework.ViewModels"
+    xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2" xmlns:datagrids="clr-namespace:Themes.ViewModels.DataGrids"
+    x:Class="REghZyFramework.MainWindow"
+    Height="720" Width="1280"
+    Style="{DynamicResource CustomWindowStyle}"
+    Title="A custom window with a dark theme">
+    <Window.DataContext>
+        <viewmodels:MainViewModel/>
+    </Window.DataContext>
     <Window.Resources>
-        <DropShadowBitmapEffect x:Key="NormalShadow" ShadowDepth="2" Softness="0.2" Opacity="0.64"/>
+        <DropShadowBitmapEffect x:Key="NormalShadow" ShadowDepth="2" Softness="0.2" Opacity="0.64" />
         <x:Array x:Key="temps" Type="{x:Type system:String}">
             <system:String>ello1</system:String>
             <system:String>ello2</system:String>
@@ -26,275 +30,275 @@
                     <MenuItem.Icon>
                         <Image Source="Resources/idektbh.png">
                             <Image.BitmapEffect>
-                                <DropShadowBitmapEffect ShadowDepth="1" Color="Black" Opacity="0.7"/>
+                                <DropShadowBitmapEffect ShadowDepth="1" Color="Black" Opacity="0.7" />
                             </Image.BitmapEffect>
                         </Image>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="Another menuitem"/>
-                <MenuItem Header="Another menuitem"/>
-                <MenuItem Header="Another menuitem"/>
-                <Separator Style="{DynamicResource MenuItemSeparator}"/>
-                <MenuItem Header="Another menuitem" IsEnabled="False"/>
-                <MenuItem Header="Another menuitem"/>
-                <MenuItem Header="Another menuitem"/>
-                <Separator Style="{DynamicResource MenuItemSeparator}"/>
+                <MenuItem Header="Another menuitem" />
+                <MenuItem Header="Another menuitem" />
+                <MenuItem Header="Another menuitem" />
+                <Separator Style="{DynamicResource MenuItemSeparator}" />
+                <MenuItem Header="Another menuitem" IsEnabled="False" />
+                <MenuItem Header="Another menuitem" />
+                <MenuItem Header="Another menuitem" />
+                <Separator Style="{DynamicResource MenuItemSeparator}" />
                 <MenuItem Header="MenuItem with many others">
                     <MenuItem Header="Another MenuItem with many others">
                         <MenuItem Header="MenuItem with many others">
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
                         </MenuItem>
                         <MenuItem Header="MenuItem with many others">
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
                         </MenuItem>
                         <MenuItem Header="MenuItem with many others">
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
                         </MenuItem>
                         <MenuItem Header="MenuItem with many others">
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
-                            <MenuItem Header="Another menuitem"/>
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
+                            <MenuItem Header="Another menuitem" />
                         </MenuItem>
                     </MenuItem>
-                    <MenuItem Header="Another menuitem"/>
-                    <MenuItem Header="Another menuitem"/>
-                    <MenuItem Header="Another menuitem"/>
-                    <MenuItem Header="Another menuitem"/>
-                    <MenuItem Header="Another menuitem"/>
-                    <MenuItem Header="Another menuitem"/>
-                    <MenuItem Header="Another menuitem"/>
-                    <MenuItem Header="Another menuitem"/>
+                    <MenuItem Header="Another menuitem" />
+                    <MenuItem Header="Another menuitem" />
+                    <MenuItem Header="Another menuitem" />
+                    <MenuItem Header="Another menuitem" />
+                    <MenuItem Header="Another menuitem" />
+                    <MenuItem Header="Another menuitem" />
+                    <MenuItem Header="Another menuitem" />
+                    <MenuItem Header="Another menuitem" />
                 </MenuItem>
             </MenuItem>
             <MenuItem Header="Edit" IsEnabled="False">
-                <MenuItem Header="Another menuitem"/>
-                <MenuItem Header="Another menuitem"/>
-                <MenuItem Header="Another menuitem"/>
-                <MenuItem Header="Another menuitem"/>
-                <MenuItem Header="Another menuitem"/>
-                <MenuItem Header="Another menuitem"/>
-                <MenuItem Header="Another menuitem"/>
-                <MenuItem Header="Another menuitem"/>
-                <MenuItem Header="Another menuitem"/>
-                <MenuItem Header="Another menuitem"/>
-                <MenuItem Header="Another menuitem"/>
-                <MenuItem Header="Another menuitem"/>
-                <MenuItem Header="Another menuitem"/>
-                <MenuItem Header="Another menuitem"/>
+                <MenuItem Header="Another menuitem" />
+                <MenuItem Header="Another menuitem" />
+                <MenuItem Header="Another menuitem" />
+                <MenuItem Header="Another menuitem" />
+                <MenuItem Header="Another menuitem" />
+                <MenuItem Header="Another menuitem" />
+                <MenuItem Header="Another menuitem" />
+                <MenuItem Header="Another menuitem" />
+                <MenuItem Header="Another menuitem" />
+                <MenuItem Header="Another menuitem" />
+                <MenuItem Header="Another menuitem" />
+                <MenuItem Header="Another menuitem" />
+                <MenuItem Header="Another menuitem" />
+                <MenuItem Header="Another menuitem" />
             </MenuItem>
             <MenuItem Header="Themes">
-                <MenuItem Header="Avaliable Themes Below"/>
+                <MenuItem Header="Avaliable Themes Below" />
                 <MenuItem Header="Light" Click="ChangeTheme" Uid="0">
                     <MenuItem.Icon>
-                        <Rectangle Stroke="#FF848484" Fill="#FFE8E8E8" StrokeThickness="2" StrokeLineJoin="Round" BitmapEffect="{StaticResource NormalShadow}"/>
+                        <Rectangle Stroke="#FF848484" Fill="#FFE8E8E8" StrokeThickness="2" StrokeLineJoin="Round" BitmapEffect="{StaticResource NormalShadow}" />
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem Header="Colourful Light" Click="ChangeTheme" Uid="1">
                     <MenuItem.Icon>
-                        <Rectangle Stroke="#FF2C7FF5" Fill="#FFE8E8E8" StrokeThickness="2" StrokeLineJoin="Round" BitmapEffect="{StaticResource NormalShadow}"/>
+                        <Rectangle Stroke="#FF2C7FF5" Fill="#FFE8E8E8" StrokeThickness="2" StrokeLineJoin="Round" BitmapEffect="{StaticResource NormalShadow}" />
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem Header="Dark" Click="ChangeTheme" Uid="2">
                     <MenuItem.Icon>
-                        <Rectangle Stroke="#FF404040" Fill="#FF1B1B1B" StrokeThickness="2" StrokeLineJoin="Round" BitmapEffect="{StaticResource NormalShadow}"/>
+                        <Rectangle Stroke="#FF404040" Fill="#FF1B1B1B" StrokeThickness="2" StrokeLineJoin="Round" BitmapEffect="{StaticResource NormalShadow}" />
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem Header="Colourful Dark" Click="ChangeTheme" Uid="3">
                     <MenuItem.Icon>
-                        <Rectangle Stroke="#FF2C7FF5" Fill="#FF1B1B1B" StrokeThickness="2" StrokeLineJoin="Round" BitmapEffect="{StaticResource NormalShadow}"/>
+                        <Rectangle Stroke="#FF2C7FF5" Fill="#FF1B1B1B" StrokeThickness="2" StrokeLineJoin="Round" BitmapEffect="{StaticResource NormalShadow}" />
                     </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>
         </Menu>
         <Grid Margin="4,18,4,4">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="3*"/>
-                <ColumnDefinition Width="2"/>
-                <ColumnDefinition Width="3*"/>
-                <ColumnDefinition Width="2"/>
-                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="400" />
+                <ColumnDefinition Width="2" />
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="2" />
+                <ColumnDefinition Width="4*" />
             </Grid.ColumnDefinitions>
-            <GroupBox Header="A GroupBox Here... with things inside" Margin="0,0,2,0">
+            <GroupBox Header="A GroupBox Here... with things inside" Margin="0,0,2,0" BorderBrush="{DynamicResource AREghZyBrush.Primary.2.Background.Static}">
                 <StackPanel>
-                    <controls:LabelledItemSelector LabelText="Resolution" ItemsSource="{Binding SomeItems, UpdateSourceTrigger=PropertyChanged}"/>
-                    <Button Command="{Binding owo}" Content="A Button Here" Height="40" Margin="5"/>
-                    <CheckBox Content="A CheckBox Here" Margin="5"/>
-                    <CheckBox Content="A CheckBox Here" Margin="5"/>
-                    <CheckBox Content="A CheckBox Here" Margin="5"/>
-                    <CheckBox Content="A CheckBox Here" Margin="5"/>
-                    <RadioButton Content="A RadioButton Here" Margin="5"/>
-                    <RadioButton Content="A RadioButton Here" Margin="5"/>
-                    <RadioButton Content="A RadioButton Here" Margin="5"/>
-                    <Slider Minimum="0" Maximum="100" Value="16" Margin="5"/>
-                    <Slider Minimum="0" Maximum="100" Value="32" Margin="5"/>
-                    <Slider Minimum="0" Maximum="100" Value="64" Margin="5"/>
-                    <Slider Minimum="0" Maximum="100" Value="100" Margin="5"/>
-                    <DataGrid Height="150"/>
+                    <controls:LabelledItemSelector LabelText="Resolution" ItemsSource="{Binding SomeItems, UpdateSourceTrigger=PropertyChanged}" />
+                    <Button Command="{Binding AddContentCommand}" Content="A Button Here" Height="40" Margin="5" />
+                    <CheckBox Content="A CheckBox Here" Margin="5" />
+                    <CheckBox Content="A CheckBox Here" Margin="5" />
+                    <CheckBox Content="A CheckBox Here" Margin="5" />
+                    <CheckBox Content="A CheckBox Here" Margin="5" />
+                    <RadioButton Content="A RadioButton Here" Margin="5" />
+                    <RadioButton Content="A RadioButton Here" Margin="5" />
+                    <RadioButton Content="A RadioButton Here" Margin="5" />
+                    <Slider Minimum="0" Maximum="100" Value="16" Margin="5" />
+                    <Slider Minimum="0" Maximum="100" Value="32" Margin="5" />
+                    <Slider Minimum="0" Maximum="100" Value="64" Margin="5" />
+                    <Slider Minimum="0" Maximum="100" Value="100" Margin="5" />
+                    <DataGrid Height="181" ItemsSource="{Binding DataGridViewModel.Items, UpdateSourceTrigger=PropertyChanged}"/>
                 </StackPanel>
             </GroupBox>
-            <GridSplitter HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1"/>
+            <GridSplitter HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" />
             <GroupBox Header="A GroupBox Here... with things inside" Margin="2,0,3,0" Grid.Column="2">
                 <Grid>
                     <StackPanel>
-                        <Label Content="A Label here" Margin="5 5 5 0"/>
-                        <Label Content="Another Label here" Margin="5 5 5 5"/>
-                        <Separator/>
-                        <Label Margin="5 5 5 0" Content="ListVBox below"/>
+                        <Label Content="A Label here" Margin="5 5 5 0" />
+                        <Label Content="Another Label here" Margin="5 5 5 5" />
+                        <Separator />
+                        <Label Margin="5 5 5 0" Content="ListVBox below" />
                         <ListBox Margin="5 0 5 0" Height="200" HorizontalContentAlignment="Stretch">
-                            <ListBoxItem Content="A listboxitem here"/>
-                            <ListBoxItem Content="Another listboxitem here"/>
-                            <ListBoxItem Content="1"/>
-                            <ListBoxItem Content="2"/>
-                            <ListBoxItem Content="3"/>
+                            <ListBoxItem Content="A listboxitem here" />
+                            <ListBoxItem Content="Another listboxitem here" />
+                            <ListBoxItem Content="1" />
+                            <ListBoxItem Content="2" />
+                            <ListBoxItem Content="3" />
                             <Grid>
-                                <Label HorizontalAlignment="Left" Content="A button to the right"/>
-                                <Button Content="A button" Margin="125,0,0,0"/>
+                                <Label HorizontalAlignment="Left" Content="A button to the right" />
+                                <Button Content="A button" Margin="125,0,0,0" />
                             </Grid>
                             <Grid>
-                                <Label HorizontalAlignment="Left" Content="A button to the right"/>
-                                <Button Content="A button" Margin="125,0,0,0"/>
+                                <Label HorizontalAlignment="Left" Content="A button to the right" />
+                                <Button Content="A button" Margin="125,0,0,0" />
                             </Grid>
                             <Grid>
-                                <Label HorizontalAlignment="Left" Content="A button to the right"/>
-                                <Button Content="A button" Margin="125,0,0,0"/>
+                                <Label HorizontalAlignment="Left" Content="A button to the right" />
+                                <Button Content="A button" Margin="125,0,0,0" />
                             </Grid>
                         </ListBox>
                     </StackPanel>
                     <Grid Margin="0,312,0,0">
-                        <Label Margin="5 5 5 0" Content="ListView below" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                        <Label Margin="5 5 5 0" Content="ListView below" VerticalAlignment="Top" HorizontalAlignment="Left" />
                         <ListView Margin="5,28,139,0" HorizontalContentAlignment="Stretch" Height="119" VerticalAlignment="Top">
                             <ListView.View>
                                 <GridView>
-                                    <GridViewColumn Header="owo" Width="75"/>
-                                    <GridViewColumn Header="hello" Width="125"/>
+                                    <GridViewColumn Header="owo" Width="75" />
+                                    <GridViewColumn Header="hello" Width="125" />
                                 </GridView>
                             </ListView.View>
-                            <ListViewItem Content="A listviewitem here"/>
-                            <ListViewItem Content="A listviewitem here"/>
-                            <ListViewItem Content="A listviewitem here"/>
-                            <ListViewItem Content="A listviewitem here"/>
+                            <ListViewItem Content="A listviewitem here" />
+                            <ListViewItem Content="A listviewitem here" />
+                            <ListViewItem Content="A listviewitem here" />
+                            <ListViewItem Content="A listviewitem here" />
                         </ListView>
-                        <Slider HorizontalAlignment="Left" SmallChange="1" Orientation="Vertical" TickPlacement="TopLeft" Margin="5,147,0,0" Maximum="50" TickFrequency="2" Value="43"/>
-                        <Slider HorizontalAlignment="Left" SmallChange="1" Orientation="Vertical" TickPlacement="BottomRight" Margin="34,147,0,0" Maximum="50" TickFrequency="2" Value="2"/>
-                        <Slider HorizontalAlignment="Left" SmallChange="1" Orientation="Vertical" TickPlacement="Both" Margin="63,147,0,0" Maximum="50" TickFrequency="2" Value="22"/>
-                        <Slider SmallChange="0" Margin="0,28,0,0" VerticalAlignment="Top" Maximum="50" TickFrequency="2" Value="20" HorizontalAlignment="Right" Width="134"/>
-                        <Slider SmallChange="0" TickPlacement="TopLeft" Margin="0,53,0,0" VerticalAlignment="Top" Maximum="50" TickFrequency="2" Value="32" HorizontalAlignment="Right" Width="134"/>
-                        <Slider HorizontalAlignment="Left" SmallChange="0" Orientation="Vertical" Margin="98,147,0,0" Maximum="50" TickFrequency="2" Value="28"/>
-                        <Slider SmallChange="0" TickPlacement="BottomRight" Margin="0,84,0,0" VerticalAlignment="Top" Maximum="50" TickFrequency="2" Value="50" HorizontalAlignment="Right" Width="134"/>
-                        <Slider SmallChange="0" TickPlacement="Both" Margin="0,115,0,0" VerticalAlignment="Top" Maximum="50" TickFrequency="2" Value="14" HorizontalAlignment="Right" Width="134"/>
-                        <TextBlock HorizontalAlignment="Left" Margin="121,152,0,0" Text="TextBlock" VerticalAlignment="Top"/>
+                        <Slider HorizontalAlignment="Left" SmallChange="1" Orientation="Vertical" TickPlacement="TopLeft" Margin="5,147,0,0" Maximum="50" TickFrequency="2" Value="43" />
+                        <Slider HorizontalAlignment="Left" SmallChange="1" Orientation="Vertical" TickPlacement="BottomRight" Margin="34,147,0,0" Maximum="50" TickFrequency="2" Value="2" />
+                        <Slider HorizontalAlignment="Left" SmallChange="1" Orientation="Vertical" TickPlacement="Both" Margin="63,147,0,0" Maximum="50" TickFrequency="2" Value="22" />
+                        <Slider SmallChange="0" Margin="0,28,0,0" VerticalAlignment="Top" Maximum="50" TickFrequency="2" Value="20" HorizontalAlignment="Right" Width="134" />
+                        <Slider SmallChange="0" TickPlacement="TopLeft" Margin="0,53,0,0" VerticalAlignment="Top" Maximum="50" TickFrequency="2" Value="32" HorizontalAlignment="Right" Width="134" />
+                        <Slider HorizontalAlignment="Left" SmallChange="0" Orientation="Vertical" Margin="98,147,0,0" Maximum="50" TickFrequency="2" Value="28" />
+                        <Slider SmallChange="0" TickPlacement="BottomRight" Margin="0,84,0,0" VerticalAlignment="Top" Maximum="50" TickFrequency="2" Value="50" HorizontalAlignment="Right" Width="134" />
+                        <Slider SmallChange="0" TickPlacement="Both" Margin="0,115,0,0" VerticalAlignment="Top" Maximum="50" TickFrequency="2" Value="14" HorizontalAlignment="Right" Width="134" />
+                        <TextBlock HorizontalAlignment="Left" Margin="121,152,0,0" Text="TextBlock" VerticalAlignment="Top" />
                     </Grid>
                 </Grid>
             </GroupBox>
-            <GridSplitter HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="3"/>
+            <GridSplitter HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="3" />
             <GroupBox Header="A list of some controls" Grid.Column="4" Margin="3,0,0,0">
                 <ScrollViewer HorizontalScrollBarVisibility="Visible"
-                          VerticalScrollBarVisibility="Visible">
+                              VerticalScrollBarVisibility="Visible">
                     <StackPanel>
-                        <Button Content="eee" Margin="0 0 0 2"/>
-                        <CheckBox Content="checkbox" Margin="0 0 0 2"/>
+                        <Button Content="eee" Margin="0 0 0 2" />
+                        <CheckBox Content="checkbox" Margin="0 0 0 2" />
                         <ComboBox Margin="0 0 0 2">
-                            <ComboBoxItem Content="A comboboxitem"/>
-                            <ComboBoxItem Content="A comboboxitem"/>
-                            <ComboBoxItem Content="A comboboxitem"/>
-                            <ComboBoxItem Content="A comboboxitem"/>
-                            <ComboBoxItem Content="A comboboxitem"/>
+                            <ComboBoxItem Content="A comboboxitem" />
+                            <ComboBoxItem Content="A comboboxitem" />
+                            <ComboBoxItem Content="A comboboxitem" />
+                            <ComboBoxItem Content="A comboboxitem" />
+                            <ComboBoxItem Content="A comboboxitem" />
                         </ComboBox>
-                        <PasswordBox Margin="0 0 0 2" PasswordChar="*"/>
-                        <ProgressBar Value="32" Minimum="0" Maximum="100" Height="32" Margin="0 0 0 2"/>
-                        <Slider Minimum="0" Maximum="100" Value="61" Margin="0 0 0 2"/>
+                        <PasswordBox Margin="0 0 0 2" PasswordChar="*" />
+                        <ProgressBar Value="32" Minimum="0" Maximum="100" Height="32" Margin="0 0 0 2" />
+                        <Slider Minimum="0" Maximum="100" Value="61" Margin="0 0 0 2" />
                         <TextBox Height="64" Margin="0 0 0 2" />
                         <TabControl Margin="0 0 0 2" Height="550">
                             <TabItem Header="Tab1 eee">
                                 <GroupBox Header="A groupbox">
                                     <StackPanel>
-                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32"/>
-                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32"/>
-                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32"/>
-                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32"/>
-                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32"/>
-                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32"/>
-                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32"/>
-                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32"/>
-                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32"/>
-                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32"/>
-                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32"/>
-                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32"/>
-                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32"/>
-                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32"/>
-                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32"/>
+                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32" />
+                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32" />
+                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32" />
+                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32" />
+                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32" />
+                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32" />
+                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32" />
+                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32" />
+                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32" />
+                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32" />
+                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32" />
+                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32" />
+                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32" />
+                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32" />
+                                        <Button Content="eeeeeeeeeeeeeeeeee" Margin="5" Height="32" />
                                     </StackPanel>
                                 </GroupBox>
                             </TabItem>
                             <TabItem Header="Tab2 eee">
                                 <StackPanel>
-                                    <Label Content="A Label here" Margin="5 5 5 0"/>
-                                    <Label Content="Another Label here" Margin="5 5 5 5"/>
-                                    <Separator/>
-                                    <Label Margin="5 5 5 0" Content="ListVBox below"/>
+                                    <Label Content="A Label here" Margin="5 5 5 0" />
+                                    <Label Content="Another Label here" Margin="5 5 5 5" />
+                                    <Separator />
+                                    <Label Margin="5 5 5 0" Content="ListVBox below" />
                                     <ListBox Margin="5 0 5 0" Height="200" HorizontalContentAlignment="Stretch">
-                                        <ListBoxItem Content="A listboxitem here"/>
-                                        <ListBoxItem Content="Another listboxitem here"/>
-                                        <ListBoxItem Content="1"/>
-                                        <ListBoxItem Content="2"/>
-                                        <ListBoxItem Content="3"/>
+                                        <ListBoxItem Content="A listboxitem here" />
+                                        <ListBoxItem Content="Another listboxitem here" />
+                                        <ListBoxItem Content="1" />
+                                        <ListBoxItem Content="2" />
+                                        <ListBoxItem Content="3" />
                                         <Grid>
-                                            <Label HorizontalAlignment="Left" Content="A button to the right"/>
-                                            <Button Content="A button" Margin="125,0,0,0"/>
+                                            <Label HorizontalAlignment="Left" Content="A button to the right" />
+                                            <Button Content="A button" Margin="125,0,0,0" />
                                         </Grid>
                                         <Grid>
-                                            <Label HorizontalAlignment="Left" Content="A button to the right"/>
-                                            <Button Content="A button" Margin="125,0,0,0"/>
+                                            <Label HorizontalAlignment="Left" Content="A button to the right" />
+                                            <Button Content="A button" Margin="125,0,0,0" />
                                         </Grid>
                                         <Grid>
-                                            <Label HorizontalAlignment="Left" Content="A button to the right"/>
-                                            <Button Content="A button" Margin="125,0,0,0"/>
+                                            <Label HorizontalAlignment="Left" Content="A button to the right" />
+                                            <Button Content="A button" Margin="125,0,0,0" />
                                         </Grid>
                                     </ListBox>
-                                    <Label Margin="5 5 5 0" Content="ListView below"/>
+                                    <Label Margin="5 5 5 0" Content="ListView below" />
                                     <ListView Margin="5 0 5 5" HorizontalContentAlignment="Stretch">
-                                        <ListViewItem Content="A listviewitem here"/>
-                                        <ListViewItem Content="A listviewitem here"/>
-                                        <ListViewItem Content="A listviewitem here"/>
-                                        <ListViewItem Content="A listviewitem here"/>
+                                        <ListViewItem Content="A listviewitem here" />
+                                        <ListViewItem Content="A listviewitem here" />
+                                        <ListViewItem Content="A listviewitem here" />
+                                        <ListViewItem Content="A listviewitem here" />
                                     </ListView>
                                 </StackPanel>
                             </TabItem>
-                            <TabItem Header="Tab3 eee"/>
-                            <TabItem Header="Tab4 eee"/>
-                            <TabItem Header="Tab5 eee"/>
-                            <TabItem Header="Tab6 eee"/>
-                            <TabItem Header="Tab7 eee"/>
+                            <TabItem Header="Tab3 eee" />
+                            <TabItem Header="Tab4 eee" />
+                            <TabItem Header="Tab5 eee" />
+                            <TabItem Header="Tab6 eee" />
+                            <TabItem Header="Tab7 eee" />
                         </TabControl>
                     </StackPanel>
                 </ScrollViewer>

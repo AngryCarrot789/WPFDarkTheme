@@ -6,8 +6,18 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Themes/LightTheme.xaml"/>
+                <ResourceDictionary Source="ThemesV2/SoftDark.xaml"/>
+                <ResourceDictionary Source="ThemesV2/ControlColours.xaml"/>
+                <ResourceDictionary Source="ThemesV2/Controls.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
+
+        <!--
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/DarkTheme.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        -->
     </Application.Resources>
 </Application>

@@ -62,6 +62,11 @@
     <Compile Include="Controls\LabelledItemSelector.xaml.cs">
       <DependentUpon>LabelledItemSelector.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ThemesV2\Controls.xaml.cs">
+      <DependentUpon>Controls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ThemesV2\ThemesController.cs" />
+    <Compile Include="ThemesV2\ThemeTypes.cs" />
     <Compile Include="Themes\ColourfulDarkTheme.xaml.cs">
       <DependentUpon>ColourfulDarkTheme.xaml</DependentUpon>
     </Compile>
@@ -79,6 +84,8 @@
     <Compile Include="Utilities\Command.cs" />
     <Compile Include="Utilities\CommandParam.cs" />
     <Compile Include="Utilities\ScrollViewerHelper.cs" />
+    <Compile Include="ViewModels\DataGrids\DataGridViewModel.cs" />
+    <Compile Include="ViewModels\DataGrids\ShopItem.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Page Include="Controls\LabelledItemSelector.xaml">
       <SubType>Designer</SubType>
@@ -96,6 +103,30 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ThemesV2\ControlColours.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ThemesV2\Controls.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ThemesV2\DeepDark.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ThemesV2\RedBlackTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ThemesV2\SoftDark.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ThemesV2\VeryDarkTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\ColourfulDarkTheme.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
