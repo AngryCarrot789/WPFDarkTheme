@@ -2,8 +2,8 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
+using FramePFX.Themes;
 using REghZyFramework.ViewModels;
-using REghZyFramework.Themes;
 
 namespace REghZyFramework {
     /// <summary>
@@ -13,7 +13,7 @@ namespace REghZyFramework {
         public App CurrentApplication { get; set; }
 
         public MainWindow() {
-            InitializeComponent();
+            this.InitializeComponent();
             this.DataContext = new MainViewModel();
 
             // loads a png icon, not an ico. 
@@ -22,19 +22,13 @@ namespace REghZyFramework {
         }
 
         private void ChangeTheme(object sender, RoutedEventArgs e) {
-            switch (int.Parse(((MenuItem) sender).Uid)) {
-                case 0:
-                    ThemesController.SetTheme(ThemesController.ThemeTypes.Light);
-                    break;
-                case 1:
-                    ThemesController.SetTheme(ThemesController.ThemeTypes.ColourfulLight);
-                    break;
-                case 2:
-                    ThemesController.SetTheme(ThemesController.ThemeTypes.Dark);
-                    break;
-                case 3:
-                    ThemesController.SetTheme(ThemesController.ThemeTypes.ColourfulDark);
-                    break;
+            switch (((MenuItem) sender).Uid) {
+                case "0": ThemesController.SetTheme(ThemeType.DeepDark); break;
+                case "1": ThemesController.SetTheme(ThemeType.SoftDark); break;
+                case "2": ThemesController.SetTheme(ThemeType.DarkGreyTheme); break;
+                case "3": ThemesController.SetTheme(ThemeType.GreyTheme); break;
+                case "4": ThemesController.SetTheme(ThemeType.LightTheme); break;
+                case "5": ThemesController.SetTheme(ThemeType.RedBlackTheme); break;
             }
 
             e.Handled = true;

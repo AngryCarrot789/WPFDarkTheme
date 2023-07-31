@@ -62,24 +62,29 @@
     <Compile Include="Controls\LabelledItemSelector.xaml.cs">
       <DependentUpon>LabelledItemSelector.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ThemesV2\Controls.xaml.cs">
-      <DependentUpon>Controls.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ThemesV2\ThemesController.cs" />
-    <Compile Include="ThemesV2\ThemeTypes.cs" />
-    <Compile Include="Themes\ColourfulDarkTheme.xaml.cs">
+    <Compile Include="ThemesOLD\ColourfulDarkTheme.xaml.cs">
       <DependentUpon>ColourfulDarkTheme.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Themes\ColourfulLightTheme.xaml.cs">
+    <Compile Include="ThemesOLD\ColourfulLightTheme.xaml.cs">
       <DependentUpon>ColourfulLightTheme.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Themes\DarkTheme.xaml.cs">
+    <Compile Include="ThemesOLD\DarkTheme.xaml.cs">
       <DependentUpon>DarkTheme.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Themes\LightTheme.xaml.cs">
+    <Compile Include="ThemesOLD\LightTheme.xaml.cs">
       <DependentUpon>LightTheme.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ThemesOLD\ThemesController.cs" />
+    <Compile Include="Themes\Attached\CornerHelper.cs" />
+    <Compile Include="Themes\Attached\MenuHelper.cs" />
+    <Compile Include="Themes\Attached\PasswordBoxHelper.cs" />
+    <Compile Include="Themes\Attached\TextBoxAutoSelect.cs" />
+    <Compile Include="Themes\Attached\TextHinting.cs" />
+    <Compile Include="Themes\Controls.xaml.cs">
+      <DependentUpon>Controls.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Themes\ThemesController.cs" />
+    <Compile Include="Themes\ThemeType.cs" />
     <Compile Include="Utilities\BaseViewModel.cs" />
     <Compile Include="Utilities\Command.cs" />
     <Compile Include="Utilities\CommandParam.cs" />
@@ -103,43 +108,51 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ThemesV2\ControlColours.xaml">
+    <Page Include="ThemesOLD\ColourfulDarkTheme.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="ThemesV2\Controls.xaml">
+    <Page Include="ThemesOLD\ColourfulLightTheme.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="ThemesV2\DeepDark.xaml">
+    <Page Include="ThemesOLD\DarkTheme.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="ThemesV2\RedBlackTheme.xaml">
+    <Page Include="ThemesOLD\LightTheme.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="ThemesV2\SoftDark.xaml">
+    <Page Include="Themes\ColourDictionaries\DarkGreyTheme.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="ThemesV2\VeryDarkTheme.xaml">
+    <Page Include="Themes\ColourDictionaries\DeepDark.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\ColourfulDarkTheme.xaml">
+    <Page Include="Themes\ColourDictionaries\GreyTheme.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\ColourfulLightTheme.xaml">
+    <Page Include="Themes\ColourDictionaries\LightTheme.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\DarkTheme.xaml">
+    <Page Include="Themes\ColourDictionaries\RedBlackTheme.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\LightTheme.xaml">
+    <Page Include="Themes\ColourDictionaries\SoftDark.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\ControlColours.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -170,9 +183,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="ThemesOLD\readme.md" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\idektbh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Themes\readme.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,48 +1,44 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Media;
 
-namespace REghZyFramework.Themes {
+namespace FramePFX.Themes {
     public static class ThemesController {
-        public enum ThemeTypes {
-            Light, ColourfulLight,
-            Dark, ColourfulDark
-        }
-
-        public static ThemeTypes CurrentTheme { get; set; }
+        public static ThemeType CurrentTheme { get; set; }
 
         private static ResourceDictionary ThemeDictionary {
-            get { return Application.Current.Resources.MergedDictionaries[0]; }
-            set { Application.Current.Resources.MergedDictionaries[0] = value; }
+            get => Application.Current.Resources.MergedDictionaries[0];
+            set => Application.Current.Resources.MergedDictionaries[0] = value;
         }
 
-        private static void ChangeTheme(Uri uri) {
-            ThemeDictionary = new ResourceDictionary() {Source = uri};
+        private static ResourceDictionary ControlColours {
+            get => Application.Current.Resources.MergedDictionaries[1];
+            set => Application.Current.Resources.MergedDictionaries[1] = value;
         }
 
-        public static void SetTheme(ThemeTypes theme) {
-            string themeName = null;
+        private static ResourceDictionary Controls {
+            get => Application.Current.Resources.MergedDictionaries[2];
+            set => Application.Current.Resources.MergedDictionaries[2] = value;
+        }
+
+        public static void SetTheme(ThemeType theme) {
+            string themeName = theme.GetName();
+            if (string.IsNullOrEmpty(themeName)) {
+                return;
+            }
+
             CurrentTheme = theme;
-            switch (theme) {
-                case ThemeTypes.Dark:
-                    themeName = "DarkTheme";
-                    break;
-                case ThemeTypes.Light:
-                    themeName = "LightTheme";
-                    break;
-                case ThemeTypes.ColourfulDark:
-                    themeName = "ColourfulDarkTheme";
-                    break;
-                case ThemeTypes.ColourfulLight:
-                    themeName = "ColourfulLightTheme";
-                    break;
-            }
+            ThemeDictionary = new ResourceDictionary() { Source = new Uri($"Themes/ColourDictionaries/{themeName}.xaml", UriKind.Relative) };
+            ControlColours = new ResourceDictionary() { Source = new Uri("Themes/ControlColours.xaml", UriKind.Relative) };
+            Controls = new ResourceDictionary() { Source = new Uri("Themes/Controls.xaml", UriKind.Relative) };
+        }
 
-            try {
-                if (!string.IsNullOrEmpty(themeName))
-                    ChangeTheme(new Uri($"Themes/{themeName}.xaml", UriKind.Relative));
-            }
-            catch {
-            }
+        public static object GetResource(object key) {
+            return ThemeDictionary[key];
+        }
+
+        public static SolidColorBrush GetBrush(string name) {
+            return GetResource(name) is SolidColorBrush brush ? brush : new SolidColorBrush(Colors.White);
         }
     }
 }
