@@ -3885,7 +3885,6 @@
         <Setter Property="Foreground" Value="{DynamicResource ABrush.Foreground.Static}"/>
         <Setter Property="VerticalGridLinesBrush" Value="{DynamicResource DataGrid.VerticalSeparatorBrush}"/>
         <Setter Property="HorizontalGridLinesBrush" Value="{DynamicResource DataGrid.HorizontalSeparatorBrush}"/>
-        <Setter Property="Foreground" Value="{DynamicResource ABrush.Foreground.Static}"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="RowDetailsVisibilityMode" Value="VisibleWhenSelected"/>
         <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
@@ -3974,9 +3973,10 @@
         </Setter>
     </Style>
     <Style TargetType="{x:Type DataGridColumnHeader}">
-        <Setter Property="Background" Value="{DynamicResource ABrush.Tone7.Background.Static}"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource ABrush.Tone6.Border.Static}"/>
-        <Setter Property="SeparatorBrush" Value="{DynamicResource DataGrid.SeparatorBrush}"/>
+        <Setter Property="Background" Value="{DynamicResource DataGrid.HeaderItem.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="SeparatorBrush" Value="{DynamicResource DataGrid.VerticalSeparatorBrush}"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Padding" Value="4,2"/>
         <Setter Property="Template">
@@ -3995,7 +3995,7 @@
                                               VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                         </Themes:DataGridHeaderBorder>
                         -->
-                        <Border x:Name="PART_Border" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}" >
+                        <Border x:Name="PART_Border" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" Padding="{TemplateBinding Padding}" >
                             <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                               RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
                                               VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
@@ -4089,12 +4089,21 @@
     </Style>
 
     <Style TargetType="{x:Type DataGridCell}">
+        <Setter Property="Foreground" Value="{DynamicResource ABrush.Foreground.Static}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type DataGridCell}">
-                    <Border x:Name="border" Background="{DynamicResource ABrush.Tone5.Background.Static}" BorderThickness="0" SnapsToDevicePixels="True">
+                    <Border x:Name="border" Background="{DynamicResource DataGrid.CellItem.Static.Background}" BorderThickness="0" SnapsToDevicePixels="True">
                         <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                     </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="{DynamicResource DataGrid.CellItem.MouseOver.Background}"/>
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="{DynamicResource DataGrid.Row.Selected.Background}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
