@@ -268,6 +268,9 @@
     <SolidColorBrush x:Key="DataGrid.HeaderItem.MouseOver.Background" Color="{DynamicResource AColour.Tone6.Background.MouseOver}"/>
     <SolidColorBrush x:Key="DataGrid.HeaderItem.MouseDown.Background" Color="{DynamicResource AColour.Tone6.Background.MouseDown}"/>
     <SolidColorBrush x:Key="DataGrid.RowHeader.Static.Background"     Color="{DynamicResource AColour.Tone6.Background.Static}"/>
+    <SolidColorBrush x:Key="DataGrid.Row.Selected.Background"         Color="{DynamicResource AColour.Tone5.Background.Selected}"/>
+    <SolidColorBrush x:Key="DataGrid.CellItem.Static.Background"      Color="{DynamicResource AColour.Tone5.Background.Static}"/>
+    <SolidColorBrush x:Key="DataGrid.CellItem.MouseOver.Background"   Color="{DynamicResource AColour.Tone5.Background.MouseOver}"/>
 
     <SolidColorBrush x:Key="Window.Static.Background"                 Color="{DynamicResource AColour.Tone3.Background.Static}"/>
     <SolidColorBrush x:Key="Window.Static.Border"                     Color="{DynamicResource AColour.Tone5.Border.Static}"/>
