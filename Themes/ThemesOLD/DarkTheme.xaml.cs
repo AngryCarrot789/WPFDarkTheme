@@ -1,11 +1,11 @@
 ﻿using System.Windows;
 
-namespace REghZyFramework.Themes {
-    public partial class ColourfulLightTheme {
+namespace REghZyFramework.ThemesOLD {
+    public partial class DarkTheme {
         private void CloseWindow_Event(object sender, RoutedEventArgs e) {
             if (e.Source != null)
                 try {
-                    CloseWind(Window.GetWindow((FrameworkElement) e.Source));
+                    this.CloseWind(Window.GetWindow((FrameworkElement) e.Source));
                 }
                 catch {
                 }
@@ -14,7 +14,7 @@ namespace REghZyFramework.Themes {
         private void AutoMinimize_Event(object sender, RoutedEventArgs e) {
             if (e.Source != null)
                 try {
-                    MaximizeRestore(Window.GetWindow((FrameworkElement) e.Source));
+                    this.MaximizeRestore(Window.GetWindow((FrameworkElement) e.Source));
                 }
                 catch {
                 }
@@ -23,7 +23,7 @@ namespace REghZyFramework.Themes {
         private void Minimize_Event(object sender, RoutedEventArgs e) {
             if (e.Source != null)
                 try {
-                    MinimizeWind(Window.GetWindow((FrameworkElement) e.Source));
+                    this.MinimizeWind(Window.GetWindow((FrameworkElement) e.Source));
                 }
                 catch {
                 }

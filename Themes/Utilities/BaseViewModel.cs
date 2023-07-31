@@ -25,7 +25,7 @@ namespace REghZyFramework.Utilities {
         /// <param name="propertyName">dont need to specify this, but the name of the property/field</param>
         protected void RaisePropertyChanged<T>(ref T property, T newValue, [CallerMemberName] string propertyName = "") {
             property = newValue;
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace REghZyFramework.Utilities {
                 callbackMethod?.Invoke();
             }
 
-            RaisePropertyChanged(ref property, newValue, propertyName);
+            this.RaisePropertyChanged(ref property, newValue, propertyName);
             if (callbackAfterPropChanged) {
                 callbackMethod?.Invoke();
             }
@@ -64,7 +64,7 @@ namespace REghZyFramework.Utilities {
                 callbackMethod?.Invoke(newValue);
             }
 
-            RaisePropertyChanged(ref property, newValue, propertyName);
+            this.RaisePropertyChanged(ref property, newValue, propertyName);
             if (callbackAfterPropChanged) {
                 callbackMethod?.Invoke(newValue);
             }

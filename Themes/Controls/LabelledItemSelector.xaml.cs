@@ -58,27 +58,27 @@ namespace REghZyFramework.Controls {
         }
 
         public string LabelText {
-            get => (string)GetValue(LabelTextProperty);
-            set => SetValue(LabelTextProperty, value);
+            get => (string) this.GetValue(LabelTextProperty);
+            set => this.SetValue(LabelTextProperty, value);
         }
 
         public ObservableCollection<string> ItemsSource {
-            get => (ObservableCollection<string>)GetValue(ItemsSourceProperty);
-            set => SetValue(ItemsSourceProperty, value);
+            get => (ObservableCollection<string>) this.GetValue(ItemsSourceProperty);
+            set => this.SetValue(ItemsSourceProperty, value);
         }
 
         public int SelectedIndex {
-            get => (int)GetValue(SelectedIndexProperty);
-            set => SetValue(SelectedIndexProperty, value);
+            get => (int) this.GetValue(SelectedIndexProperty);
+            set => this.SetValue(SelectedIndexProperty, value);
         }
 
         public string SelectedItem {
-            get => (string)GetValue(SelectedItemProperty);
-            set => SetValue(SelectedItemProperty, value);
+            get => (string) this.GetValue(SelectedItemProperty);
+            set => this.SetValue(SelectedItemProperty, value);
         }
 
         public LabelledItemSelector() {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
         public void SetSelectedItem(string value) {
@@ -132,11 +132,11 @@ namespace REghZyFramework.Controls {
         }
 
         private void MoveItemRightClick(object sender, RoutedEventArgs e) {
-            MoveItemRight();
+            this.MoveItemRight();
         }
 
         private void MoveItemLeftClick(object sender, RoutedEventArgs e) {
-            MoveItemLeft();
+            this.MoveItemLeft();
         }
     }
 }

@@ -4,20 +4,23 @@
              xmlns:local="clr-namespace:REghZyFramework"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <!-- For using the new themes -->
+
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="ThemesV2/SoftDark.xaml"/>
-                <ResourceDictionary Source="ThemesV2/ControlColours.xaml"/>
-                <ResourceDictionary Source="ThemesV2/Controls.xaml"/>
+                <ResourceDictionary Source="Themes/ColourDictionaries/SoftDark.xaml"/>
+                <ResourceDictionary Source="Themes/ControlColours.xaml"/>
+                <ResourceDictionary Source="Themes/Controls.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 
         <!--
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Themes/DarkTheme.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
+        For using the old themes:
+            <ResourceDictionary>
+                <ResourceDictionary.MergedDictionaries>
+                    <ResourceDictionary Source="Themes/DarkTheme.xaml" />
+                </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary>
         -->
     </Application.Resources>
 </Application>
