@@ -1,7 +1,7 @@
 # The Dark Theme app
 I started making this so that me, or anyone really, can easily have a nice looking theme on their program without needing to write any extra code. 
-Here's a preview of the latest update
-![](newPreview.png)
+Here's a preview of the latest update:
+![](theme-previews.png)
 ---
 
 # Using the themes (new)
