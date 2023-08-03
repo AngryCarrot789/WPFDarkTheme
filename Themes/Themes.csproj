@@ -75,7 +75,7 @@
       <DependentUpon>LightTheme.xaml</DependentUpon>
     </Compile>
     <Compile Include="ThemesOLD\ThemesController.cs" />
-    <Compile Include="Themes\Attached\CornerHelper.cs" />
+    <Compile Include="Themes\Attached\CornerRadiusHelper.cs" />
     <Compile Include="Themes\Attached\MenuHelper.cs" />
     <Compile Include="Themes\Attached\PasswordBoxHelper.cs" />
     <Compile Include="Themes\Attached\TextBoxAutoSelect.cs" />
@@ -90,6 +90,8 @@
     <Compile Include="Utilities\CommandParam.cs" />
     <Compile Include="Utilities\ScrollViewerHelper.cs" />
     <Compile Include="ViewModels\DataGrids\DataGridViewModel.cs" />
+    <Compile Include="ViewModels\DataGrids\EditorGridViewModel.cs" />
+    <Compile Include="ViewModels\DataGrids\EditorItem.cs" />
     <Compile Include="ViewModels\DataGrids\ShopItem.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Page Include="Controls\LabelledItemSelector.xaml">
@@ -153,8 +155,8 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Themes\Controls.xaml">
-      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

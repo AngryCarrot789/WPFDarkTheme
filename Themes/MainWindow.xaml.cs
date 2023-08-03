@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 using FramePFX.Themes;
-using REghZyFramework.ViewModels;
+using Themes.ViewModels;
 
 namespace REghZyFramework {
     /// <summary>

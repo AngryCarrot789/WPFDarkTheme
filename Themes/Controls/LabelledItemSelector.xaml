@@ -8,12 +8,12 @@
              d:DesignHeight="32" d:DesignWidth="200"
              Foreground="{DynamicResource ControlDefaultForeground}">
     <DockPanel>
-        <Label x:Name="labelText" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16" />
+        <Label x:Name="labelText" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16"/>
         <Grid Margin="20 0 0 0" VerticalAlignment="Stretch">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="25" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="25"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="25"/>
             </Grid.ColumnDefinitions>
             <Button Margin="0 0 5 0"
                     VerticalAlignment="Stretch"
@@ -21,12 +21,12 @@
                     Content="&lt;"
                     Background="Transparent"
                     BorderBrush="Transparent"
-                    Click="MoveItemLeftClick" />
+                    Click="MoveItemLeftClick"/>
             <TextBlock x:Name="selectedContent"
                        Grid.Column="1"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
-                       FontSize="16" />
+                       FontSize="16"/>
             <Button Margin="5 0 0 0"
                     Content="&gt;"
                     VerticalAlignment="Stretch"
@@ -34,7 +34,7 @@
                     Grid.Column="2"
                     Background="Transparent"
                     BorderBrush="Transparent"
-                    Click="MoveItemRightClick" />
+                    Click="MoveItemRightClick"/>
         </Grid>
     </DockPanel>
 </UserControl>
