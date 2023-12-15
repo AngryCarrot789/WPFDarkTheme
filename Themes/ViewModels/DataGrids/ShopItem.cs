@@ -1,33 +1,28 @@
 ﻿using REghZyFramework.Utilities;
 
-namespace Themes.ViewModels.DataGrids {
-    public class ShopItem : BaseViewModel {
-        private string name;
-        private double price;
-        private string description;
+namespace Themes.ViewModels.DataGrids;
 
-        public string Name {
-            get => this.name;
-            set => this.RaisePropertyChanged(ref this.name, value);
-        }
+public class ShopItem(string name, double price, string description) : BaseViewModel
+{
+    private string _name = name;
+    private double _price = price;
+    private string _description = description;
 
-        public double Price {
-            get => this.price;
-            set => this.RaisePropertyChanged(ref this.price, value);
-        }
+    public string Name
+    {
+        get => _name;
+        set => RaisePropertyChanged(ref this._name, value);
+    }
 
-        public string Description {
-            get => this.description;
-            set => this.RaisePropertyChanged(ref this.description, value);
-        }
+    public double Price
+    {
+        get => _price;
+        set => RaisePropertyChanged(ref this._price, value);
+    }
 
-        public ShopItem() {
-        }
-
-        public ShopItem(string name, double price, string description) {
-            this.name = name;
-            this.price = price;
-            this.description = description;
-        }
+    public string Description
+    {
+        get => _description;
+        set => RaisePropertyChanged(ref this._description, value);
     }
 }

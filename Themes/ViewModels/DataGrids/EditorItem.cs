@@ -1,34 +1,29 @@
-﻿using System.Windows;
-using REghZyFramework.Utilities;
+﻿using REghZyFramework.Utilities;
+using System.Windows;
 
-namespace Themes.ViewModels.DataGrids {
-    public class EditorItem : BaseViewModel {
-        private string name;
-        private Visibility visibility;
-        private bool isEnabled;
+namespace Themes.ViewModels.DataGrids;
 
-        public string Name {
-            get => this.name;
-            set => this.RaisePropertyChanged(ref this.name, value);
-        }
+public class EditorItem(string name, Visibility visibility, bool isEnabled) : BaseViewModel
+{
+    private string _name = name;
+    private Visibility _visibility = visibility;
+    private bool _isEnabled = isEnabled;
 
-        public Visibility Visibility {
-            get => this.visibility;
-            set => this.RaisePropertyChanged(ref this.visibility, value);
-        }
+    public string Name
+    {
+        get => _name;
+        set => RaisePropertyChanged(ref _name, value);
+    }
 
-        public bool IsEnabled {
-            get => this.isEnabled;
-            set => this.RaisePropertyChanged(ref this.isEnabled, value);
-        }
+    public Visibility Visibility
+    {
+        get => _visibility;
+        set => RaisePropertyChanged(ref _visibility, value);
+    }
 
-        public EditorItem() {
-        }
-
-        public EditorItem(string name, Visibility visibility, bool isEnabled) {
-            this.name = name;
-            this.visibility = visibility;
-            this.isEnabled = isEnabled;
-        }
+    public bool IsEnabled
+    {
+        get => _isEnabled;
+        set => RaisePropertyChanged(ref _isEnabled, value);
     }
 }
