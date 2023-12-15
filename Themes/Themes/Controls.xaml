@@ -1246,7 +1246,7 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type TextElement}" BasedOn="{StaticResource {x:Type TextElement}}">
+    <Style TargetType="{x:Type TextElement}">
         <Setter Property="Foreground" Value="{DynamicResource ABrush.Foreground.Static}"/>
         <Setter Property="RenderOptions.EdgeMode" Value="Unspecified"/>
         <Setter Property="TextOptions.TextRenderingMode" Value="ClearType"/>
