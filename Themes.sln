@@ -1,9 +1,9 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.960
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Themes", "Themes\Themes.csproj", "{62B5D2C6-6CAA-4477-A3B6-EA143354A98E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Themes", "Themes\Themes.csproj", "{62B5D2C6-6CAA-4477-A3B6-EA143354A98E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CE0FCEE9-0B4D-41B8-ABD0-530CF859C758}"
 	ProjectSection(SolutionItems) = preProject
