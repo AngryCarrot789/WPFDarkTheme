@@ -1,43 +1,43 @@
 ﻿using System.Windows;
 
-namespace REghZyFramework.ThemesOLD {
-    public partial class ColourfulLightTheme {
-        private void CloseWindow_Event(object sender, RoutedEventArgs e) {
-            if (e.Source != null)
-                try {
-                    this.CloseWind(Window.GetWindow((FrameworkElement) e.Source));
-                }
-                catch {
-                }
-        }
+namespace REghZyFramework.ThemesOLD;
 
-        private void AutoMinimize_Event(object sender, RoutedEventArgs e) {
-            if (e.Source != null)
-                try {
-                    this.MaximizeRestore(Window.GetWindow((FrameworkElement) e.Source));
-                }
-                catch {
-                }
-        }
-
-        private void Minimize_Event(object sender, RoutedEventArgs e) {
-            if (e.Source != null)
-                try {
-                    this.MinimizeWind(Window.GetWindow((FrameworkElement) e.Source));
-                }
-                catch {
-                }
-        }
-
-        public void CloseWind(Window window) => window.Close();
-
-        public void MaximizeRestore(Window window) {
-            if (window.WindowState == WindowState.Maximized)
-                window.WindowState = WindowState.Normal;
-            else if (window.WindowState == WindowState.Normal)
-                window.WindowState = WindowState.Maximized;
-        }
-
-        public void MinimizeWind(Window window) => window.WindowState = WindowState.Minimized;
+public partial class ColourfulLightTheme
+{
+    private void CloseWindow_Event(object sender, RoutedEventArgs e)
+    {
+        if (e.Source != null)
+            try
+            {
+                CloseWind(Window.GetWindow((FrameworkElement)e.Source));
+            }
+            catch { }
     }
+
+    private void AutoMinimize_Event(object sender, RoutedEventArgs e)
+    {
+        if (e.Source != null)
+            try
+            {
+                MaximizeRestore(Window.GetWindow((FrameworkElement)e.Source));
+            }
+            catch { }
+    }
+
+    private void Minimize_Event(object sender, RoutedEventArgs e)
+    {
+        if (e.Source != null)
+            try
+            {
+                MinimizeWind(Window.GetWindow((FrameworkElement)e.Source));
+            }
+            catch { }
+    }
+
+    public static void CloseWind(Window window) => window.Close();
+
+    public static void MaximizeRestore(Window window)
+        => window.WindowState = window.WindowState == WindowState.Maximized ? WindowState.Maximized : WindowState.Normal;
+
+    public static void MinimizeWind(Window window) => window.WindowState = WindowState.Minimized;
 }

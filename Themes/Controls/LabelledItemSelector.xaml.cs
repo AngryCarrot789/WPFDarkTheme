@@ -2,141 +2,134 @@
 using System.Windows;
 using System.Windows.Controls;
 
-namespace REghZyFramework.Controls {
+namespace REghZyFramework.Controls
+{
     /// <summary>
     /// Interaction logic for LabelledItemSelector.xaml
     /// </summary>
-    public partial class LabelledItemSelector : UserControl {
-        public static DependencyProperty LabelTextProperty =
+    public partial class LabelledItemSelector : UserControl
+    {
+        public DependencyProperty LabelTextProperty =
             DependencyProperty.Register(
                 nameof(LabelText),
                 typeof(string),
                 typeof(LabelledItemSelector),
                 new PropertyMetadata("Label Here", OnLabelTextChanged));
 
-        public static DependencyProperty ItemsSourceProperty =
+        public DependencyProperty ItemsSourceProperty =
             DependencyProperty.Register(
                 nameof(ItemsSource),
                 typeof(ObservableCollection<string>),
                 typeof(LabelledItemSelector),
                 new PropertyMetadata(new ObservableCollection<string>()));
 
-        public static DependencyProperty SelectedIndexProperty =
+        public DependencyProperty SelectedIndexProperty =
             DependencyProperty.Register(
                 nameof(SelectedIndex),
                 typeof(int),
                 typeof(LabelledItemSelector),
                 new PropertyMetadata(0, OnSelectedIndexChanged));
 
-        public static DependencyProperty SelectedItemProperty =
+        public DependencyProperty SelectedItemProperty =
             DependencyProperty.Register(
                 nameof(SelectedItem),
                 typeof(string),
                 typeof(LabelledItemSelector),
                 new PropertyMetadata(string.Empty, OnSelectedItemChanged));
 
-        public static void OnLabelTextChanged(DependencyObject d, DependencyPropertyChangedEventArgs e) {
-            if (d is LabelledItemSelector control) {
-                string newLabelText = (string)e.NewValue;
-                control.labelText.Content = newLabelText;
-            }
+        public static void OnLabelTextChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            if (d is not LabelledItemSelector control) return;
+            
+            string newLabelText = (string)e.NewValue;
+            control.labelText.Content = newLabelText;
         }
 
-        public static void OnSelectedIndexChanged(DependencyObject d, DependencyPropertyChangedEventArgs e) {
-            if (d is LabelledItemSelector control) {
-                int newIndex = (int)e.NewValue;
-                if (control.ItemsSource != null && control.HasItems)
-                    control.SelectedItem = control.ItemsSource[newIndex];
-            }
+        public static void OnSelectedIndexChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            if (d is not LabelledItemSelector control) return;
+            
+            int newIndex = (int)e.NewValue;
+            if (control.ItemsSource != null && control.HasItems)
+                control.SelectedItem = control.ItemsSource[newIndex];
         }
 
-        public static void OnSelectedItemChanged(DependencyObject d, DependencyPropertyChangedEventArgs e) {
-            if (d is LabelledItemSelector control) {
-                string newContent = (string)e.NewValue;
-                control.selectedContent.Text = newContent;
-            }
+        public static void OnSelectedItemChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            if (d is not LabelledItemSelector control) return;
+            
+            string newContent = (string)e.NewValue;
+            control.selectedContent.Text = newContent;
         }
 
-        public string LabelText {
-            get => (string) this.GetValue(LabelTextProperty);
-            set => this.SetValue(LabelTextProperty, value);
+        public string LabelText
+        {
+            get => (string)GetValue(LabelTextProperty);
+            set => SetValue(LabelTextProperty, value);
         }
 
-        public ObservableCollection<string> ItemsSource {
-            get => (ObservableCollection<string>) this.GetValue(ItemsSourceProperty);
-            set => this.SetValue(ItemsSourceProperty, value);
+        public ObservableCollection<string> ItemsSource
+        {
+            get => (ObservableCollection<string>)GetValue(ItemsSourceProperty);
+            set => SetValue(ItemsSourceProperty, value);
         }
 
-        public int SelectedIndex {
-            get => (int) this.GetValue(SelectedIndexProperty);
-            set => this.SetValue(SelectedIndexProperty, value);
+        public int SelectedIndex
+        {
+            get => (int)GetValue(SelectedIndexProperty);
+            set => SetValue(SelectedIndexProperty, value);
         }
 
-        public string SelectedItem {
-            get => (string) this.GetValue(SelectedItemProperty);
-            set => this.SetValue(SelectedItemProperty, value);
+        public string SelectedItem
+        {
+            get => (string)GetValue(SelectedItemProperty);
+            set => SetValue(SelectedItemProperty, value);
         }
 
-        public LabelledItemSelector() {
-            this.InitializeComponent();
-        }
+        public LabelledItemSelector() => InitializeComponent();
 
-        public void SetSelectedItem(string value) {
-            this.SelectedItem = value;
-        }
+        public void SetSelectedItem(string value) => SelectedItem = value;
 
-        public string GetPreviousItem() {
-            if (this.ItemsSource != null && this.HasItems)
-                if (this.HasItems && this.SelectedPosition <= this.ItemsCount)
-                    return this.ItemsSource[this.SelectedIndex - 1];
+        public string GetPreviousItem()
+        {
+            if (ItemsSource != null && HasItems)
+                if (HasItems && SelectedPosition <= ItemsCount)
+                    return ItemsSource[SelectedIndex - 1];
             return string.Empty;
         }
 
-        public string GetNextItem() {
-            if (this.ItemsSource != null && this.HasItems)
-                if (!this.IsLastItemSelected)
-                    return this.ItemsSource[this.SelectedIndex + 1];
+        public string GetNextItem()
+        {
+            if (ItemsSource != null && HasItems)
+                if (!IsLastItemSelected)
+                    return ItemsSource[SelectedIndex + 1];
             return string.Empty;
         }
 
-        public void ResetSelectedItem() {
-            this.SelectedIndex = 0;
+        public void ResetSelectedItem() => SelectedIndex = 0;
+
+        public bool HasItems => ItemsCount > 0;
+
+        public int SelectedPosition => SelectedIndex + 1;
+
+        public bool IsLastItemSelected => SelectedPosition == ItemsCount;
+
+        public int ItemsCount => ItemsSource != null ? ItemsSource.Count : 0;
+
+        public void MoveItemRight()
+        {
+            if (HasItems && SelectedIndex < (ItemsCount - 1))
+                SelectedIndex++;
         }
 
-        public bool HasItems {
-            get => this.ItemsCount > 0;
+        public void MoveItemLeft()
+        {
+            if (HasItems && SelectedIndex > 0 && SelectedPosition <= ItemsSource.Count)
+                    SelectedIndex--;
         }
 
-        public int SelectedPosition {
-            get => this.SelectedIndex + 1;
-        }
+        private void MoveItemRightClick(object sender, RoutedEventArgs e) => MoveItemRight();
 
-        public bool IsLastItemSelected {
-            get => this.SelectedPosition == this.ItemsCount;
-        }
-
-        public int ItemsCount {
-            get => this.ItemsSource != null ? this.ItemsSource.Count : 0;
-        }
-
-        public void MoveItemRight() {
-            if (this.HasItems && this.SelectedIndex < (this.ItemsCount - 1))
-                this.SelectedIndex++;
-        }
-
-        public void MoveItemLeft() {
-            if (this.HasItems) {
-                if (this.SelectedIndex > 0 && this.SelectedPosition <= this.ItemsSource.Count)
-                    this.SelectedIndex--;
-            }
-        }
-
-        private void MoveItemRightClick(object sender, RoutedEventArgs e) {
-            this.MoveItemRight();
-        }
-
-        private void MoveItemLeftClick(object sender, RoutedEventArgs e) {
-            this.MoveItemLeft();
-        }
+        private void MoveItemLeftClick(object sender, RoutedEventArgs e) => MoveItemLeft();
     }
 }

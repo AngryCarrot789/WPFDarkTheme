@@ -1,26 +1,27 @@
 ﻿using System;
 
-namespace FramePFX.Themes {
-    public enum ThemeType {
-        SoftDark,
-        RedBlackTheme,
-        DeepDark,
-        GreyTheme,
-        DarkGreyTheme,
-        LightTheme,
-    }
+namespace FramePFX.Themes;
 
-    public static class ThemeTypeExtension {
-        public static string GetName(this ThemeType type) {
-            switch (type) {
-                case ThemeType.SoftDark:        return "SoftDark";
-                case ThemeType.RedBlackTheme:   return "RedBlackTheme";
-                case ThemeType.DeepDark:        return "DeepDark";
-                case ThemeType.GreyTheme:       return "GreyTheme";
-                case ThemeType.DarkGreyTheme:   return "DarkGreyTheme";
-                case ThemeType.LightTheme:   return "LightTheme";
-                default: throw new ArgumentOutOfRangeException(nameof(type), type, null);
-            }
-        }
-    }
+public enum ThemeType
+{
+    SoftDark,
+    RedBlackTheme,
+    DeepDark,
+    GreyTheme,
+    DarkGreyTheme,
+    LightTheme,
+}
+
+public static class ThemeTypeExtension
+{
+    public static string GetName(this ThemeType type) => type switch
+    {
+        ThemeType.SoftDark => "SoftDark",
+        ThemeType.RedBlackTheme => "RedBlackTheme",
+        ThemeType.DeepDark => "DeepDark",
+        ThemeType.GreyTheme => "GreyTheme",
+        ThemeType.DarkGreyTheme => "DarkGreyTheme",
+        ThemeType.LightTheme => "LightTheme",
+        _ => throw new ArgumentOutOfRangeException(nameof(type), type, null),
+    };
 }

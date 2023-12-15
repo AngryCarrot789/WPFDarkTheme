@@ -7,21 +7,9 @@ namespace Themes.Converters;
 
 public class BrushToColorConverter : IValueConverter
 {
-    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-    {
-        if (value is SolidColorBrush brush)
-        {
-            return brush.Color;
-        }
-        return Colors.Transparent; // Default value if conversion fails
-    }
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture) 
+        => value is SolidColorBrush brush ? brush.Color : Colors.Transparent;
 
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-    {
-        if (value is Color color)
-        {
-            return new SolidColorBrush(color);
-        }
-        return Brushes.Transparent; // Default value if conversion fails
-    }
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) 
+        => value is Color color ? new SolidColorBrush(color) : Brushes.Transparent;
 }

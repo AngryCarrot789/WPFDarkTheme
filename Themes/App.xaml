@@ -1,16 +1,15 @@
 ﻿<Application x:Class="REghZyFramework.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:REghZyFramework"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <!-- For using the new themes -->
 
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Themes/ColourDictionaries/SoftDark.xaml"/>
-                <ResourceDictionary Source="Themes/ControlColours.xaml"/>
-                <ResourceDictionary Source="Themes/Controls.xaml"/>
+                <ResourceDictionary Source="Themes/ColourDictionaries/SoftDark.xaml" />
+                <ResourceDictionary Source="Themes/ControlColours.xaml" />
+                <ResourceDictionary Source="Themes/Controls.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 
@@ -18,7 +17,7 @@
         For using the old themes:
             <ResourceDictionary>
                 <ResourceDictionary.MergedDictionaries>
-                    <ResourceDictionary Source="Themes/DarkTheme.xaml"/>
+                    <ResourceDictionary Source="Themes/DarkTheme.xaml" />
                 </ResourceDictionary.MergedDictionaries>
             </ResourceDictionary>
         -->
