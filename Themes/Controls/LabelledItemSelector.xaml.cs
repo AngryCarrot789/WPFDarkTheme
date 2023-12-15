@@ -9,28 +9,28 @@ namespace REghZyFramework.Controls
     /// </summary>
     public partial class LabelledItemSelector : UserControl
     {
-        public DependencyProperty LabelTextProperty =
+        public static DependencyProperty LabelTextProperty =
             DependencyProperty.Register(
                 nameof(LabelText),
                 typeof(string),
                 typeof(LabelledItemSelector),
                 new PropertyMetadata("Label Here", OnLabelTextChanged));
 
-        public DependencyProperty ItemsSourceProperty =
+        public static DependencyProperty ItemsSourceProperty =
             DependencyProperty.Register(
                 nameof(ItemsSource),
                 typeof(ObservableCollection<string>),
                 typeof(LabelledItemSelector),
                 new PropertyMetadata(new ObservableCollection<string>()));
 
-        public DependencyProperty SelectedIndexProperty =
+        public static DependencyProperty SelectedIndexProperty =
             DependencyProperty.Register(
                 nameof(SelectedIndex),
                 typeof(int),
                 typeof(LabelledItemSelector),
                 new PropertyMetadata(0, OnSelectedIndexChanged));
 
-        public DependencyProperty SelectedItemProperty =
+        public static DependencyProperty SelectedItemProperty =
             DependencyProperty.Register(
                 nameof(SelectedItem),
                 typeof(string),
