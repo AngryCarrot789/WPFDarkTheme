@@ -13,7 +13,7 @@
         <viewModels:MainViewModel/>
     </Window.DataContext>
     <Window.Resources>
-        <DropShadowBitmapEffect x:Key="NormalShadow" ShadowDepth="2" Softness="0.2" Opacity="0.64"/>
+        <DropShadowEffect x:Key="NormalShadow" ShadowDepth="2" BlurRadius="5" Opacity="0.64"/>
         <x:Array x:Key="temps" Type="{x:Type system:String}">
             <system:String>ello1</system:String>
             <system:String>ello2</system:String>
@@ -118,32 +118,32 @@
                 <MenuItem Header="Avaliable Themes Below"/>
                 <MenuItem Header="Deep Dark" Click="ChangeTheme" Uid="0">
                     <MenuItem.Icon>
-                        <Rectangle Stroke="#FF232323" Fill="#FF1B1B1B" StrokeThickness="2" StrokeLineJoin="Round" BitmapEffect="{StaticResource NormalShadow}"/>
+                        <Rectangle Stroke="#FF232323" Fill="#FF1B1B1B" StrokeThickness="2" StrokeLineJoin="Round" Effect="{StaticResource NormalShadow}"/>
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem Header="Soft Dark (default)" Click="ChangeTheme" Uid="1">
                     <MenuItem.Icon>
-                        <Rectangle Stroke="#FF404040" Fill="#FF2A2A2A" StrokeThickness="2" StrokeLineJoin="Round" BitmapEffect="{StaticResource NormalShadow}"/>
+                        <Rectangle Stroke="#FF404040" Fill="#FF2A2A2A" StrokeThickness="2" StrokeLineJoin="Round" Effect="{StaticResource NormalShadow}"/>
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem Header="Dark Grey" Click="ChangeTheme" Uid="2">
                     <MenuItem.Icon>
-                        <Rectangle Stroke="#FF737373" Fill="#FF4E4E4E" StrokeThickness="2" StrokeLineJoin="Round" BitmapEffect="{StaticResource NormalShadow}"/>
+                        <Rectangle Stroke="#FF737373" Fill="#FF4E4E4E" StrokeThickness="2" StrokeLineJoin="Round" Effect="{StaticResource NormalShadow}"/>
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem Header="Grey" Click="ChangeTheme" Uid="3">
                     <MenuItem.Icon>
-                        <Rectangle Stroke="#FFB3B3B3" Fill="#FF797979" StrokeThickness="2" StrokeLineJoin="Round" BitmapEffect="{StaticResource NormalShadow}"/>
+                        <Rectangle Stroke="#FFB3B3B3" Fill="#FF797979" StrokeThickness="2" StrokeLineJoin="Round" Effect="{StaticResource NormalShadow}"/>
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem Header="Light" Click="ChangeTheme" Uid="4">
                     <MenuItem.Icon>
-                        <Rectangle Stroke="#FF848484" Fill="#FFE8E8E8" StrokeThickness="2" StrokeLineJoin="Round" BitmapEffect="{StaticResource NormalShadow}"/>
+                        <Rectangle Stroke="#FF848484" Fill="#FFE8E8E8" StrokeThickness="2" StrokeLineJoin="Round" Effect="{StaticResource NormalShadow}"/>
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem Header="Red" Click="ChangeTheme" Uid="5">
                     <MenuItem.Icon>
-                        <Rectangle Stroke="#FFFF1A1A" Fill="#FFED1C1C" StrokeThickness="2" StrokeLineJoin="Round" BitmapEffect="{StaticResource NormalShadow}"/>
+                        <Rectangle Stroke="#FFFF1A1A" Fill="#FFED1C1C" StrokeThickness="2" StrokeLineJoin="Round" Effect="{StaticResource NormalShadow}"/>
                     </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>

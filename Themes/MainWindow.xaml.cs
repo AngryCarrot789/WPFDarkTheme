@@ -17,7 +17,7 @@ namespace REghZyFramework {
             this.DataContext = new MainViewModel();
 
             // loads a png icon, not an ico. 
-            Uri iconUri = new Uri("pack://application:,,,/Resources/idektbh.png", UriKind.RelativeOrAbsolute);
+            Uri iconUri = new("pack://application:,,,/Resources/idektbh.png", UriKind.RelativeOrAbsolute);
             this.Icon = BitmapFrame.Create(iconUri);
         }
 
