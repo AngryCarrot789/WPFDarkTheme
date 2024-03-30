@@ -76,6 +76,7 @@
     </Compile>
     <Compile Include="ThemesOLD\ThemesController.cs" />
     <Compile Include="Themes\Attached\CornerRadiusHelper.cs" />
+    <Compile Include="Themes\Attached\HorizontalScrolling.cs" />
     <Compile Include="Themes\Attached\MenuHelper.cs" />
     <Compile Include="Themes\Attached\PasswordBoxHelper.cs" />
     <Compile Include="Themes\Attached\TextBoxAutoSelect.cs" />
@@ -83,12 +84,11 @@
     <Compile Include="Themes\Controls.xaml.cs">
       <DependentUpon>Controls.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Themes\ScrollViewerInnerBorderThicknessConverter.cs" />
     <Compile Include="Themes\ThemesController.cs" />
     <Compile Include="Themes\ThemeType.cs" />
     <Compile Include="Utilities\BaseViewModel.cs" />
-    <Compile Include="Utilities\Command.cs" />
-    <Compile Include="Utilities\CommandParam.cs" />
-    <Compile Include="Utilities\ScrollViewerHelper.cs" />
+    <Compile Include="Utilities\RelayCommand.cs" />
     <Compile Include="ViewModels\DataGrids\DataGridViewModel.cs" />
     <Compile Include="ViewModels\DataGrids\EditorGridViewModel.cs" />
     <Compile Include="ViewModels\DataGrids\EditorItem.cs" />
@@ -187,12 +187,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ThemesOLD\readme.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\idektbh.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Themes\readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\idektbh.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

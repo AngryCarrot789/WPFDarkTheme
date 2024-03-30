@@ -14,12 +14,6 @@
     </Window.DataContext>
     <Window.Resources>
         <DropShadowBitmapEffect x:Key="NormalShadow" ShadowDepth="2" Softness="0.2" Opacity="0.64"/>
-        <x:Array x:Key="temps" Type="{x:Type system:String}">
-            <system:String>ello1</system:String>
-            <system:String>ello2</system:String>
-            <system:String>ello3</system:String>
-            <system:String>ello4</system:String>
-        </x:Array>
     </Window.Resources>
     <Grid>
         <Menu VerticalAlignment="Top">
@@ -159,11 +153,9 @@
             <GroupBox Header="A GroupBox Here... with things inside" Margin="0,0,2,0">
                 <StackPanel>
                     <controls:LabelledItemSelector LabelText="Resolution" ItemsSource="{Binding SomeItems, UpdateSourceTrigger=PropertyChanged}"/>
-                    <Button Command="{Binding AddContentCommand}" Content="A Button Here" Height="40" Margin="5"/>
+                    <Button Command="{Binding AddContentCommand}" Content="A Button Here" Height="24" Margin="5"/>
                     <ToggleButton Content="A toggle button" Height="40" Margin="5" IsChecked="{Binding ElementName=CheckBox1, Path=IsChecked, Mode=TwoWay}"/>
                     <CheckBox Content="A CheckBox Here" Margin="5" x:Name="CheckBox1"/>
-                    <CheckBox Content="A CheckBox Here" Margin="5"/>
-                    <CheckBox Content="A CheckBox Here" Margin="5"/>
                     <CheckBox Content="A CheckBox Here" Margin="5"/>
                     <RadioButton Content="A RadioButton Here" Margin="5"/>
                     <RadioButton Content="A RadioButton Here" Margin="5"/>
@@ -172,7 +164,16 @@
                     <Slider Minimum="0" Maximum="100" Value="32" Margin="5"/>
                     <Slider Minimum="0" Maximum="100" Value="64" Margin="5"/>
                     <Slider Minimum="0" Maximum="100" Value="100" Margin="5"/>
+
+                    <!-- This DataGrid generates items and columns purely via the binding engine and reflection -->
+                    <TextBlock Text="This DataGrids items and columns are fully generated from binding only. The cell editor controls aren't styled due to a WPF limitation" Padding="2,5" TextWrapping="Wrap"/>
                     <DataGrid ItemsSource="{Binding DataGridViewModel.Items, UpdateSourceTrigger=PropertyChanged}"/>
+
+                    <!-- 
+                        This DataGrid has explicit columns. The advantage of this is that you can change 
+                        the editing element styles, which cannot be automatically styled from my findings (WPF limitation)
+                    -->
+                    <TextBlock Text="This DataGrids columns are explicity specified, and the editor component styles are explicitly set, meaning if you double click a row in the Name column, it will have a dark theme text box" Padding="2,5" TextWrapping="Wrap"/>
                     <DataGrid ItemsSource="{Binding EditorGridViewModel.Items, UpdateSourceTrigger=PropertyChanged}" Height="118" AutoGenerateColumns="False">
                         <DataGrid.Resources>
                             <ObjectDataProvider x:Key="VisibilityEnumData" ObjectType="{x:Type system:Enum}" MethodName="GetValues">
@@ -228,8 +229,8 @@
                         <ListView Margin="5,28,139,0" HorizontalContentAlignment="Stretch" Height="119" VerticalAlignment="Top">
                             <ListView.View>
                                 <GridView>
-                                    <GridViewColumn Header="owo" Width="75"/>
-                                    <GridViewColumn Header="hello" Width="125"/>
+                                    <GridViewColumn Header="Column 1" Width="75"/>
+                                    <GridViewColumn Header="Thing" Width="125"/>
                                 </GridView>
                             </ListView.View>
                             <ListViewItem Content="A listviewitem here"/>

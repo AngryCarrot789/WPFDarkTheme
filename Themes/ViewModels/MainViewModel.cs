@@ -5,12 +5,13 @@ using Themes.ViewModels.DataGrids;
 
 namespace Themes.ViewModels {
     public class MainViewModel : BaseViewModel {
-        public ICommand AddContentCommand { get; set; }
+        public DataGridViewModel DataGridViewModel { get; }
+
+        public EditorGridViewModel EditorGridViewModel { get; }
 
         public ObservableCollection<string> SomeItems { get; }
 
-        public DataGridViewModel DataGridViewModel { get; }
-        public EditorGridViewModel EditorGridViewModel { get; }
+        public ICommand AddContentCommand { get; set; }
 
         public MainViewModel() {
             this.DataGridViewModel = new DataGridViewModel();
@@ -21,7 +22,8 @@ namespace Themes.ViewModels {
                 "1920x1080",
                 "3840x2160",
             };
-            this.AddContentCommand = new Command(() => {
+
+            this.AddContentCommand = new RelayCommand(() => {
                 this.SomeItems.Add("item 1");
                 this.SomeItems.Add("item 2");
                 this.SomeItems.Add("item 3");

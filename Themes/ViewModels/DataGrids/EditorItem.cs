@@ -12,6 +12,8 @@ namespace Themes.ViewModels.DataGrids {
             set => this.RaisePropertyChanged(ref this.name, value);
         }
 
+        // Not exactly MVVM-friendly but meh.
+        // Could always replace this with a bool and use a BoolToVisibility converter in the UI
         public Visibility Visibility {
             get => this.visibility;
             set => this.RaisePropertyChanged(ref this.visibility, value);

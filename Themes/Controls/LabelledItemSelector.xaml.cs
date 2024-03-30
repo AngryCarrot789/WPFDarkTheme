@@ -3,9 +3,9 @@ using System.Windows;
 using System.Windows.Controls;
 
 namespace REghZyFramework.Controls {
-    /// <summary>
-    /// Interaction logic for LabelledItemSelector.xaml
-    /// </summary>
+    // It would be a better idea to make this a Control, and create a style somewhere (e.g. App.xaml),
+    // since that will yield faster application runtime, since a UserControl loads the xaml each time
+    // an instance is created due to InitializeComponent
     public partial class LabelledItemSelector : UserControl {
         public static DependencyProperty LabelTextProperty =
             DependencyProperty.Register(
