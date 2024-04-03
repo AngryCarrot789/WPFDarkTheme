@@ -1,11 +1,14 @@
-# The Dark Theme app
-I started making this so that me, or anyone really, can easily have a nice looking theme on their program without needing to write any extra code. 
-Here's a preview of the latest update:
+# WPF Theme Library
+
+I started making this so that me, or anyone really, can easily have a nice looking theme on their program without needing to write any extra code.
+Here's a preview of the available themes:
+
 ![](theme-previews.png)
+
 ---
 
 # Using the themes (new)
-For both the new and old versions, you need to reference `PresentationFramework.Aero2.dll` in order for drop shadows to work. Right click References in the solution explorer bit, Add Reference, goto Assemblies and double click/include `PresentationFramework.Aero2`
+For both the new and old versions, you need to reference `PresentationFramework.Aero2.dll` in order for drop shadows to work (and for the app to compile). Right click References in the solution explorer bit, Add Reference, goto Assemblies and double click/include `PresentationFramework.Aero2`
 
 [Click here](#using-the-old-themes) if you want to use the old version which is slightly easier to use but is deprecated
 
@@ -21,27 +24,21 @@ Firstly, add the theme, control colours and controls dictionaries. This assumes 
             <!-- the above theme. I aim for this to contain ALL brushes, not most  -->
             <ResourceDictionary Source="Themes/ControlColours.xaml"/>
             <!-- Contains all of the control styles (Button, ListBox, etc) -->
-            <ResourceDictionary Source="Themes/Controls.xaml"/>        
+            <ResourceDictionary Source="Themes/Controls.xaml"/>
         </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
 </Application.Resources>
-```
-
-### Window Style
-To style windows, just add this to your windows' XAML:
-```
-Style="{StaticResource CustomWindowStyleEx}"
 ```
 
 ---
 
 # Using the old themes
 
-I remade the entire theme library a while back for my other projects, and I'm adding it to this repo... finally lol
+This is the first version, where all control styles are defined in the specific theme file (leading to massive files for each theme). While this grants most control over the styles, it's annoying to have to add new styles to all theme files, so this isn't recommended anymore.
 
-The old theme library stores every controls' style in each resource dictionary which, although grands the easiest control over what colours are used, is annoying to have to add new styles
+If you want to use it anyway, then just drag and drop the theme(s) you want (located in the `ThemesOLD` folder folder) into your project's themes folder.
 
-If you want to use it anyway, then just drag and drop the theme(s) you want (located in the ThemesOLD folder folder) into your project (i'd recommend putting them inside a Themes folder just to be organised) and inside App.xaml place this: (and replace DarkTheme with whatever theme you want, like LightTheme, ColourfulDarkTheme, etc)
+Inside App.xaml place this: (and replace DarkTheme with whatever theme you want, like LightTheme, ColourfulDarkTheme, etc)
 ```xml
 <Application.Resources>
     <ResourceDictionary>
@@ -52,6 +49,8 @@ If you want to use it anyway, then just drag and drop the theme(s) you want (loc
 </Application.Resources>
 ```
 And then most things like buttons, ListBoxes, etc, will automatically be styled
+
+---
 
 ## Window styles
 In your window XAML code (where you define height/width, etc), add:
@@ -64,6 +63,7 @@ This styles styles the title bar, its buttons, etc. There's also `CustomToolWind
 ---
 
 # Update Logs (time is from bottom to top)
+- Reorganised WPF project to make differentiating new Avalonia theme easier (coming soon)
 - Deprecated the old themes (renamed folder to ThemesOLD), and moved to using the new library
 - Added version 2. I only added dark themes to V2 so far, but i might add a light themes. They are located in the ThemesV2 folder. I made the app use them (in App.xaml, which shows how to install them, i commented out the older version)
 - Made menuitems autostyle, improved the looks of disabled controls (which use a textblock as their content, e.g. buttons or menuitems), and also made the maximize/restore button change based on the window state
