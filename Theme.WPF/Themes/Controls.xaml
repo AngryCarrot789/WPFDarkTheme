@@ -3,7 +3,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2"
                     xmlns:a="clr-namespace:Theme.WPF.Themes.Attached"
-                    xmlns:themes1="clr-namespace:Theme.WPF.Themes">
+                    xmlns:local="clr-namespace:Theme.WPF.Themes">
     <PopupAnimation x:Key="{x:Static SystemParameters.MenuPopupAnimationKey}">Fade</PopupAnimation>
     <BorderGapMaskConverter x:Key="BorderGapMaskConverter"/>
     <Style x:Key="FocusVisual">
@@ -1124,7 +1124,7 @@
         </Setter>
     </Style>
 
-    <themes1:ScrollViewerInnerBorderThicknessConverter x:Key="ScrollViewerWithPanelBorderBarsBorderThicknessConverter"/>
+    <local:ScrollViewerInnerBorderThicknessConverter x:Key="ScrollViewerWithPanelBorderBarsBorderThicknessConverter"/>
 
     <Style x:Key="ScrollViewerWithPanelBorderBars" TargetType="{x:Type ScrollViewer}">
         <Setter Property="Background" Value="Transparent"/>
