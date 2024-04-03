@@ -9,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theme.WPF", "Theme.WPF\Theme.WPF.csproj", "{EDCEF5AC-7DF0-479C-95E2-76C40BA0CC6F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theme.Avalonia", "Theme.Avalonia\Theme.Avalonia\Theme.Avalonia.csproj", "{2EBCCFFD-0CBC-437D-978F-00FC9F615DE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theme.Avalonia.Desktop", "Theme.Avalonia\Theme.Avalonia.Desktop\Theme.Avalonia.Desktop.csproj", "{6F1BDDC1-1481-4B40-8C6D-E48DC35BEAF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +23,14 @@ Global
 		{EDCEF5AC-7DF0-479C-95E2-76C40BA0CC6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDCEF5AC-7DF0-479C-95E2-76C40BA0CC6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDCEF5AC-7DF0-479C-95E2-76C40BA0CC6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EBCCFFD-0CBC-437D-978F-00FC9F615DE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EBCCFFD-0CBC-437D-978F-00FC9F615DE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EBCCFFD-0CBC-437D-978F-00FC9F615DE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EBCCFFD-0CBC-437D-978F-00FC9F615DE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F1BDDC1-1481-4B40-8C6D-E48DC35BEAF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F1BDDC1-1481-4B40-8C6D-E48DC35BEAF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F1BDDC1-1481-4B40-8C6D-E48DC35BEAF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F1BDDC1-1481-4B40-8C6D-E48DC35BEAF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

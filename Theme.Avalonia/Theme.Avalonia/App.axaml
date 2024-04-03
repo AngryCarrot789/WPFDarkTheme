@@ -1,0 +1,14 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:Theme.Avalonia"
+             x:Class="Theme.Avalonia.App"
+             RequestedThemeVariant="Default">
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+
+    <!-- TODO: Custom Theme here -->
+    <Application.Styles>
+        <SimpleTheme/>
+    </Application.Styles>
+</Application>
