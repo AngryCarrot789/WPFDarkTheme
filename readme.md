@@ -12,7 +12,7 @@ For both the new and old versions, you need to reference `PresentationFramework.
 
 [Click here](#using-the-old-themes) if you want to use the old version which is slightly easier to use but is deprecated
 
-Firstly, add the theme, control colours and controls dictionaries. This assumes that you don't change the folder structure used by this project
+Firstly, add the theme, control colours and controls dictionaries to App.xaml. This assumes that you don't change the folder structure used by this project
 
 ```xml
 <Application.Resources>
