@@ -1,6 +1,7 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="using:Theme.Avalonia"
+             xmlns:themes="clr-namespace:SharpPad.Themes"
              x:Class="Theme.Avalonia.App"
              RequestedThemeVariant="Default">
     <Application.DataTemplates>
@@ -10,5 +11,6 @@
     <!-- TODO: Custom Theme here -->
     <Application.Styles>
         <SimpleTheme/>
+        <themes:JetTheme/>
     </Application.Styles>
 </Application>

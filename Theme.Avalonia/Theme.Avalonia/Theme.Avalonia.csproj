@@ -8,6 +8,16 @@
 
     <ItemGroup>
         <AvaloniaResource Include="Assets\**"/>
+        <AvaloniaXaml Remove="Themes\ControlResources.axaml" />
+        <AvaloniaResource Include="Themes\ControlResources.axaml" />
+        <AvaloniaXaml Remove="Themes\JetTheme.axaml" />
+        <AvaloniaResource Include="Themes\JetTheme.axaml" />
+        <AvaloniaXaml Remove="Themes\ThemeResources.axaml" />
+        <AvaloniaResource Include="Themes\ThemeResources.axaml" />
+        <AvaloniaXaml Remove="Themes\Controls\Button.axaml" />
+        <AvaloniaResource Include="Themes\Controls\Button.axaml" />
+        <AvaloniaXaml Remove="Themes\Controls\TextBlock.axaml" />
+        <AvaloniaResource Include="Themes\Controls\TextBlock.axaml" />
     </ItemGroup>
 
     <ItemGroup>
