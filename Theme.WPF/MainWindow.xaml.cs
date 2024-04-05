@@ -25,12 +25,24 @@ namespace Theme.WPF
         {
             switch (((MenuItem) sender).Uid)
             {
-                case "0": ThemesController.SetTheme(ThemeType.DeepDark); break;
-                case "1": ThemesController.SetTheme(ThemeType.SoftDark); break;
-                case "2": ThemesController.SetTheme(ThemeType.DarkGreyTheme); break;
-                case "3": ThemesController.SetTheme(ThemeType.GreyTheme); break;
-                case "4": ThemesController.SetTheme(ThemeType.LightTheme); break;
-                case "5": ThemesController.SetTheme(ThemeType.RedBlackTheme); break;
+                case "0":
+                    ThemesController.SetTheme(ThemeType.DeepDark);
+                    break;
+                case "1":
+                    ThemesController.SetTheme(ThemeType.SoftDark);
+                    break;
+                case "2":
+                    ThemesController.SetTheme(ThemeType.DarkGreyTheme);
+                    break;
+                case "3":
+                    ThemesController.SetTheme(ThemeType.GreyTheme);
+                    break;
+                case "4":
+                    ThemesController.SetTheme(ThemeType.LightTheme);
+                    break;
+                case "5":
+                    ThemesController.SetTheme(ThemeType.RedBlackTheme);
+                    break;
             }
 
             e.Handled = true;

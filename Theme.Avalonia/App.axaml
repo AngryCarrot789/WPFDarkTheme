@@ -1,0 +1,18 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Theme.Avalonia.App"
+             RequestedThemeVariant="Default">
+    <Application.Styles>
+        <SimpleTheme/>
+        <StyleInclude Source="Themes/Controls.axaml"/>
+    </Application.Styles>
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <MergeResourceInclude Source="Themes/Colours/SoftDark.axaml"/>
+                <MergeResourceInclude Source="Themes/ControlColours.axaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

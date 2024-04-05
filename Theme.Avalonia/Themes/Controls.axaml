@@ -1,0 +1,13 @@
+<Styles xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- This file contains all of the standard control styles/control themes -->
+    <Styles.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <MergeResourceInclude Source="ControlStyles/TextBlock.axaml"/>
+                <MergeResourceInclude Source="ControlStyles/Button.axaml"/>
+                <MergeResourceInclude Source="ControlStyles/ToggleButton.axaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Styles.Resources>
+</Styles>

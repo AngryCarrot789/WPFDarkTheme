@@ -1,8 +1,7 @@
 <ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <ControlTheme x:Key="{x:Type Button}" TargetType="Button">
-        <!-- {DynamicResource Button.Static.Background} -->
-        <Setter Property="Background" Value="Orange"/>
+    <ControlTheme x:Key="{x:Type Button}" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="{DynamicResource Button.Static.Background}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource Button.Static.Border}"/>
         <Setter Property="Foreground" Value="{DynamicResource Button.Static.Foreground}"/>
         <Setter Property="BorderThickness" Value="1"/>
@@ -11,7 +10,7 @@
         <Setter Property="Padding" Value="1"/>
         <Setter Property="Template">
             <ControlTemplate>
-                <ContentPresenter Name="PART_ContentPresenter"
+                <ContentPresenter x:Name="PART_ContentPresenter"
                                   Padding="{TemplateBinding Padding}"
                                   HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                                   VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -26,13 +25,16 @@
             </ControlTemplate>
         </Setter>
         <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-            <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderMidBrush}"/>
+            <Setter Property="Background" Value="{DynamicResource Button.MouseOver.Background}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource Button.MouseOver.Border}"/>
         </Style>
         <Style Selector="^:pressed  /template/ ContentPresenter#PART_ContentPresenter">
-            <Setter Property="Background" Value="{DynamicResource ThemeControlHighBrush}"/>
+            <Setter Property="Background" Value="{DynamicResource Button.Pressed.Background}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource Button.Pressed.Border}"/>
         </Style>
         <Style Selector="^:disabled">
-            <Setter Property="Opacity" Value="{DynamicResource ThemeDisabledOpacity}"/>
+            <Setter Property="Background" Value="{DynamicResource Button.Disabled.Background}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource Button.Disabled.Border}"/>
         </Style>
     </ControlTheme>
 </ResourceDictionary>

@@ -5,7 +5,6 @@
         xmlns:views="clr-namespace:Theme.Avalonia.Views"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Theme.Avalonia.Views.MainWindow"
-        Icon="/Assets/avalonia-logo.ico"
         Title="Theme.Avalonia">
-        <views:MainView />
+    <views:MainView/>
 </Window>

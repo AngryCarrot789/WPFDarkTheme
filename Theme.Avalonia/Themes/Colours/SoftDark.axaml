@@ -1,0 +1,198 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- #################################################################################### -->
+    <!-- The letter A is in front of the colours themselves, because it's annoying  -->
+    <!-- having to scroll down in visual studio's designer to "Colour" or "Brush" -->
+    <!-- #################################################################################### -->
+
+    <Color x:Key="AColour.Foreground.Static">#F0F0F0</Color>
+    <Color x:Key="AColour.Foreground.Deeper">#DCDCDC</Color>
+    <Color x:Key="AColour.Foreground.Disabled">#BEBEBE</Color>
+    <Color x:Key="AColour.Glyph.Static">#DCDCDC</Color>
+    <Color x:Key="AColour.Glyph.Disabled">#B4B4B4</Color>
+    <Color x:Key="AColour.Glyph.MouseOver">#FAFAFA</Color>
+    <Color x:Key="AColour.Glyph.MouseDown">#EBEBEB</Color>
+    <Color x:Key="AColour.Glyph.Selected">#E4E4E4</Color>
+    <Color x:Key="AColour.Glyph.Selected.Inactive">#DADADA</Color>
+    <Color x:Key="AColour.ColourfulGlyph.Static">#3494E1</Color>
+    <Color x:Key="AColour.ColourfulGlyph.Disabled">#5587AF</Color>
+    <Color x:Key="AColour.ColourfulGlyph.MouseOver">#2D7DD7</Color>
+    <Color x:Key="AColour.ColourfulGlyph.MouseDown">#3287C8</Color>
+    <Color x:Key="AColour.ColourfulGlyph.Selected">#3273B9</Color>
+    <Color x:Key="AColour.ColourfulGlyph.Selected.Inactive">#3778C8</Color>
+
+    <Color x:Key="AColour.AccentTone1.Background.Static">#5587AF</Color>
+    <Color x:Key="AColour.AccentTone1.Border.Static">#4182CD</Color>
+    <Color x:Key="AColour.AccentTone2.Background.Static">#3494E1</Color>
+    <Color x:Key="AColour.AccentTone2.Border.Static">#2F82C8</Color>
+    <Color x:Key="AColour.AccentTone3.Background.Static">#2D7DD7</Color>
+    <Color x:Key="AColour.AccentTone3.Border.Static">#3287C8</Color>
+
+    <Color x:Key="AColour.Tone0.Background.Static">#141414</Color>
+    <Color x:Key="AColour.Tone0.Border.Static">#000000</Color>
+    <Color x:Key="AColour.Tone1.Background.Static">#181818</Color>
+    <Color x:Key="AColour.Tone1.Border.Static">#141414</Color>
+    <Color x:Key="AColour.Tone2.Background.Static">#1C1C1C</Color>
+    <Color x:Key="AColour.Tone2.Border.Static">#262626</Color>
+    <Color x:Key="AColour.Tone3.Background.Static">#212121</Color>
+    <Color x:Key="AColour.Tone3.Border.Static">#353535</Color>
+
+    <Color x:Key="AColour.Tone4.Background.Static">#242424</Color>
+    <Color x:Key="AColour.Tone4.Border.Static">#2B2B2B</Color>
+    <Color x:Key="AColour.Tone4.Background.MouseOver">#363636</Color>
+    <Color x:Key="AColour.Tone4.Border.MouseOver">#404040</Color>
+    <Color x:Key="AColour.Tone4.Background.MouseDown">#303030</Color>
+    <Color x:Key="AColour.Tone4.Border.MouseDown">#3A3A3A</Color>
+    <Color x:Key="AColour.Tone4.Background.Selected">#343434</Color>
+    <Color x:Key="AColour.Tone4.Background.Selected.Inactive">#2C2C2C</Color>
+    <Color x:Key="AColour.Tone4.Border.Selected">#3A3A3A</Color>
+    <Color x:Key="AColour.Tone4.Border.Selected.Inactive">#363636</Color>
+    <Color x:Key="AColour.Tone4.Background.Disabled">#505050</Color>
+    <Color x:Key="AColour.Tone4.Border.Disabled">#5A5A5A</Color>
+
+    <Color x:Key="AColour.Tone5.Background.Static">#292929</Color>
+    <Color x:Key="AColour.Tone5.Border.Static">#333333</Color>
+    <Color x:Key="AColour.Tone5.Background.MouseOver">#404040</Color>
+    <Color x:Key="AColour.Tone5.Border.MouseOver">#4A4A4A</Color>
+    <Color x:Key="AColour.Tone5.Background.MouseDown">#3A3A3A</Color>
+    <Color x:Key="AColour.Tone5.Border.MouseDown">#444444</Color>
+    <Color x:Key="AColour.Tone5.Background.Selected">#3E3E3E</Color>
+    <Color x:Key="AColour.Tone5.Background.Selected.Inactive">#363636</Color>
+    <Color x:Key="AColour.Tone5.Border.Selected">#444444</Color>
+    <Color x:Key="AColour.Tone5.Border.Selected.Inactive">#404040</Color>
+    <Color x:Key="AColour.Tone5.Background.Disabled">#5D5D5D</Color>
+    <Color x:Key="AColour.Tone5.Border.Disabled">#696969</Color>
+
+    <Color x:Key="AColour.Tone6.Background.Static">#313131</Color>
+    <Color x:Key="AColour.Tone6.Border.Static">#3B3B3B</Color>
+    <Color x:Key="AColour.Tone6.Background.MouseOver">#484848</Color>
+    <Color x:Key="AColour.Tone6.Border.MouseOver">#5C5C5C</Color>
+    <Color x:Key="AColour.Tone6.Background.MouseDown">#424242</Color>
+    <Color x:Key="AColour.Tone6.Border.MouseDown">#4C4C4C</Color>
+    <Color x:Key="AColour.Tone6.Background.Selected">#464646</Color>
+    <Color x:Key="AColour.Tone6.Background.Selected.Inactive">#3E3E3E</Color>
+    <Color x:Key="AColour.Tone6.Border.Selected">#4C4C4C</Color>
+    <Color x:Key="AColour.Tone6.Border.Selected.Inactive">#484848</Color>
+    <Color x:Key="AColour.Tone6.Background.Disabled">#696969</Color>
+    <Color x:Key="AColour.Tone6.Border.Disabled">#767676</Color>
+
+    <Color x:Key="AColour.Tone7.Background.Static">#3C3C3C</Color>
+    <Color x:Key="AColour.Tone7.Border.Static">#464646</Color>
+    <Color x:Key="AColour.Tone7.Background.MouseOver">#545454</Color>
+    <Color x:Key="AColour.Tone7.Border.MouseOver">#5E5E5E</Color>
+    <Color x:Key="AColour.Tone7.Background.MouseDown">#4A4A4A</Color>
+    <Color x:Key="AColour.Tone7.Border.MouseDown">#545454</Color>
+    <Color x:Key="AColour.Tone7.Background.Selected">#4F4F4F</Color>
+    <Color x:Key="AColour.Tone7.Background.Selected.Inactive">#474747</Color>
+    <Color x:Key="AColour.Tone7.Border.Selected">#555555</Color>
+    <Color x:Key="AColour.Tone7.Border.Selected.Inactive">#515151</Color>
+    <Color x:Key="AColour.Tone7.Background.Disabled">#737373</Color>
+    <Color x:Key="AColour.Tone7.Border.Disabled">#828282</Color>
+    <Color x:Key="AColour.Tone8.Background.Static">#505050</Color>
+    <Color x:Key="AColour.Tone8.Border.Static">#5F5F5F</Color>
+    <Color x:Key="AColour.Tone8.Background.MouseOver">#5F5F5F</Color>
+    <Color x:Key="AColour.Tone8.Border.MouseOver">#6E6E6E</Color>
+    <Color x:Key="AColour.Tone8.Background.MouseDown">#555555</Color>
+    <Color x:Key="AColour.Tone8.Border.MouseDown">#616161</Color>
+    <Color x:Key="AColour.Tone8.Background.Selected">#5A5A5A</Color>
+    <Color x:Key="AColour.Tone8.Background.Selected.Inactive">#545454</Color>
+    <Color x:Key="AColour.Tone8.Border.Selected">#646464</Color>
+    <Color x:Key="AColour.Tone8.Border.Selected.Inactive">#636363</Color>
+    <Color x:Key="AColour.Tone8.Background.Disabled">#8A8A8A</Color>
+    <Color x:Key="AColour.Tone8.Border.Disabled">#9B9B9B</Color>
+
+    <!-- Primary.4 would be containers, aka control that have a deep background (that sinks into the view) -->
+    <!-- Primary.5 would be regular controls, aka control that are obvious and normal (they stick out)-->
+    <!-- Primary.6 is like Primary.5 but it's more obvious, it sticks out a bit more -->
+    <!-- Primary.7 is like Primary.6 but it's very obvious, it sticks out more (useful for popups maybe, possibly with shadows as well) -->
+
+    <SolidColorBrush x:Key="ABrush.AccentTone1.Background.Static" Color="{StaticResource AColour.AccentTone1.Background.Static}"/>
+    <SolidColorBrush x:Key="ABrush.AccentTone1.Border.Static" Color="{StaticResource AColour.AccentTone1.Border.Static}"/>
+    <SolidColorBrush x:Key="ABrush.AccentTone2.Background.Static" Color="{StaticResource AColour.AccentTone2.Background.Static}"/>
+    <SolidColorBrush x:Key="ABrush.AccentTone2.Border.Static" Color="{StaticResource AColour.AccentTone2.Border.Static}"/>
+    <SolidColorBrush x:Key="ABrush.AccentTone3.Background.Static" Color="{StaticResource AColour.AccentTone3.Background.Static}"/>
+    <SolidColorBrush x:Key="ABrush.AccentTone3.Border.Static" Color="{StaticResource AColour.AccentTone3.Border.Static}"/>
+    <SolidColorBrush x:Key="ABrush.Foreground.Static" Color="{StaticResource AColour.Foreground.Static}"/>
+    <SolidColorBrush x:Key="ABrush.Foreground.Deeper" Color="{StaticResource AColour.Foreground.Deeper}"/>
+    <SolidColorBrush x:Key="ABrush.Foreground.Disabled" Color="{StaticResource AColour.Foreground.Disabled}"/>
+    <SolidColorBrush x:Key="ABrush.Glyph.Static" Color="{StaticResource AColour.Glyph.Static}"/>
+    <SolidColorBrush x:Key="ABrush.Glyph.Disabled" Color="{StaticResource AColour.Glyph.Disabled}"/>
+    <SolidColorBrush x:Key="ABrush.Glyph.MouseOver" Color="{StaticResource AColour.Glyph.MouseOver}"/>
+    <SolidColorBrush x:Key="ABrush.Glyph.MouseDown" Color="{StaticResource AColour.Glyph.MouseDown}"/>
+    <SolidColorBrush x:Key="ABrush.Glyph.Selected" Color="{StaticResource AColour.Glyph.Selected}"/>
+    <SolidColorBrush x:Key="ABrush.Glyph.Selected.Inactive" Color="{StaticResource AColour.Glyph.Selected.Inactive}"/>
+    <SolidColorBrush x:Key="ABrush.ColourfulGlyph.Static" Color="{StaticResource AColour.ColourfulGlyph.Static}"/>
+    <SolidColorBrush x:Key="ABrush.ColourfulGlyph.Disabled" Color="{StaticResource AColour.ColourfulGlyph.Disabled}"/>
+    <SolidColorBrush x:Key="ABrush.ColourfulGlyph.MouseOver" Color="{StaticResource AColour.ColourfulGlyph.MouseOver}"/>
+    <SolidColorBrush x:Key="ABrush.ColourfulGlyph.MouseDown" Color="{StaticResource AColour.ColourfulGlyph.MouseDown}"/>
+    <SolidColorBrush x:Key="ABrush.ColourfulGlyph.Selected" Color="{StaticResource AColour.ColourfulGlyph.Selected}"/>
+    <SolidColorBrush x:Key="ABrush.ColourfulGlyph.Selected.Inactive" Color="{StaticResource AColour.ColourfulGlyph.Selected.Inactive}"/>
+    <SolidColorBrush x:Key="ABrush.Tone0.Background.Static" Color="{StaticResource AColour.Tone0.Background.Static}"/>
+    <SolidColorBrush x:Key="ABrush.Tone0.Border.Static" Color="{StaticResource AColour.Tone0.Border.Static}"/>
+    <SolidColorBrush x:Key="ABrush.Tone1.Background.Static" Color="{StaticResource AColour.Tone1.Background.Static}"/>
+    <SolidColorBrush x:Key="ABrush.Tone1.Border.Static" Color="{StaticResource AColour.Tone1.Border.Static}"/>
+    <SolidColorBrush x:Key="ABrush.Tone2.Background.Static" Color="{StaticResource AColour.Tone2.Background.Static}"/>
+    <SolidColorBrush x:Key="ABrush.Tone2.Border.Static" Color="{StaticResource AColour.Tone2.Border.Static}"/>
+    <SolidColorBrush x:Key="ABrush.Tone3.Background.Static" Color="{StaticResource AColour.Tone3.Background.Static}"/>
+    <SolidColorBrush x:Key="ABrush.Tone3.Border.Static" Color="{StaticResource AColour.Tone3.Border.Static}"/>
+    <SolidColorBrush x:Key="ABrush.Tone4.Background.Static" Color="{StaticResource AColour.Tone4.Background.Static}"/>
+    <SolidColorBrush x:Key="ABrush.Tone4.Border.Static" Color="{StaticResource AColour.Tone4.Border.Static}"/>
+    <SolidColorBrush x:Key="ABrush.Tone4.Background.MouseOver" Color="{StaticResource AColour.Tone4.Background.MouseOver}"/>
+    <SolidColorBrush x:Key="ABrush.Tone4.Border.MouseOver" Color="{StaticResource AColour.Tone4.Border.MouseOver}"/>
+    <SolidColorBrush x:Key="ABrush.Tone4.Background.MouseDown" Color="{StaticResource AColour.Tone4.Background.MouseDown}"/>
+    <SolidColorBrush x:Key="ABrush.Tone4.Border.MouseDown" Color="{StaticResource AColour.Tone4.Border.MouseDown}"/>
+    <SolidColorBrush x:Key="ABrush.Tone4.Background.Selected" Color="{StaticResource AColour.Tone4.Background.Selected}"/>
+    <SolidColorBrush x:Key="ABrush.Tone4.Background.Selected.Inactive" Color="{StaticResource AColour.Tone4.Background.Selected.Inactive}"/>
+    <SolidColorBrush x:Key="ABrush.Tone4.Border.Selected" Color="{StaticResource AColour.Tone4.Border.Selected}"/>
+    <SolidColorBrush x:Key="ABrush.Tone4.Border.Selected.Inactive" Color="{StaticResource AColour.Tone4.Border.Selected.Inactive}"/>
+    <SolidColorBrush x:Key="ABrush.Tone4.Background.Disabled" Color="{StaticResource AColour.Tone4.Background.Disabled}"/>
+    <SolidColorBrush x:Key="ABrush.Tone4.Border.Disabled" Color="{StaticResource AColour.Tone4.Border.Disabled}"/>
+    <SolidColorBrush x:Key="ABrush.Tone5.Background.Static" Color="{StaticResource AColour.Tone5.Background.Static}"/>
+    <SolidColorBrush x:Key="ABrush.Tone5.Border.Static" Color="{StaticResource AColour.Tone5.Border.Static}"/>
+    <SolidColorBrush x:Key="ABrush.Tone5.Background.MouseOver" Color="{StaticResource AColour.Tone5.Background.MouseOver}"/>
+    <SolidColorBrush x:Key="ABrush.Tone5.Border.MouseOver" Color="{StaticResource AColour.Tone5.Border.MouseOver}"/>
+    <SolidColorBrush x:Key="ABrush.Tone5.Background.MouseDown" Color="{StaticResource AColour.Tone5.Background.MouseDown}"/>
+    <SolidColorBrush x:Key="ABrush.Tone5.Border.MouseDown" Color="{StaticResource AColour.Tone5.Border.MouseDown}"/>
+    <SolidColorBrush x:Key="ABrush.Tone5.Background.Selected" Color="{StaticResource AColour.Tone5.Background.Selected}"/>
+    <SolidColorBrush x:Key="ABrush.Tone5.Background.Selected.Inactive" Color="{StaticResource AColour.Tone5.Background.Selected.Inactive}"/>
+    <SolidColorBrush x:Key="ABrush.Tone5.Border.Selected" Color="{StaticResource AColour.Tone5.Border.Selected}"/>
+    <SolidColorBrush x:Key="ABrush.Tone5.Border.Selected.Inactive" Color="{StaticResource AColour.Tone5.Border.Selected.Inactive}"/>
+    <SolidColorBrush x:Key="ABrush.Tone5.Background.Disabled" Color="{StaticResource AColour.Tone5.Background.Disabled}"/>
+    <SolidColorBrush x:Key="ABrush.Tone5.Border.Disabled" Color="{StaticResource AColour.Tone5.Border.Disabled}"/>
+    <SolidColorBrush x:Key="ABrush.Tone6.Background.Static" Color="{StaticResource AColour.Tone6.Background.Static}"/>
+    <SolidColorBrush x:Key="ABrush.Tone6.Border.Static" Color="{StaticResource AColour.Tone6.Border.Static}"/>
+    <SolidColorBrush x:Key="ABrush.Tone6.Background.MouseOver" Color="{StaticResource AColour.Tone6.Background.MouseOver}"/>
+    <SolidColorBrush x:Key="ABrush.Tone6.Border.MouseOver" Color="{StaticResource AColour.Tone6.Border.MouseOver}"/>
+    <SolidColorBrush x:Key="ABrush.Tone6.Background.MouseDown" Color="{StaticResource AColour.Tone6.Background.MouseDown}"/>
+    <SolidColorBrush x:Key="ABrush.Tone6.Border.MouseDown" Color="{StaticResource AColour.Tone6.Border.MouseDown}"/>
+    <SolidColorBrush x:Key="ABrush.Tone6.Background.Selected" Color="{StaticResource AColour.Tone6.Background.Selected}"/>
+    <SolidColorBrush x:Key="ABrush.Tone6.Background.Selected.Inactive" Color="{StaticResource AColour.Tone6.Background.Selected.Inactive}"/>
+    <SolidColorBrush x:Key="ABrush.Tone6.Border.Selected" Color="{StaticResource AColour.Tone6.Border.Selected}"/>
+    <SolidColorBrush x:Key="ABrush.Tone6.Border.Selected.Inactive" Color="{StaticResource AColour.Tone6.Border.Selected.Inactive}"/>
+    <SolidColorBrush x:Key="ABrush.Tone6.Background.Disabled" Color="{StaticResource AColour.Tone6.Background.Disabled}"/>
+    <SolidColorBrush x:Key="ABrush.Tone6.Border.Disabled" Color="{StaticResource AColour.Tone6.Border.Disabled}"/>
+    <SolidColorBrush x:Key="ABrush.Tone7.Background.Static" Color="{StaticResource AColour.Tone7.Background.Static}"/>
+    <SolidColorBrush x:Key="ABrush.Tone7.Background.MouseOver" Color="{StaticResource AColour.Tone7.Background.MouseOver}"/>
+    <SolidColorBrush x:Key="ABrush.Tone7.Background.MouseDown" Color="{StaticResource AColour.Tone7.Background.MouseDown}"/>
+    <SolidColorBrush x:Key="ABrush.Tone7.Background.Selected" Color="{StaticResource AColour.Tone7.Background.Selected}"/>
+    <SolidColorBrush x:Key="ABrush.Tone7.Background.Selected.Inactive" Color="{StaticResource AColour.Tone7.Background.Selected.Inactive}"/>
+    <SolidColorBrush x:Key="ABrush.Tone7.Background.Disabled" Color="{StaticResource AColour.Tone7.Background.Disabled}"/>
+    <SolidColorBrush x:Key="ABrush.Tone7.Border.Static" Color="{StaticResource AColour.Tone7.Border.Static}"/>
+    <SolidColorBrush x:Key="ABrush.Tone7.Border.MouseOver" Color="{StaticResource AColour.Tone7.Border.MouseOver}"/>
+    <SolidColorBrush x:Key="ABrush.Tone7.Border.MouseDown" Color="{StaticResource AColour.Tone7.Border.MouseDown}"/>
+    <SolidColorBrush x:Key="ABrush.Tone7.Border.Selected" Color="{StaticResource AColour.Tone7.Border.Selected}"/>
+    <SolidColorBrush x:Key="ABrush.Tone7.Border.Selected.Inactive" Color="{StaticResource AColour.Tone7.Border.Selected.Inactive}"/>
+    <SolidColorBrush x:Key="ABrush.Tone7.Border.Disabled" Color="{StaticResource AColour.Tone7.Border.Disabled}"/>
+    <SolidColorBrush x:Key="ABrush.Tone8.Background.Static" Color="{StaticResource AColour.Tone8.Background.Static}"/>
+    <SolidColorBrush x:Key="ABrush.Tone8.Background.MouseOver" Color="{StaticResource AColour.Tone8.Background.MouseOver}"/>
+    <SolidColorBrush x:Key="ABrush.Tone8.Background.MouseDown" Color="{StaticResource AColour.Tone8.Background.MouseDown}"/>
+    <SolidColorBrush x:Key="ABrush.Tone8.Background.Selected" Color="{StaticResource AColour.Tone8.Background.Selected}"/>
+    <SolidColorBrush x:Key="ABrush.Tone8.Background.Selected.Inactive" Color="{StaticResource AColour.Tone8.Background.Selected.Inactive}"/>
+    <SolidColorBrush x:Key="ABrush.Tone8.Background.Disabled" Color="{StaticResource AColour.Tone8.Background.Disabled}"/>
+    <SolidColorBrush x:Key="ABrush.Tone8.Border.Static" Color="{StaticResource AColour.Tone8.Border.Static}"/>
+    <SolidColorBrush x:Key="ABrush.Tone8.Border.MouseOver" Color="{StaticResource AColour.Tone8.Border.MouseOver}"/>
+    <SolidColorBrush x:Key="ABrush.Tone8.Border.MouseDown" Color="{StaticResource AColour.Tone8.Border.MouseDown}"/>
+    <SolidColorBrush x:Key="ABrush.Tone8.Border.Selected" Color="{StaticResource AColour.Tone8.Border.Selected}"/>
+    <SolidColorBrush x:Key="ABrush.Tone8.Border.Selected.Inactive" Color="{StaticResource AColour.Tone8.Border.Selected.Inactive}"/>
+    <SolidColorBrush x:Key="ABrush.Tone8.Border.Disabled" Color="{StaticResource AColour.Tone8.Border.Disabled}"/>
+</ResourceDictionary>

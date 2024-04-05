@@ -17,16 +17,10 @@ public partial class App : Application
         switch (this.ApplicationLifetime)
         {
             case IClassicDesktopStyleApplicationLifetime desktop:
-                desktop.MainWindow = new MainWindow
-                {
-                    DataContext = new MainViewModel()
-                };
+                desktop.MainWindow = new MainWindow();
                 break;
-            case ISingleViewApplicationLifetime singleViewPlatform:
-                singleViewPlatform.MainView = new MainView
-                {
-                    DataContext = new MainViewModel()
-                };
+            case ISingleViewApplicationLifetime singleView:
+                singleView.MainView = new MainView();
                 break;
         }
 

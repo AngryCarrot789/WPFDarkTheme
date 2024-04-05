@@ -1,0 +1,56 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ControlTheme x:Key="{x:Type ToggleButton}" TargetType="{x:Type ToggleButton}">
+        <Setter Property="Background" Value="{DynamicResource Button.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Button.Static.Border}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Button.Static.Foreground}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="1"/>
+        <Setter Property="Template">
+            <ControlTemplate>
+                <ContentPresenter x:Name="PART_ContentPresenter"
+                                  Padding="{TemplateBinding Padding}"
+                                  HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                  VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                  Background="{TemplateBinding Background}"
+                                  BorderBrush="{TemplateBinding BorderBrush}"
+                                  BorderThickness="{TemplateBinding BorderThickness}"
+                                  Content="{TemplateBinding Content}"
+                                  ContentTemplate="{TemplateBinding ContentTemplate}"
+                                  CornerRadius="{TemplateBinding CornerRadius}"
+                                  RecognizesAccessKey="True"
+                                  TextElement.Foreground="{TemplateBinding Foreground}"/>
+            </ControlTemplate>
+        </Setter>
+        <Style Selector="^[IsDefault=True] /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="BorderBrush" Value="{DynamicResource Button.Defaulted.Border}"/>
+        </Style>
+        <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="{DynamicResource Button.MouseOver.Background}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource Button.MouseOver.Border}"/>
+        </Style>
+        <Style Selector="^:pressed  /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="{DynamicResource Button.Pressed.Background}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource Button.Pressed.Border}"/>
+        </Style>
+        <Style Selector="^:disabled">
+            <Setter Property="Background" Value="{DynamicResource Button.Disabled.Background}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource Button.Disabled.Border}"/>
+        </Style>
+        <Style Selector="^:checked">
+            <Setter Property="Background" Value="{DynamicResource ToggleButton.IsChecked.Background}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource ToggleButton.IsChecked.Border}"/>
+        </Style>
+        <!-- doesn't work... -->
+        <Style Selector="^:checked, ^:pressed">
+            <Setter Property="Background" Value="{DynamicResource ToggleButton.Pressed.IsChecked.Background}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource ToggleButton.Pressed.IsChecked.Border}"/>
+        </Style>
+        <Style Selector="^:checked, ^:pointerover">
+            <Setter Property="Background" Value="{DynamicResource ToggleButton.MouseOver.IsChecked.Background}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource ToggleButton.MouseOver.IsChecked.Border}"/>
+        </Style>
+    </ControlTheme>
+</ResourceDictionary>
