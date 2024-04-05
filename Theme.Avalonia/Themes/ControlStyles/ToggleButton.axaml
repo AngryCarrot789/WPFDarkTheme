@@ -31,7 +31,7 @@
             <Setter Property="Background" Value="{DynamicResource Button.MouseOver.Background}"/>
             <Setter Property="BorderBrush" Value="{DynamicResource Button.MouseOver.Border}"/>
         </Style>
-        <Style Selector="^:pressed  /template/ ContentPresenter#PART_ContentPresenter">
+        <Style Selector="^:pressed /template/ ContentPresenter#PART_ContentPresenter">
             <Setter Property="Background" Value="{DynamicResource Button.Pressed.Background}"/>
             <Setter Property="BorderBrush" Value="{DynamicResource Button.Pressed.Border}"/>
         </Style>
@@ -43,14 +43,13 @@
             <Setter Property="Background" Value="{DynamicResource ToggleButton.IsChecked.Background}"/>
             <Setter Property="BorderBrush" Value="{DynamicResource ToggleButton.IsChecked.Border}"/>
         </Style>
-        <!-- doesn't work... -->
-        <Style Selector="^:checked, ^:pressed">
-            <Setter Property="Background" Value="{DynamicResource ToggleButton.Pressed.IsChecked.Background}"/>
-            <Setter Property="BorderBrush" Value="{DynamicResource ToggleButton.Pressed.IsChecked.Border}"/>
-        </Style>
-        <Style Selector="^:checked, ^:pointerover">
+        <Style Selector="^:checked:pointerover /template/ ContentPresenter#PART_ContentPresenter">
             <Setter Property="Background" Value="{DynamicResource ToggleButton.MouseOver.IsChecked.Background}"/>
             <Setter Property="BorderBrush" Value="{DynamicResource ToggleButton.MouseOver.IsChecked.Border}"/>
+        </Style>
+        <Style Selector="^[IsChecked=True][IsPressed=true] /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="{DynamicResource ToggleButton.Pressed.IsChecked.Background}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource ToggleButton.Pressed.IsChecked.Border}"/>
         </Style>
     </ControlTheme>
 </ResourceDictionary>
