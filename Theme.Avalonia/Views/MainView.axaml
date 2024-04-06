@@ -4,8 +4,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:avalonia="clr-namespace:Theme.Avalonia"
+             xmlns:c="clr-namespace:Theme.Avalonia.Themes.Controls"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:DataType="avalonia:MainViewModel">
+             x:DataType="avalonia:MainViewModel"
+             Background="{DynamicResource Window.Static.Background}">
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
          to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
@@ -140,7 +142,7 @@
                 <ColumnDefinition Width="2"/>
                 <ColumnDefinition Width="4*"/>
             </Grid.ColumnDefinitions>
-            <Grid Margin="0,0,2,0">
+            <c:GroupBox Header="A GroupBox Here... with things inside" Margin="0,0,2,0">
                 <StackPanel>
                     <Button Command="{Binding AddContentCommand}" Content="A Button Here" Height="24" Margin="5"/>
                     <ToggleButton Content="A toggle button" Height="40" Margin="5" IsChecked="{Binding ElementName=CheckBox1, Path=IsChecked, Mode=TwoWay}"/>
@@ -171,9 +173,9 @@
                         </DataGrid.Columns>
                     </DataGrid>
                 </StackPanel>
-            </Grid>
+            </c:GroupBox>
             <GridSplitter HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1"/>
-            <Grid Margin="2,0,3,0" Grid.Column="2">
+            <c:GroupBox Header="A group box!!" Margin="2,0,3,0" Grid.Column="2">
                 <Grid>
                     <StackPanel>
                         <Label Content="A Label here" Margin="5 5 5 0"/>
@@ -213,9 +215,9 @@
                         <TextBlock HorizontalAlignment="Left" Margin="121,152,0,0" Text="TextBlock" VerticalAlignment="Top"/>
                     </Grid>
                 </Grid>
-            </Grid>
+            </c:GroupBox>
             <GridSplitter HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="3"/>
-            <Grid Grid.Column="4" Margin="3,0,0,0">
+            <c:GroupBox Header="Another group box!!! A list of some controls" Grid.Column="4" Margin="3,0,0,0">
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible">
                     <StackPanel Margin="5">
                         <Button Content="eee"/>
@@ -233,7 +235,7 @@
                         <TextBox Height="64" Margin="0 0 0 2"/>
                         <TabControl Margin="0 0 0 2" Height="550">
                             <TabItem Header="Tab1 eee">
-                                <Grid>
+                                <c:GroupBox Header="Things">
                                     <StackPanel>
                                         <TreeView Margin="5">
                                             <TreeViewItem Header="My shopping list">
@@ -279,7 +281,7 @@
                                         <Button Content="Button" Margin="5" Height="32"/>
                                         <Button Content="Button" Margin="5" Height="32"/>
                                     </StackPanel>
-                                </Grid>
+                                </c:GroupBox>
                             </TabItem>
                             <TabItem Header="Tab2 eee">
                                 <StackPanel>
@@ -317,7 +319,7 @@
                         </TabControl>
                     </StackPanel>
                 </ScrollViewer>
-            </Grid>
+            </c:GroupBox>
         </Grid>
     </Grid>
 

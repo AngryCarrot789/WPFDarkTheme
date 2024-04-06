@@ -35,11 +35,11 @@
             <Setter Property="Background" Value="{DynamicResource Button.Pressed.Background}"/>
             <Setter Property="BorderBrush" Value="{DynamicResource Button.Pressed.Border}"/>
         </Style>
-        <Style Selector="^:disabled">
+        <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter">
             <Setter Property="Background" Value="{DynamicResource Button.Disabled.Background}"/>
             <Setter Property="BorderBrush" Value="{DynamicResource Button.Disabled.Border}"/>
         </Style>
-        <Style Selector="^:checked">
+        <Style Selector="^:checked /template/ ContentPresenter#PART_ContentPresenter">
             <Setter Property="Background" Value="{DynamicResource ToggleButton.IsChecked.Background}"/>
             <Setter Property="BorderBrush" Value="{DynamicResource ToggleButton.IsChecked.Border}"/>
         </Style>

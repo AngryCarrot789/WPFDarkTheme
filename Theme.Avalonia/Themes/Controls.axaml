@@ -7,6 +7,9 @@
                 <MergeResourceInclude Source="ControlStyles/TextBlock.axaml"/>
                 <MergeResourceInclude Source="ControlStyles/Button.axaml"/>
                 <MergeResourceInclude Source="ControlStyles/ToggleButton.axaml"/>
+                <MergeResourceInclude Source="ControlStyles/GroupBox.axaml"/>
+                <MergeResourceInclude Source="ControlStyles/ListBox.axaml"/>
+                <MergeResourceInclude Source="ControlStyles/ListBoxItem.axaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Styles.Resources>

@@ -1,0 +1,44 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:c="clr-namespace:Theme.Avalonia.Themes.Controls"
+                    xmlns:cv="clr-namespace:Theme.Avalonia.Themes.Converters">
+    <ControlTheme x:Key="{x:Type c:GroupBox}" TargetType="{x:Type c:GroupBox}">
+        <Setter Property="Background" Value="{DynamicResource ABrush.Tone3.Background.Static}"/>
+        <Setter Property="HeaderBrush" Value="{DynamicResource GroupBox.Header.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource GroupBox.Static.Border}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ABrush.Foreground.Static}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HeaderContentGap" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="1"/>
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                    <DockPanel>
+                        <!-- Using a converter for the border thickness saves having an extra border element -->
+                        <!-- in this template, which helps with performance a tiny bit -->
+                        <Border x:Name="PART_Header" Padding="3,3,3,2"
+                                Background="{TemplateBinding HeaderBrush}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding HeaderContentGap, Converter={x:Static cv:GroupBoxGapToThicknessConverter.Instance}}"
+                                DockPanel.Dock="Top" MinHeight="27">
+                            <ContentPresenter x:Name="PART_HeaderPresenter"
+                                              Background="Transparent" BorderBrush="Transparent"
+                                              Content="{TemplateBinding Header}"
+                                              ContentTemplate="{Binding $parent[Expander].HeaderTemplate}"
+                                              VerticalAlignment="Center" HorizontalAlignment="Left"
+                                              Margin="5,0,5,0"/>
+                        </Border>
+                        <Border x:Name="PART_ContentBorder"
+                                Background="{TemplateBinding Background}">
+                            <ContentPresenter x:Name="PART_ContentPresenter" Background="Transparent" BorderBrush="Transparent"
+                                              Content="{TemplateBinding Content}"
+                                              ContentTemplate="{Binding $parent[Expander].ContentTemplate}"/>
+                        </Border>
+                    </DockPanel>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </ControlTheme>
+</ResourceDictionary>
