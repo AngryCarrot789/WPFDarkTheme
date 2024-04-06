@@ -1492,10 +1492,10 @@
     </Style>
 
     <Style x:Key="{x:Static GridView.GridViewScrollViewerStyleKey}"
-           TargetType="ScrollViewer">
+           TargetType="{x:Type ScrollViewer}">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="ScrollViewer">
+                <ControlTemplate TargetType="{x:Type ScrollViewer}">
                     <Grid Background="{TemplateBinding Background}">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
@@ -1550,7 +1550,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="GridViewColumnHeaderGripper" TargetType="Thumb">
+    <Style x:Key="GridViewColumnHeaderGripper" TargetType="{x:Type Thumb}">
         <Setter Property="Width" Value="18"/>
         <Setter Property="Background" Value="{StaticResource ControlDefaultBorderBrush}"/>
         <Setter Property="BorderBrush" Value="{StaticResource ControlDefaultBorderBrush}"/>
@@ -1568,13 +1568,13 @@
         </Setter>
     </Style>
 
-    <Style x:Key="{x:Type GridViewColumnHeader}" TargetType="GridViewColumnHeader">
+    <Style x:Key="{x:Type GridViewColumnHeader}" TargetType="{x:Type GridViewColumnHeader}">
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Foreground" Value="{StaticResource ControlDefaultForeground}"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="GridViewColumnHeader">
+                <ControlTemplate TargetType="{x:Type GridViewColumnHeader}">
                     <Grid>
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
@@ -1625,7 +1625,7 @@
                         Value="0.7"/>
                 <Setter Property="Template">
                     <Setter.Value>
-                        <ControlTemplate TargetType="GridViewColumnHeader">
+                        <ControlTemplate TargetType="{x:Type GridViewColumnHeader}">
                             <Canvas Name="PART_FloatingHeaderCanvas">
                                 <Rectangle Fill="#60000000"
                                            Width="{TemplateBinding ActualWidth}"
@@ -1639,7 +1639,7 @@
                      Value="Padding">
                 <Setter Property="Template">
                     <Setter.Value>
-                        <ControlTemplate TargetType="GridViewColumnHeader">
+                        <ControlTemplate TargetType="{x:Type GridViewColumnHeader}">
                             <Border Name="HeaderBorder"
                                     BorderThickness="0,1,0,1"
                                     Background="{StaticResource ContainerBackground}" BorderBrush="{StaticResource ContainerBorder}"/>
@@ -4016,7 +4016,7 @@
         <Setter Property="VerticalOffset" Value="15"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="ToolTip">
+                <ControlTemplate TargetType="{x:Type ToolTip}">
                     <Themes:SystemDropShadowChrome Name="Shdw"
                                                    Themes:SystemDropShadowChrome.Color="Transparent"
                                                    Themes:SystemDropShadowChrome.CornerRadius="0"

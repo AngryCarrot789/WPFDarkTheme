@@ -1,0 +1,107 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="using:System">
+    <Design.PreviewWith>
+        <Grid Width="400" Height="100" Background="{DynamicResource ABrush.Tone1.Background.Static}">
+            <Menu VerticalAlignment="Top">
+                <MenuItem Header="File">
+                    <MenuItem Header="New File"/>
+                    <Separator/>
+                    <MenuItem Header="Save"/>
+                    <MenuItem Header="Save as...">
+                        <MenuItem Header="Txct"/>
+                        <MenuItem Header="cs"/>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+        </Grid>
+    </Design.PreviewWith>
+
+    <!-- This is the width of the ColumnDefinition that contains the icons -->
+    <GridLength x:Key="MenuItemIconTrayGridLength">20</GridLength>
+    <!-- The same as above expect with the right padding of menu item icons or something like that -->
+    <sys:Double x:Key="MenuItemIconTrayWithPaddingWidth">23</sys:Double>
+
+    <!-- This MenuItem style is for the direct children of a menu; top-level. -->
+    <ControlTheme x:Key="SimpleTopLevelMenuItem" TargetType="{x:Type MenuItem}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Foreground" Value="{DynamicResource ABrush.Foreground.Static}"/>
+        <Setter Property="Padding" Value="7,0"/>
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border x:Name="root"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding CornerRadius}">
+                    <Panel>
+                        <ContentPresenter x:Name="PART_HeaderPresenter"
+                                          Margin="{TemplateBinding Padding}"
+                                          Content="{TemplateBinding Header}"
+                                          ContentTemplate="{TemplateBinding HeaderTemplate}">
+                            <ContentPresenter.DataTemplates>
+                                <DataTemplate DataType="sys:String">
+                                    <AccessText Text="{Binding}"/>
+                                </DataTemplate>
+                            </ContentPresenter.DataTemplates>
+                        </ContentPresenter>
+                        <Popup x:Name="PART_Popup"
+                               IsLightDismissEnabled="True"
+                               IsOpen="{TemplateBinding IsSubMenuOpen, Mode=TwoWay}"
+                               Placement="BottomEdgeAlignedLeft"
+                               OverlayInputPassThroughElement="{Binding $parent[Menu]}">
+                            <Border Background="{DynamicResource Popup.Static.Background}"
+                                    BorderBrush="{DynamicResource Popup.Static.Border}"
+                                    BorderThickness="1">
+                                <Grid>
+                                    <Border Background="{DynamicResource MenuItem.IconBar.Static.Background}"
+                                            BorderBrush="{DynamicResource MenuItem.IconBar.Static.Border}"
+                                            BorderThickness="0,0,1,0"
+                                            Width="{StaticResource MenuItemIconTrayWithPaddingWidth}" HorizontalAlignment="Left"/>
+                                    <ScrollViewer Theme="{StaticResource SimpleMenuScrollViewer}">
+                                        <ItemsPresenter x:Name="PART_ItemsPresenter"
+                                                        Grid.IsSharedSizeScope="True"
+                                                        ItemsPanel="{TemplateBinding ItemsPanel}"/>
+                                    </ScrollViewer>
+                                </Grid>
+                            </Border>
+                        </Popup>
+                    </Panel>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+
+        <Style Selector="^:selected /template/ Border#root">
+            <Setter Property="Background" Value="{DynamicResource MenuItem.MouseOver.Background}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource MenuItem.MouseOver.Background}"/>
+        </Style>
+
+        <Style Selector="^:empty /template/ Path#rightArrow">
+            <Setter Property="IsVisible" Value="False"/>
+        </Style>
+
+        <Style Selector="^:disabled">
+            <Setter Property="Background" Value="{DynamicResource MenuItem.Disabled.Background}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource MenuItem.Disabled.Background}"/>
+        </Style>
+    </ControlTheme>
+
+    <ControlTheme x:Key="{x:Type Menu}" TargetType="{x:Type Menu}">
+        <Setter Property="ItemContainerTheme" Value="{StaticResource SimpleTopLevelMenuItem}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ABrush.Foreground.Static}"/>
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding CornerRadius}">
+                    <ItemsPresenter x:Name="PART_ItemsPresenter"
+                                    ItemsPanel="{TemplateBinding ItemsPanel}"
+                                    KeyboardNavigation.TabNavigation="Continue"/>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </ControlTheme>
+</ResourceDictionary>

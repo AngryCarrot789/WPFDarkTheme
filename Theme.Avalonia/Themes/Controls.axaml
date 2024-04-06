@@ -4,6 +4,8 @@
     <Styles.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <MergeResourceInclude Source="ControlStyles/ScrollViewer.axaml"/>
+                <MergeResourceInclude Source="ControlStyles/ScrollBar.axaml"/>
                 <MergeResourceInclude Source="ControlStyles/TextBlock.axaml"/>
                 <MergeResourceInclude Source="ControlStyles/Button.axaml"/>
                 <MergeResourceInclude Source="ControlStyles/RepeatButton.axaml"/>
@@ -25,6 +27,9 @@
                 <MergeResourceInclude Source="ControlStyles/ComboBox.axaml"/>
                 <MergeResourceInclude Source="ControlStyles/ComboBoxItem.axaml"/>
                 <MergeResourceInclude Source="ControlStyles/ProgressBar.axaml"/>
+                <MergeResourceInclude Source="ControlStyles/Menu.axaml"/>
+                <MergeResourceInclude Source="ControlStyles/MenuItem.axaml"/>
+                <MergeResourceInclude Source="ControlStyles/MenuFlyoutPresenter.axaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Styles.Resources>

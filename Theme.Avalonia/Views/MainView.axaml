@@ -90,16 +90,8 @@
                 <MenuItem Header="Another menuitem"/>
                 <MenuItem Header="Another menuitem"/>
                 <MenuItem Header="Another menuitem"/>
-                <MenuItem Header="Another menuitem"/>
-                <MenuItem Header="Another menuitem"/>
-                <MenuItem Header="Another menuitem"/>
-                <MenuItem Header="Another menuitem"/>
-                <MenuItem Header="Another menuitem"/>
-                <MenuItem Header="Another menuitem"/>
-                <MenuItem Header="Another menuitem"/>
-                <MenuItem Header="Another menuitem"/>
             </MenuItem>
-            <MenuItem Header="Themes">
+            <MenuItem Header="Themes (TODO)">
                 <MenuItem Header="Avaliable Themes Below"/>
                 <MenuItem Header="Deep Dark" Click="ChangeTheme" DataContext="0">
                     <MenuItem.Icon>

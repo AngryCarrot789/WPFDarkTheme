@@ -6,8 +6,8 @@
     <!-- #################################################################################### -->
 
     <Color x:Key="AColour.Foreground.Static">#F0F0F0</Color>
-    <Color x:Key="AColour.Foreground.Deeper">#DCDCDC</Color>
-    <Color x:Key="AColour.Foreground.Disabled">#BEBEBE</Color>
+    <Color x:Key="AColour.Foreground.Deeper">#D2D2D2</Color>
+    <Color x:Key="AColour.Foreground.Disabled">#BABABA</Color>
     <Color x:Key="AColour.Glyph.Static">#DCDCDC</Color>
     <Color x:Key="AColour.Glyph.Disabled">#B4B4B4</Color>
     <Color x:Key="AColour.Glyph.MouseOver">#FAFAFA</Color>

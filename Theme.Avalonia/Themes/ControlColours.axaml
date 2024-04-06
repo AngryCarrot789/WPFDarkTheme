@@ -190,7 +190,7 @@
     <SolidColorBrush x:Key="MenuItem.IconBar.Static.Border" Color="{DynamicResource AColour.Tone6.Border.Static}"/>
     <SolidColorBrush x:Key="MenuItem.Square.Static.Background" Color="{DynamicResource AColour.Tone6.Background.Static}"/>
     <SolidColorBrush x:Key="MenuItem.Square.Static.Border" Color="{DynamicResource AColour.Tone8.Border.Static}"/>
-    <SolidColorBrush x:Key="MenuItem.MouseOver.Background" Color="{DynamicResource AColour.Tone3.Background.Static}"/>
+    <SolidColorBrush x:Key="MenuItem.MouseOver.Background" Color="{DynamicResource AColour.AccentTone2.Background.Static}"/>
     <SolidColorBrush x:Key="MenuItem.MouseOver.Border" Color="{DynamicResource AColour.Tone5.Border.MouseOver}"/>
     <SolidColorBrush x:Key="MenuItem.Disabled.Background" Color="{DynamicResource AColour.Tone5.Background.MouseOver}"/>
     <SolidColorBrush x:Key="Popup.Static.Background" Color="{DynamicResource AColour.Tone5.Background.Static}"/>

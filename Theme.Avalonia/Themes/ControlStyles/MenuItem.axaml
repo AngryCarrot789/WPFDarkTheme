@@ -1,0 +1,156 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:conv="using:Avalonia.Controls.Converters"
+                    xmlns:sys="using:System">
+    <Design.PreviewWith>
+        <Grid Width="400" Height="100" Background="{DynamicResource ABrush.Tone1.Background.Static}">
+            <Menu VerticalAlignment="Top">
+                <MenuItem Header="File">
+                    <MenuItem Header="New File"/>
+                    <Separator/>
+                    <MenuItem Header="Save"/>
+                    <MenuItem Header="Save as...">
+                        <MenuItem Header="Txct"/>
+                        <MenuItem Header="cs"/>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+        </Grid>
+    </Design.PreviewWith>
+
+    <conv:PlatformKeyGestureConverter x:Key="KeyGestureConverter"/>
+
+    <ControlTheme x:Key="{x:Type MenuItem}" TargetType="{x:Type MenuItem}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Padding" Value="6 0"/>
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border x:Name="root"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding CornerRadius}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="{StaticResource MenuItemIconTrayGridLength}"/>
+                            <ColumnDefinition Width="5"/>
+                            <ColumnDefinition Width="*"/>
+                            <!-- A large amount of padding between the Header and Input Gesture Text -->
+                            <!-- The default simple theme has no padding, and the two blend together -->
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="Auto" SharedSizeGroup="MenuItemIGT"/>
+                            <ColumnDefinition Width="20"/>
+                        </Grid.ColumnDefinitions>
+                        <ContentControl Grid.Column="0"
+                                        x:Name="PART_ToggleIconPresenter"
+                                        IsVisible="False"
+                                        Margin="2"
+                                        Width="16" Height="16"/>
+                        <ContentControl Grid.Column="0"
+                                        x:Name="PART_IconPresenter"
+                                        Width="16" Height="16"
+                                        Margin="2"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Content="{TemplateBinding Icon}"/>
+                        <ContentPresenter x:Name="PART_HeaderPresenter"
+                                          Grid.Column="2"
+                                          Margin="{TemplateBinding Padding}"
+                                          VerticalAlignment="Center"
+                                          Content="{TemplateBinding Header}"
+                                          ContentTemplate="{TemplateBinding HeaderTemplate}">
+                            <ContentPresenter.DataTemplates>
+                                <DataTemplate DataType="sys:String">
+                                    <AccessText Text="{Binding}"/>
+                                </DataTemplate>
+                            </ContentPresenter.DataTemplates>
+                        </ContentPresenter>
+                        <TextBlock x:Name="PART_InputGestureText"
+                                   Grid.Column="4"
+                                   VerticalAlignment="Center"
+                                   Text="{TemplateBinding InputGesture, Converter={StaticResource KeyGestureConverter}}"
+                                   Foreground="{DynamicResource ABrush.Foreground.Disabled}"/>
+                        <Path x:Name="rightArrow"
+                              Grid.Column="5"
+                              Margin="10,0,0,0"
+                              VerticalAlignment="Center"
+                              Data="M0,0L4,3.5 0,7z"
+                              Fill="{DynamicResource ABrush.Glyph.Static}"/>
+                        <Popup Grid.Column="0"
+                               x:Name="PART_Popup"
+                               IsLightDismissEnabled="False"
+                               IsOpen="{TemplateBinding IsSubMenuOpen, Mode=TwoWay}"
+                               Placement="RightEdgeAlignedTop">
+                            <Border Background="{DynamicResource Popup.Static.Background}"
+                                    BorderBrush="{DynamicResource Popup.Static.Border}"
+                                    BorderThickness="1">
+                                <Grid>
+                                    <Border Background="{DynamicResource MenuItem.IconBar.Static.Background}"
+                                            BorderBrush="{DynamicResource MenuItem.IconBar.Static.Border}"
+                                            BorderThickness="0,0,1,0"
+                                            Width="{StaticResource MenuItemIconTrayWithPaddingWidth}" HorizontalAlignment="Left"/>
+                                    <ScrollViewer Theme="{StaticResource SimpleMenuScrollViewer}">
+                                        <ItemsPresenter x:Name="PART_ItemsPresenter"
+                                                        Grid.IsSharedSizeScope="True"
+                                                        ItemsPanel="{TemplateBinding ItemsPanel}"/>
+                                    </ScrollViewer>
+                                </Grid>
+                            </Border>
+                        </Popup>
+                    </Grid>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+
+        <Style Selector="^:separator">
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Separator/>
+                </ControlTemplate>
+            </Setter>
+        </Style>
+
+        <Style Selector="^:pointerover /template/ Border#root">
+            <Setter Property="Background" Value="{DynamicResource MenuItem.MouseOver.Background}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource MenuItem.MouseOver.Background}"/>
+        </Style>
+
+        <Style Selector="^:selected /template/ Border#root">
+            <Setter Property="Background" Value="{DynamicResource MenuItem.MouseOver.Background}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource MenuItem.MouseOver.Background}"/>
+        </Style>
+
+        <Style Selector="^:empty /template/ Path#rightArrow">
+            <Setter Property="IsVisible" Value="False"/>
+        </Style>
+
+        <Style Selector="^:disabled">
+            <Setter Property="Background" Value="{DynamicResource MenuItem.Disabled.Background}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource MenuItem.Disabled.Background}"/>
+        </Style>
+
+        <Style Selector="^:toggle /template/ Viewbox#PART_ToggleIconPresenter, ^:radio /template/ Viewbox#PART_ToggleIconPresenter">
+            <Setter Property="IsVisible" Value="True"/>
+        </Style>
+        <Style Selector="^:toggle /template/ ContentPresenter#PART_IconPresenter, ^:radio /template/ ContentPresenter#PART_IconPresenter">
+            <Setter Property="IsVisible" Value="False"/>
+        </Style>
+        <Style Selector="^:checked:toggle /template/ ContentControl#PART_ToggleIconPresenter">
+            <Setter Property="Content">
+                <Template>
+                    <Path VerticalAlignment="Center"
+                          Data="F1M10,1.2L4.7,9.1 4.5,9.1 0,5.2 1.3,3.5 4.3,6.1 8.3,0 10,1.2z"
+                          Fill="{Binding $parent[MenuItem].Foreground}"/>
+                </Template>
+            </Setter>
+        </Style>
+        <Style Selector="^:checked:radio /template/ ContentControl#PART_ToggleIconPresenter">
+            <Setter Property="Content">
+                <Template>
+                    <Ellipse Fill="{Binding $parent[MenuItem].Foreground}" Margin="4" Width="8" Height="8"/>
+                </Template>
+            </Setter>
+        </Style>
+    </ControlTheme>
+</ResourceDictionary>
