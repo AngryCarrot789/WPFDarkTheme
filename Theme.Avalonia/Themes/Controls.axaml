@@ -22,7 +22,9 @@
                 <MergeResourceInclude Source="ControlStyles/TabItem.axaml"/>
                 <MergeResourceInclude Source="ControlStyles/GridSplitter.axaml"/>
                 <MergeResourceInclude Source="ControlStyles/TextBox.axaml"/>
-
+                <MergeResourceInclude Source="ControlStyles/ComboBox.axaml"/>
+                <MergeResourceInclude Source="ControlStyles/ComboBoxItem.axaml"/>
+                <MergeResourceInclude Source="ControlStyles/ProgressBar.axaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Styles.Resources>

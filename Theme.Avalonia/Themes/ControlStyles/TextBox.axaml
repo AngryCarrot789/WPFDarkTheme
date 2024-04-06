@@ -95,7 +95,7 @@
     </ControlTheme>
 
     <ControlTheme x:Key="{x:Type TextBox}" TargetType="{x:Type TextBox}">
-        <Setter Property="CaretBrush" Value="{DynamicResource ABrush.Foreground.Static}"/>
+        <Setter Property="CaretBrush" Value="{DynamicResource ABrush.Glyph.Static}"/>
         <Setter Property="Background" Value="{DynamicResource TextBox.Static.Background}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource TextBox.Static.Border}"/>
         <Setter Property="Foreground" Value="{DynamicResource ABrush.Foreground.Static}"/>
@@ -182,9 +182,7 @@
                                         </Style>
                                     </ScrollViewer.Styles>
                                 </ScrollViewer>
-                                <ContentPresenter Grid.Column="2"
-                                                  Grid.ColumnSpan="1"
-                                                  Content="{TemplateBinding InnerRightContent}"/>
+                                <ContentPresenter Grid.Column="2" Content="{TemplateBinding InnerRightContent}"/>
                             </Grid>
                         </DataValidationErrors>
                     </DockPanel>

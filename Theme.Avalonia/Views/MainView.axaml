@@ -222,8 +222,8 @@
                             <ComboBoxItem Content="A comboboxitem"/>
                             <ComboBoxItem Content="A comboboxitem"/>
                         </ComboBox>
-                        <ProgressBar Value="32" Minimum="0" Maximum="100" Height="32" Margin="0 0 0 2"/>
-                        <ProgressBar Value="{Binding ElementName=SliderThing, Path=Value}" Minimum="0" Maximum="100" Height="32" Margin="0 0 0 2"/>
+                        <ProgressBar IsIndeterminate="True" Value="32" Minimum="0" Maximum="100" Height="12" Margin="0 0 0 2"/>
+                        <ProgressBar Value="{Binding ElementName=SliderThing, Path=Value}" Minimum="0" Maximum="100" Height="20" Margin="0 0 0 2"/>
                         <Slider Minimum="0" Maximum="100" Value="61" Margin="0 0 0 2" x:Name="SliderThing"/>
                         <TextBox Height="64" Margin="0 0 0 2"/>
                         <TabControl Margin="0 0 0 2" Height="550">
