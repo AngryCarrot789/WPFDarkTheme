@@ -10,6 +10,11 @@
                 <MergeResourceInclude Source="ControlStyles/GroupBox.axaml"/>
                 <MergeResourceInclude Source="ControlStyles/ListBox.axaml"/>
                 <MergeResourceInclude Source="ControlStyles/ListBoxItem.axaml"/>
+                <MergeResourceInclude Source="ControlStyles/Slider.axaml"/>
+                <MergeResourceInclude Source="ControlStyles/TreeView.axaml"/>
+                <MergeResourceInclude Source="ControlStyles/TreeViewItem.axaml"/>
+                <MergeResourceInclude Source="ControlStyles/CheckBox.axaml"/>
+                <MergeResourceInclude Source="ControlStyles/RadioButton.axaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Styles.Resources>

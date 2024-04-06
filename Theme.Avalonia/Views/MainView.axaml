@@ -13,9 +13,8 @@
          to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <avalonia:MainViewModel/>
     </Design.DataContext>
-
-    <Grid>
-        <Menu VerticalAlignment="Top">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
             <MenuItem Header="File">
                 <MenuItem Header="Open file maybe?" InputGesture="CTRL + O">
                 </MenuItem>
@@ -134,14 +133,7 @@
                 </MenuItem>
             </MenuItem>
         </Menu>
-        <Grid Margin="4,18,4,4">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="400"/>
-                <ColumnDefinition Width="2"/>
-                <ColumnDefinition Width="3*"/>
-                <ColumnDefinition Width="2"/>
-                <ColumnDefinition Width="4*"/>
-            </Grid.ColumnDefinitions>
+        <Grid ColumnDefinitions="400,2,3*,2,4*">
             <c:GroupBox Header="A GroupBox Here... with things inside" Margin="0,0,2,0">
                 <StackPanel>
                     <Button Command="{Binding AddContentCommand}" Content="A Button Here" Height="24" Margin="5"/>
@@ -174,7 +166,7 @@
                     </DataGrid>
                 </StackPanel>
             </c:GroupBox>
-            <GridSplitter HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1"/>
+            <GridSplitter Grid.Column="1"/>
             <c:GroupBox Header="A group box!!" Margin="2,0,3,0" Grid.Column="2">
                 <Grid>
                     <StackPanel>
@@ -216,7 +208,7 @@
                     </Grid>
                 </Grid>
             </c:GroupBox>
-            <GridSplitter HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="3"/>
+            <GridSplitter Grid.Column="3"/>
             <c:GroupBox Header="Another group box!!! A list of some controls" Grid.Column="4" Margin="3,0,0,0">
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible">
                     <StackPanel Margin="5">
@@ -262,7 +254,7 @@
                                                 <TreeViewItem Header="extra tree items 2"/>
                                             </TreeViewItem>
                                         </TreeView>
-                                        <StackPanel Orientation="Horizontal">
+                                        <StackPanel Orientation="Vertical">
                                             <Calendar/>
                                             <DatePicker/>
                                         </StackPanel>
@@ -321,6 +313,6 @@
                 </ScrollViewer>
             </c:GroupBox>
         </Grid>
-    </Grid>
+    </DockPanel>
 
 </UserControl>
