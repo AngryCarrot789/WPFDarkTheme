@@ -1,6 +1,6 @@
 <ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <ControlTheme x:Key="{x:Type TreeView}" TargetType="TreeView">
+    <ControlTheme x:Key="{x:Type TreeView}" TargetType="{x:Type TreeView}">
         <Setter Property="Background" Value="{DynamicResource TreeView.Static.Background}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource TreeView.Static.Border}"/>
         <Setter Property="Foreground" Value="{DynamicResource ABrush.Foreground.Static}"/>

@@ -7,7 +7,7 @@
         </StackPanel>
     </Design.PreviewWith>
 
-    <ControlTheme x:Key="SliderRepeatTrackTheme" TargetType="RepeatButton">
+    <ControlTheme x:Key="SliderRepeatTrackTheme" TargetType="{x:Type RepeatButton}">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Focusable" Value="False"/>
         <Setter Property="Foreground" Value="{DynamicResource ThemeBorderLowBrush}"/>
@@ -18,7 +18,7 @@
         </Setter>
     </ControlTheme>
 
-    <ControlTheme x:Key="SliderThumbHorizontalDefault" TargetType="Thumb">
+    <ControlTheme x:Key="SliderThumbHorizontalDefault" TargetType="{x:Type Thumb}">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Focusable" Value="False"/>
         <Setter Property="Template">
@@ -40,7 +40,7 @@
         </Style>
     </ControlTheme>
 
-    <ControlTheme x:Key="SliderThumbVerticalDefault" TargetType="Thumb">
+    <ControlTheme x:Key="SliderThumbVerticalDefault" TargetType="{x:Type Thumb}">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Focusable" Value="False"/>
         <Setter Property="Template">
@@ -62,7 +62,7 @@
         </Style>
     </ControlTheme>
 
-    <ControlTheme x:Key="{x:Type Slider}" TargetType="Slider">
+    <ControlTheme x:Key="{x:Type Slider}" TargetType="{x:Type Slider}">
         <Style Selector="^:horizontal">
             <Setter Property="MinWidth" Value="40"/>
             <Setter Property="MinHeight" Value="20"/>

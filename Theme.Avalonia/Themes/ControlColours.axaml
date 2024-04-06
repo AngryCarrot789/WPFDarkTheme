@@ -147,7 +147,7 @@
     <SolidColorBrush x:Key="RadioButton.Pressed.Glyph" Color="{DynamicResource AColour.Glyph.MouseDown}"/>
     <SolidColorBrush x:Key="RadioButton.Disabled.Glyph" Color="{DynamicResource AColour.Glyph.Disabled}"/>
 
-    <SolidColorBrush x:Key="TabItem.Selected.Background" Color="{DynamicResource AColour.Tone4.Background.Static}"/>
+    <SolidColorBrush x:Key="TabItem.Selected.Background" Color="{DynamicResource AColour.Tone6.Background.Static}"/>
     <SolidColorBrush x:Key="TabItem.Selected.Border" Color="{DynamicResource AColour.Tone5.Border.Selected}"/>
     <SolidColorBrush x:Key="TabItem.Static.Background" Color="{DynamicResource AColour.Tone5.Background.Static}"/>
     <SolidColorBrush x:Key="TabItem.Static.Border" Color="{DynamicResource AColour.Tone5.Border.Static}"/>

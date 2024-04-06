@@ -1,0 +1,61 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Grid Background="Gray" Width="200" Height="200">
+            <TabControl>
+                <TabItem Header="Tab A"></TabItem>
+                <TabItem Header="Tab B"></TabItem>
+                <TabItem Header="Tab C"></TabItem>
+            </TabControl>
+        </Grid>
+    </Design.PreviewWith>
+    <ControlTheme x:Key="{x:Type TabItem}" TargetType="{x:Type TabItem}">
+        <Setter Property="Foreground" Value="{DynamicResource ABrush.Foreground.Static}"/>
+        <Setter Property="Background" Value="{DynamicResource TabItem.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=TabControl}, Path=BorderBrush}"/>
+        <Setter Property="Margin" Value="-1,-1,-1,0"/>
+        <Setter Property="Padding" Value="8,4,8,4"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Grid x:Name="templateRoot">
+                    <Border x:Name="mainBorder"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="1,1,1,1"
+                            Margin="0">
+                    </Border>
+                    <ContentPresenter x:Name="PART_ContentPresenter"
+                                      Margin="{TemplateBinding Padding}"
+                                      HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                      VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                      Content="{TemplateBinding Header}"
+                                      ContentTemplate="{TemplateBinding HeaderTemplate}"
+                                      CornerRadius="{TemplateBinding CornerRadius}"/>
+                    <Border x:Name="PART_SelectionLine" IsVisible="False"
+                            Background="{DynamicResource ABrush.ColourfulGlyph.Static}"
+                            VerticalAlignment="Bottom" Height="3" Margin="0"/>
+                </Grid>
+            </ControlTemplate>
+        </Setter>
+        <Style Selector="^:pointerover /template/ Border#mainBorder">
+            <Setter Property="Background" Value="{DynamicResource TabItem.MouseOver.Background}"/>
+        </Style>
+        <Style Selector="^:selected">
+            <Setter Property="ZIndex" Value="1"/>
+            <Style Selector="^ /template/ Border#mainBorder">
+                <Setter Property="Background" Value="{DynamicResource TabItem.Selected.Background}"/>
+            </Style>
+            <Style Selector="^ /template/ Border#PART_SelectionLine">
+                <Setter Property="IsVisible" Value="True"/>
+            </Style>
+        </Style>
+        <Style Selector="^[TabStripPlacement=Left]">
+            <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        </Style>
+        <Style Selector="^[TabStripPlacement=Right]">
+            <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        </Style>
+    </ControlTheme>
+</ResourceDictionary>

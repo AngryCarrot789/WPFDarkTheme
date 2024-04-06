@@ -5,7 +5,7 @@
             <CheckBox Content="Ello"/>
         </Grid>
     </Design.PreviewWith>
-    <ControlTheme x:Key="{x:Type CheckBox}" TargetType="CheckBox">
+    <ControlTheme x:Key="{x:Type CheckBox}" TargetType="{x:Type CheckBox}">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderBrush" Value="{DynamicResource OptionMark.Static.Border}"/>
         <Setter Property="Foreground" Value="{DynamicResource ABrush.Foreground.Static}"/>

@@ -15,6 +15,9 @@
                 <MergeResourceInclude Source="ControlStyles/TreeViewItem.axaml"/>
                 <MergeResourceInclude Source="ControlStyles/CheckBox.axaml"/>
                 <MergeResourceInclude Source="ControlStyles/RadioButton.axaml"/>
+                <MergeResourceInclude Source="ControlStyles/Separator.axaml"/>
+                <MergeResourceInclude Source="ControlStyles/TabControl.axaml"/>
+                <MergeResourceInclude Source="ControlStyles/TabItem.axaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Styles.Resources>
