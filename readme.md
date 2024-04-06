@@ -1,4 +1,4 @@
-# WPF Theme Library
+# WPF Theme Library (+WIP Avalonia)
 
 I started making this so that me, or anyone really, can easily have a nice looking theme on their program without needing to write any extra code.
 Here's a preview of the available themes:
@@ -77,3 +77,7 @@ This styles styles the title bar, its buttons, etc. There's also `CustomToolWind
 - Also improved the ScrollBars (the scroll handle bit was darker than the backgroundy bit, so i changed that.
 - Added some colours to the light theme too (not sure why you'd want to use it but eh)
 - And finally improved the RadioBoxes by giving them a more circular shape, like they normally have.
+
+
+
+# Using the avalonia themes

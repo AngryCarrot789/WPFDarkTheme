@@ -1,9 +1,9 @@
 <ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ControlTheme x:Key="{x:Type ListBox}" TargetType="{x:Type ListBox}">
-        <Setter Property="Background" Value="{DynamicResource Button.Static.Background}"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource Button.Static.Border}"/>
-        <Setter Property="Foreground" Value="{DynamicResource Button.Static.Foreground}"/>
+        <Setter Property="Background" Value="{DynamicResource ListBox.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource ListBox.Static.Border}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ABrush.Foreground.Static}"/>
         <Setter Property="Padding" Value="0"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>

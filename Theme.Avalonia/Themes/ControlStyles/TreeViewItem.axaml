@@ -31,7 +31,7 @@
 
         <Style Selector="^:checked">
             <Setter Property="RenderTransform">
-                <RotateTransform Angle="45" />
+                <RotateTransform Angle="45"/>
             </Setter>
         </Style>
     </ControlTheme>

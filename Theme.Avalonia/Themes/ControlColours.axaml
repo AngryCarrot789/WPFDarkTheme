@@ -22,6 +22,7 @@
     <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="{DynamicResource AColour.Foreground.Disabled}"/>
     <SolidColorBrush x:Key="Button.Defaulted.Background" Color="{DynamicResource AColour.ColourfulGlyph.Static}"/>
     <SolidColorBrush x:Key="Button.Defaulted.Border" Color="{DynamicResource AColour.ColourfulGlyph.Disabled}"/>
+    <SolidColorBrush x:Key="ButtonSpinner.Error.Border" Color="Red"/>
     <SolidColorBrush x:Key="ToggleButton.IsChecked.Background" Color="{DynamicResource AColour.AccentTone2.Background.Static}"/>
     <SolidColorBrush x:Key="ToggleButton.IsChecked.Border" Color="{DynamicResource AColour.AccentTone2.Border.Static}"/>
     <SolidColorBrush x:Key="ToggleButton.Pressed.IsChecked.Background" Color="{DynamicResource AColour.Tone6.Border.Selected}"/>
@@ -77,6 +78,7 @@
     <SolidColorBrush x:Key="TextBox.Focus.Border" Color="{DynamicResource AColour.ColourfulGlyph.Static}"/>
     <SolidColorBrush x:Key="TextBox.Selection.Inactive" Color="{DynamicResource AColour.ColourfulGlyph.Selected.Inactive}"/>
     <SolidColorBrush x:Key="TextBox.Selection" Color="{DynamicResource AColour.ColourfulGlyph.Selected}"/>
+    <SolidColorBrush x:Key="TextBox.Error.Border" Color="Red"/>
 
     <SolidColorBrush x:Key="ListBox.Static.Background" Color="{DynamicResource AColour.Tone4.Background.Static}"/>
     <SolidColorBrush x:Key="ListBox.Static.Border" Color="{DynamicResource AColour.Tone4.Border.Static}"/>

@@ -143,6 +143,7 @@
                     <RadioButton Content="A RadioButton Here" Margin="5"/>
                     <RadioButton Content="A RadioButton Here" Margin="5"/>
                     <RadioButton Content="A RadioButton Here" Margin="5"/>
+                    <ButtonSpinner/>
                     <Slider Minimum="0" Maximum="100" Value="16" Margin="5"/>
                     <Slider Minimum="0" Maximum="100" Value="32" Margin="5"/>
                     <Slider Minimum="0" Maximum="100" Value="64" Margin="5"/>

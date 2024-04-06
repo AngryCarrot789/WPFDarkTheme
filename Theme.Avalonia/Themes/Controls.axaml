@@ -6,7 +6,9 @@
             <ResourceDictionary.MergedDictionaries>
                 <MergeResourceInclude Source="ControlStyles/TextBlock.axaml"/>
                 <MergeResourceInclude Source="ControlStyles/Button.axaml"/>
+                <MergeResourceInclude Source="ControlStyles/RepeatButton.axaml"/>
                 <MergeResourceInclude Source="ControlStyles/ToggleButton.axaml"/>
+                <MergeResourceInclude Source="ControlStyles/ButtonSpinner.axaml"/>
                 <MergeResourceInclude Source="ControlStyles/GroupBox.axaml"/>
                 <MergeResourceInclude Source="ControlStyles/ListBox.axaml"/>
                 <MergeResourceInclude Source="ControlStyles/ListBoxItem.axaml"/>
@@ -18,6 +20,9 @@
                 <MergeResourceInclude Source="ControlStyles/Separator.axaml"/>
                 <MergeResourceInclude Source="ControlStyles/TabControl.axaml"/>
                 <MergeResourceInclude Source="ControlStyles/TabItem.axaml"/>
+                <MergeResourceInclude Source="ControlStyles/GridSplitter.axaml"/>
+                <MergeResourceInclude Source="ControlStyles/TextBox.axaml"/>
+
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Styles.Resources>
