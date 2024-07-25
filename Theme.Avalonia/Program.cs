@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using Avalonia;
 
 namespace Theme.Avalonia;

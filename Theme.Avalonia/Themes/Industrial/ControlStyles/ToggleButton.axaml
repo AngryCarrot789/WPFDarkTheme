@@ -1,0 +1,66 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <ToggleButton Margin="10" Width="140" Height="60" Content="OK"/>
+    </Design.PreviewWith>
+    
+    <ControlTheme x:Key="{x:Type ToggleButton}" TargetType="{x:Type ToggleButton}">
+        <Setter Property="Background" Value="Lime"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Button.Static.Border}"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontFamily" Value="{StaticResource ASCII8X16}"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template" Value="{StaticResource RaisedBasedButtonTemplate}"/>
+        <Style Selector="^:pressed,^:checked">
+            <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                <!-- Purely offsets the ContentPresenter 2 pixels towards the bottom right corner,
+                     to give the illusion of pushing it into the screen.
+                     Because PART_BorderTL and PART_BorderBR are placed after the content presenter,
+                     the 2 pixel gap of the content presenter is never seen when the button is pressed -->
+                <Setter Property="Margin" Value="10,10,6,6"/>
+            </Style>
+            <Style Selector="^ /template/ Border#PART_BorderTL">
+                <Setter Property="BorderBrush" Value="Black"/>
+            </Style>
+            <Style Selector="^ /template/ Border#PART_BorderBR">
+                <Setter Property="BorderBrush" Value="White"/>
+            </Style>
+        </Style>
+        <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter">
+            <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                <Setter Property="Background" Value="{DynamicResource Button.Disabled.Background}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource Button.Disabled.Border}"/>
+            </Style>
+        </Style>
+    </ControlTheme>
+    
+    <ControlTheme x:Key="UnBasedToggleButton" TargetType="{x:Type ToggleButton}">
+        <Setter Property="Background" Value="Lime"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Button.Static.Border}"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontFamily" Value="{StaticResource ASCII8X16}"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template" Value="{StaticResource RaisedUnBasedButtonTemplate}"/>
+        <Style Selector="^:pressed,^:checked">
+            <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                <Setter Property="Margin" Value="10,10,6,6"/>
+            </Style>
+            <Style Selector="^ /template/ Border#PART_BorderTL">
+                <Setter Property="BorderBrush" Value="Black"/>
+            </Style>
+            <Style Selector="^ /template/ Border#PART_BorderBR">
+                <Setter Property="BorderBrush" Value="White"/>
+            </Style>
+        </Style>
+        <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter">
+            <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                <Setter Property="Background" Value="{DynamicResource Button.Disabled.Background}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource Button.Disabled.Border}"/>
+            </Style>
+        </Style>
+    </ControlTheme>
+</ResourceDictionary>

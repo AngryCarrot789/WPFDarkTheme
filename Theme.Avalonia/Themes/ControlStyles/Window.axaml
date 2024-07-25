@@ -1,0 +1,42 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:c="clr-namespace:Theme.Avalonia.Themes.Controls">
+    <ControlTheme x:Key="{x:Type Window}" TargetType="{x:Type Window}">
+        <Setter Property="Background" Value="{DynamicResource Window.Static.Background}"/>
+        <Setter Property="TransparencyBackgroundFallback" Value="White"/>
+        <Setter Property="Foreground" Value="{DynamicResource ABrush.Foreground.Static}"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Panel>
+                    <Border x:Name="PART_TransparencyFallback" IsHitTestVisible="False"/>
+                    <Border Background="{TemplateBinding Background}" IsHitTestVisible="False"/>
+                    <Panel Margin="{TemplateBinding WindowDecorationMargin}" Background="Transparent"/>
+                    <VisualLayerManager>
+                        <VisualLayerManager.ChromeOverlayLayer>
+                            <TitleBar/>
+                        </VisualLayerManager.ChromeOverlayLayer>
+                        <ContentPresenter x:Name="PART_ContentPresenter"
+                                          Margin="{TemplateBinding Padding}"
+                                          HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          Content="{TemplateBinding Content}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}"/>
+                    </VisualLayerManager>
+                </Panel>
+            </ControlTemplate>
+        </Setter>
+    </ControlTheme>
+
+    <!--
+        This gives the regular shadow, but the Win32 titlebar is behind the managed content so the buttons still respond :/
+        WPF got around this with a WindowChrome-specific hit test visibility
+        ExtendClientAreaToDecorationsHint="True"
+        ExtendClientAreaChromeHints="SystemChrome"
+        ExtendClientAreaTitleBarHeightHint="-1"
+    -->
+
+    <ControlTheme x:Key="{x:Type c:WindowEx}" TargetType="{x:Type c:WindowEx}" BasedOn="{StaticResource {x:Type Window}}">
+        <Setter Property="TitleBarBrush" Value="{DynamicResource Window.Static.Title.Background}"/>
+    </ControlTheme>
+</ResourceDictionary>

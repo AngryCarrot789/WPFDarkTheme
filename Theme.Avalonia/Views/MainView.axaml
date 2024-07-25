@@ -128,7 +128,7 @@
         <Grid ColumnDefinitions="400,2,3*,2,4*">
             <c:GroupBox Header="A GroupBox Here... with things inside" Margin="0,0,2,0">
                 <StackPanel>
-                    <Button Command="{Binding AddContentCommand}" Content="A Button Here" Height="24" Margin="5"/>
+                    <Button Command="{Binding AddContentCommand}" Content="A Button Here" Height="50" Margin="5" FontFamily="{StaticResource VGA8X16}"/>
                     <ToggleButton Content="A toggle button" Height="40" Margin="5" IsChecked="{Binding ElementName=CheckBox1, Path=IsChecked, Mode=TwoWay}"/>
                     <CheckBox Content="A CheckBox Here" Margin="5" x:Name="CheckBox1"/>
                     <CheckBox Content="A CheckBox Here" Margin="5"/>

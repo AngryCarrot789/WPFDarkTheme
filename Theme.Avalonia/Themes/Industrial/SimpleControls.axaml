@@ -1,0 +1,80 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <Styles.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <!--<MergeResourceInclude Source="ControlStyles/AdornerLayer.axaml" />
+        <MergeResourceInclude Source="ControlStyles/Button.axaml" />
+        <MergeResourceInclude Source="ControlStyles/RadioButton.axaml" />
+        <MergeResourceInclude Source="ControlStyles/Expander.axaml" />
+        <MergeResourceInclude Source="ControlStyles/RepeatButton.axaml" />
+        <MergeResourceInclude Source="ControlStyles/ToggleSwitch.axaml" />
+        <MergeResourceInclude Source="ControlStyles/ButtonSpinner.axaml" />
+        <MergeResourceInclude Source="ControlStyles/ToggleButton.axaml" />
+        <MergeResourceInclude Source="ControlStyles/DropDownButton.axaml" />
+        <MergeResourceInclude Source="ControlStyles/PathIcon.axaml" />
+        <MergeResourceInclude Source="ControlStyles/CheckBox.axaml" />
+        <MergeResourceInclude Source="ControlStyles/ToolTip.axaml" />
+        <MergeResourceInclude Source="ControlStyles/Label.axaml" />
+        <MergeResourceInclude Source="ControlStyles/ComboBoxItem.axaml" />
+        <MergeResourceInclude Source="ControlStyles/ComboBox.axaml" />
+        <MergeResourceInclude Source="ControlStyles/Window.axaml" />
+        <MergeResourceInclude Source="ControlStyles/Carousel.axaml" />
+        <MergeResourceInclude Source="ControlStyles/CaptionButtons.axaml" />
+        <MergeResourceInclude Source="ControlStyles/TitleBar.axaml" />
+        <MergeResourceInclude Source="ControlStyles/TextBox.axaml" />
+        <MergeResourceInclude Source="ControlStyles/AutoCompleteBox.axaml" />
+        <MergeResourceInclude Source="ControlStyles/DataValidationErrors.axaml" />
+        <MergeResourceInclude Source="ControlStyles/FlyoutPresenter.axaml" />
+        <MergeResourceInclude Source="ControlStyles/MenuFlyoutPresenter.axaml" />
+        <MergeResourceInclude Source="ControlStyles/GridSplitter.axaml" />
+        <MergeResourceInclude Source="ControlStyles/HyperlinkButton.axaml" />
+        <MergeResourceInclude Source="ControlStyles/ItemsControl.axaml" />
+        <MergeResourceInclude Source="ControlStyles/ListBoxItem.axaml" />
+        <MergeResourceInclude Source="ControlStyles/ListBox.axaml" />
+        <MergeResourceInclude Source="ControlStyles/ScrollBar.axaml" />
+        <MergeResourceInclude Source="ControlStyles/ScrollViewer.axaml" />
+        <MergeResourceInclude Source="ControlStyles/TabStrip.axaml" />
+        <MergeResourceInclude Source="ControlStyles/TabStripItem.axaml" />
+        <MergeResourceInclude Source="ControlStyles/TabControl.axaml" />
+        <MergeResourceInclude Source="ControlStyles/TabItem.axaml" />
+        <MergeResourceInclude Source="ControlStyles/PopupRoot.axaml" />
+        <MergeResourceInclude Source="ControlStyles/OverlayPopupHost.axaml" />
+        <MergeResourceInclude Source="ControlStyles/WindowNotificationManager.axaml" />
+        <MergeResourceInclude Source="ControlStyles/EmbeddableControlRoot.axaml" />
+        <MergeResourceInclude Source="ControlStyles/TransitioningContentControl.axaml" />
+        <MergeResourceInclude Source="ControlStyles/TreeView.axaml" />
+        <MergeResourceInclude Source="ControlStyles/TreeViewItem.axaml" />
+        <MergeResourceInclude Source="ControlStyles/ProgressBar.axaml" />
+        <MergeResourceInclude Source="ControlStyles/Separator.axaml" />
+        <MergeResourceInclude Source="ControlStyles/Menu.axaml" />
+        <MergeResourceInclude Source="ControlStyles/MenuItem.axaml" />
+        <MergeResourceInclude Source="ControlStyles/ContextMenu.axaml" />
+        <MergeResourceInclude Source="ControlStyles/CalendarButton.axaml" />
+        <MergeResourceInclude Source="ControlStyles/CalendarDayButton.axaml" />
+        <MergeResourceInclude Source="ControlStyles/CalendarItem.axaml" />
+        <MergeResourceInclude Source="ControlStyles/Calendar.axaml" />
+        <MergeResourceInclude Source="ControlStyles/CalendarDatePicker.axaml" />
+        <MergeResourceInclude Source="ControlStyles/Slider.axaml" />
+        <MergeResourceInclude Source="ControlStyles/NotificationCard.axaml" />
+        <MergeResourceInclude Source="ControlStyles/NumericUpDown.axaml" />
+        <MergeResourceInclude Source="ControlStyles/DateTimePickerShared.axaml" />
+        <MergeResourceInclude Source="ControlStyles/DatePicker.axaml" />
+        <MergeResourceInclude Source="ControlStyles/TimePicker.axaml" />
+        <MergeResourceInclude Source="ControlStyles/SplitView.axaml" />
+        <MergeResourceInclude Source="ControlStyles/ManagedFileChooser.axaml" />
+        <MergeResourceInclude Source="ControlStyles/SplitButton.axaml" />
+        <MergeResourceInclude Source="ControlStyles/SelectableTextBlock.axaml" />
+        <MergeResourceInclude Source="ControlStyles/RefreshContainer.axaml" />
+        <MergeResourceInclude Source="ControlStyles/RefreshVisualizer.axaml" />
+        <MergeResourceInclude Source="ControlStyles/ThemeVariantScope.axaml" />
+        <MergeResourceInclude Source="ControlStyles/HeaderedContentControla.xaml"/>
+        <MergeResourceInclude Source="ControlStyles/TextSelectionHandle.axaml" />-->
+        
+        <MergeResourceInclude Source="ControlStyles/Button.axaml"/>
+        <MergeResourceInclude Source="ControlStyles/ToggleButton.axaml"/>
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Styles.Resources>
+</Styles>

@@ -1,5 +1,6 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:industrial="clr-namespace:Theme.Avalonia.Themes.Industrial"
              x:Class="Theme.Avalonia.App"
              RequestedThemeVariant="Default">
     <Application.Styles>
@@ -13,6 +14,7 @@
                 <MergeResourceInclude Source="Themes/Colours/SoftDark.axaml"/>
                 <MergeResourceInclude Source="Themes/ControlColours.axaml"/>
             </ResourceDictionary.MergedDictionaries>
+            <FontFamily x:Key="ASCII8X16">avares://Theme.Avalonia/Themes/Industrial/Fonts#8x16 ASCII</FontFamily>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

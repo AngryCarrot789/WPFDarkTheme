@@ -1,5 +1,5 @@
 <Styles xmlns="https://github.com/avaloniaui"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <!-- This file contains all of the standard control styles/control themes -->
     <Styles.Resources>
         <ResourceDictionary>
@@ -30,6 +30,7 @@
                 <MergeResourceInclude Source="ControlStyles/Menu.axaml"/>
                 <MergeResourceInclude Source="ControlStyles/MenuItem.axaml"/>
                 <MergeResourceInclude Source="ControlStyles/MenuFlyoutPresenter.axaml"/>
+                <MergeResourceInclude Source="ControlStyles/Window.axaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Styles.Resources>

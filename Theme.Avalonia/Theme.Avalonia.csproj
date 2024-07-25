@@ -15,9 +15,21 @@
         <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.10"/>
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
         <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.10"/>
+        <PackageReference Include="Avalonia.Themes.Simple" Version="11.0.10" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Themes\AttachedProperties\" />
+      <None Remove="Themes\Industrial\Fonts\Ac437_ACM_VGA_8x16.ttf" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Themes\Industrial\Fonts\AcPlus_IBM_VGA_8x16-2x.ttf" />
+      <None Remove="Themes\Industrial\Fonts\AcPlus_IBM_VGA_8x16.ttf" />
+      <None Remove="Themes\Industrial\Fonts\8x16-ascii.ttf" />
+      <AvaloniaResource Include="Themes\Industrial\Fonts\8x16-ascii.ttf" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Themes\Industrial\Controls\" />
     </ItemGroup>
 </Project>

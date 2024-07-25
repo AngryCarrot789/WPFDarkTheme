@@ -1,0 +1,110 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Button Margin="10" Width="140" Height="60" Content="OK"/>
+    </Design.PreviewWith>
+    
+    <ControlTemplate x:Key="RaisedBasedButtonTemplate" TargetType="{x:Type Button}">
+        <Grid>
+            <Border Background="#cccccc"/>
+            <Border BorderBrush="White" BorderThickness="2,2,0,0"/>
+            <Border BorderBrush="Black" BorderThickness="0,0,2,2"/>
+                    
+            <Border Background="{TemplateBinding Background}" Margin="8"/>
+            <ContentPresenter x:Name="PART_ContentPresenter"
+                              Margin="8"
+                              Padding="{TemplateBinding Padding}"
+                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                              BorderThickness="0"
+                              Content="{TemplateBinding Content}"
+                              ContentTemplate="{TemplateBinding ContentTemplate}"
+                              CornerRadius="{TemplateBinding CornerRadius}"
+                              RecognizesAccessKey="True"
+                              TextElement.Foreground="{TemplateBinding Foreground}"/>
+                    
+            <Border x:Name="PART_BorderTL" Margin="6" BorderBrush="White" BorderThickness="2,2,0,0"/>
+            <Border x:Name="PART_BorderBR" Margin="6" BorderBrush="Black" BorderThickness="0,0,2,2"/>
+        </Grid>
+    </ControlTemplate>
+    
+    <ControlTemplate x:Key="RaisedUnBasedButtonTemplate" TargetType="{x:Type Button}">
+        <Grid>
+            <Border Background="{TemplateBinding Background}" Margin="8"/>
+            <ContentPresenter x:Name="PART_ContentPresenter"
+                              Margin="8"
+                              Padding="{TemplateBinding Padding}"
+                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                              BorderThickness="0"
+                              Content="{TemplateBinding Content}"
+                              ContentTemplate="{TemplateBinding ContentTemplate}"
+                              CornerRadius="{TemplateBinding CornerRadius}"
+                              RecognizesAccessKey="True"
+                              TextElement.Foreground="{TemplateBinding Foreground}"/>
+                    
+            <Border x:Name="PART_BorderTL" Margin="6" BorderBrush="White" BorderThickness="2,2,0,0"/>
+            <Border x:Name="PART_BorderBR" Margin="6" BorderBrush="Black" BorderThickness="0,0,2,2"/>
+        </Grid>
+    </ControlTemplate>
+    
+    <ControlTheme x:Key="{x:Type Button}" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="Lime"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Button.Static.Border}"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontFamily" Value="{StaticResource ASCII8X16}"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template" Value="{StaticResource RaisedBasedButtonTemplate}"/>
+        <Style Selector="^:pressed">
+            <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                <!-- Purely offsets the ContentPresenter 2 pixels towards the bottom right corner,
+                     to give the illusion of pushing it into the screen.
+                     Because PART_BorderTL and PART_BorderBR are placed after the content presenter,
+                     the 2 pixel gap of the content presenter is never seen when the button is pressed -->
+                <Setter Property="Margin" Value="10,10,6,6"/>
+            </Style>
+            <Style Selector="^ /template/ Border#PART_BorderTL">
+                <Setter Property="BorderBrush" Value="Black"/>
+            </Style>
+            <Style Selector="^ /template/ Border#PART_BorderBR">
+                <Setter Property="BorderBrush" Value="White"/>
+            </Style>
+        </Style>
+        <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter">
+            <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                <Setter Property="Background" Value="{DynamicResource Button.Disabled.Background}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource Button.Disabled.Border}"/>
+            </Style>
+        </Style>
+    </ControlTheme>
+    
+    <ControlTheme x:Key="UnBasedButton" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="Lime"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Button.Static.Border}"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontFamily" Value="{StaticResource ASCII8X16}"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template" Value="{StaticResource RaisedUnBasedButtonTemplate}"/>
+        <Style Selector="^:pressed">
+            <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                <Setter Property="Margin" Value="10,10,6,6"/>
+            </Style>
+            <Style Selector="^ /template/ Border#PART_BorderTL">
+                <Setter Property="BorderBrush" Value="Black"/>
+            </Style>
+            <Style Selector="^ /template/ Border#PART_BorderBR">
+                <Setter Property="BorderBrush" Value="White"/>
+            </Style>
+        </Style>
+        <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter">
+            <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                <Setter Property="Background" Value="{DynamicResource Button.Disabled.Background}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource Button.Disabled.Border}"/>
+            </Style>
+        </Style>
+    </ControlTheme>
+</ResourceDictionary>
